@@ -23,6 +23,7 @@ Bem-vindo ao cofre da **plataforma da Funil Comercial** — a **empresa** de est
 > - 🧩 [[07 - Componentes]] — **catálogo** de componentes e páginas.
 > - 🗒️ [[03 - Changelog]] — **o que mudou** e por quê, sprint a sprint.
 > - 🗺️ [[04 - Roadmap]] — **o que vem** (por horizonte) e o que está adiado.
+> - 🧭 [[05 - Fluxo de Pré-qualificação Inbound]] — mensagens e regras de conteúdo para a futura pré-qualificação de novos contatos.
 
 > [!tip] Para agentes: comece pelo `CLAUDE.md`
 > A raiz do repo tem um **`CLAUDE.md`** (mapa conciso, auto-carregado) que aponta para estas notas. O ecossistema de conhecimento é: `MEMORY.md` (fatos/prefs) + `CLAUDE.md` (mapa) + este **cofre** (profundidade) + **Graphify** opcional (`/graphify .` → grafo do código). O `README.md` da raiz está **desatualizado** — não usar como fonte.
@@ -38,6 +39,7 @@ Bem-vindo ao cofre da **plataforma da Funil Comercial** — a **empresa** de est
 | [[07 - Componentes]] | Componentes e páginas | "Que componente uso para Y?" |
 | [[03 - Changelog]] | Histórico de mudanças | "O que mudou e quando?" |
 | [[04 - Roadmap]] | Planejamento por horizonte | "O que vem a seguir?" |
+| [[05 - Fluxo de Pré-qualificação Inbound]] | Mensagens e regras de pré-qualificação | "Como conduzir um novo inbound?" |
 
 ## ⚡ Fatos rápidos
 
