@@ -631,7 +631,7 @@ export default function LandingPage() {
 
       <footer className="border-t border-white/10 bg-background py-10 md:py-12">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 border-b border-white/10 pb-8 mb-8 text-center md:text-left">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-b border-white/10 pb-8 mb-8 text-center md:text-left">
             <div className="flex flex-col gap-3 md:gap-4">
               <h4 className="text-sm font-bold text-foreground">Principais Regiões Atendidas</h4>
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
@@ -646,6 +646,18 @@ export default function LandingPage() {
                 <Link to="/estrutura-de-vendas-para-dentistas" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Dentistas</Link>
                 <Link to="/estrutura-de-vendas-para-terapeutas" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Terapeutas</Link>
                 <Link to="/estrutura-de-vendas-para-massoterapeutas" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Massoterapeutas</Link>
+              </div>
+            </div>
+            <div className="flex flex-col gap-3 md:gap-4">
+              <h4 className="text-sm font-bold text-foreground">Marketing por Nicho</h4>
+              <div className="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2">
+                <Link to="/agencia-de-marketing/arquitetos" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Arquitetos</Link>
+                <Link to="/agencia-de-marketing/advogados" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Advogados</Link>
+                <Link to="/agencia-de-marketing/dentistas" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Dentistas</Link>
+                <Link to="/agencia-de-marketing/medicos" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Médicos</Link>
+                <Link to="/agencia-de-marketing/psicologas" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Psicólogas</Link>
+                <Link to="/agencia-de-marketing/nutricionistas" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Nutricionistas</Link>
+                <Link to="/agencia-de-marketing/contadores" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Contadores</Link>
               </div>
             </div>
           </div>
