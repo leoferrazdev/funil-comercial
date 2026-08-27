@@ -79,23 +79,42 @@ async function run() {
         // Injetar H1 Oculto/Invisível ou visível apenas para o Googlebot no body para FCP
         // Isso ajuda imensamente o Googlebot antes do JS carregar
         const h1Skeleton = `<div style="display:none;" id="seo-shell"><h1>${title} em ${cityName} - ${estado.toUpperCase()}</h1><p>${description}</p></div>`;
-        html = html.replace('<div id="root">', `<div id="root">\n${h1Skeleton}`);
+        const finalHtml = html.replace('<div id="root">', `<div id="root">\n${h1Skeleton}`);
 
-        // Criar estrutura de pasta
         // A URL é /agencia-de-marketing/:nicho/:estado/:cidade
-        const routePath = `agencia-de-marketing/${niche}/${estado.toLowerCase()}/${cidade.toLowerCase()}`;
-        const saveDir = path.join(DIST_DIR, routePath);
+        const urlSegments = ['agencia-de-marketing', niche, estado.toLowerCase(), cidade.toLowerCase()];
         
-        if (!fs.existsSync(saveDir)) {
-          fs.mkdirSync(saveDir, { recursive: true });
+        let currentPath = DIST_DIR;
+        
+        // CORREÇÃO CRÍTICA DO ERRO 403: O servidor (ex: GitHub Pages / Vercel) vê o diretório
+        // existindo (porque criamos subpastas), mas sem index.html ele dá 403 Forbidden.
+        // Solução: Ao descer na árvore de diretórios, garantimos que CADA nível tenha um index.html
+        for (let i = 0; i < urlSegments.length; i++) {
+            currentPath = path.join(currentPath, urlSegments[i]);
+            if (!fs.existsSync(currentPath)) {
+                fs.mkdirSync(currentPath, { recursive: true });
+            }
+            
+            const levelHtmlPath = path.join(currentPath, 'index.html');
+            
+            // Se for o último nível (a cidade), gravamos o HTML otimizado específico
+            if (i === urlSegments.length - 1) {
+                fs.writeFileSync(levelHtmlPath, finalHtml);
+                generatedCount++;
+            } 
+            // Para níveis intermediários (ex: /agencia-de-marketing, /advogados, /sp), gravamos um fallback
+            else if (!fs.existsSync(levelHtmlPath)) {
+                let fallbackHtml = baseHtml;
+                // Adicionamos uma tag apenas para sabermos que é um fallback
+                fallbackHtml = fallbackHtml.replace('</head>', '\n    <meta name="prerendered-local-fallback" content="true">\n</head>');
+                fs.writeFileSync(levelHtmlPath, fallbackHtml);
+                // Não incrementamos o count para estes falbacks silenciosos, ou podemos incrementar
+            }
         }
-        
-        fs.writeFileSync(path.join(saveDir, 'index.html'), html);
-        generatedCount++;
     }
   }
 
-  console.log(`✨ Selective Prerendering (Local Shells) Complete! Generated ${generatedCount} programmatic pages.`);
+  console.log(`✨ Selective Prerendering (Local Shells) Complete! Generated ${generatedCount} programmatic local pages (plus fallbacks).`);
 }
 
 function formatSlug(text: string) {
