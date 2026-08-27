@@ -41,6 +41,15 @@ function generateSitemap() {
   // 2. Local Sitemap
   let localUrls = '';
   let localRouteCount = 0;
+  
+  // Niche Hub Pages
+  NICHES.forEach(nicho => {
+    localRouteCount += 3;
+    localUrls += generateUrlNode(`/agencia-de-marketing/${nicho}`, '0.8', 'weekly');
+    localUrls += generateUrlNode(`/empresa-de-captacao/${nicho}`, '0.8', 'weekly');
+    localUrls += generateUrlNode(`/melhor-crm/${nicho}`, '0.8', 'weekly');
+  });
+
   TARGET_CITIES.forEach(location => {
     NICHES.forEach(nicho => {
       localRouteCount++;

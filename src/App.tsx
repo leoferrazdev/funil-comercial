@@ -77,6 +77,7 @@ const GlossarioIndex = lazy(() => import("./pages/GlossarioIndex"));
 const GlossarioTermo = lazy(() => import("./pages/GlossarioTermo"));
 const ProgrammaticBlogPost = lazy(() => import("./pages/ProgrammaticBlogPost"));
 const ProgrammaticIntentLanding = lazy(() => import("./pages/ProgrammaticIntentLanding"));
+const ProgrammaticNicheHub = lazy(() => import("./pages/ProgrammaticNicheHub"));
 const PrivacyPage = lazy(() => import("./pages/LegalPages").then(module => ({ default: module.PrivacyPage })));
 const TermsPage = lazy(() => import("./pages/LegalPages").then(module => ({ default: module.TermsPage })));
 const DataDeletionPage = lazy(() => import("./pages/LegalPages").then(module => ({ default: module.DataDeletionPage })));
@@ -1194,6 +1195,9 @@ function AppContent() {
           <Route path="/glossario/:slug" element={<GlossarioTermo />} />
           <Route path="/blog/guia-de-vendas/:nicho/:estado/:cidade" element={<ProgrammaticBlogPost />} />
           <Route path="/local/:nicho/:estado/:cidade" element={<LocalCityLanding />} />
+          <Route path="/agencia-de-marketing/:nicho" element={<ProgrammaticNicheHub />} />
+          <Route path="/empresa-de-captacao/:nicho" element={<ProgrammaticNicheHub />} />
+          <Route path="/melhor-crm/:nicho" element={<ProgrammaticNicheHub />} />
           <Route path="/agencia-de-marketing/:nicho/:estado/:cidade" element={<ProgrammaticIntentLanding intentType="agencia" />} />
           <Route path="/empresa-de-captacao/:nicho/:estado/:cidade" element={<ProgrammaticIntentLanding intentType="captacao" />} />
           <Route path="/melhor-crm/:nicho/:estado/:cidade" element={<ProgrammaticIntentLanding intentType="crm" />} />

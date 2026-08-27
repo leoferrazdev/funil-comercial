@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { trackEvent } from "../lib/analytics";
+import { trackWhatsappClick } from "../lib/analytics";
 import { Link, useParams } from "react-router";
 import {
   ArrowRight,
@@ -118,7 +118,7 @@ export default function ProgrammaticIntentLanding({ intentType }: IntentProps) {
             <Logo iconSize={32} theme="monochrome-white" />
           </Link>
           <a
-            href={whatsappLink} onClick={(e) => { trackEvent("whatsapp_click", { method: "whatsapp" }); }}
+            href={whatsappLink} onClick={(e) => { trackWhatsappClick({ origem: "seo_programatico", nicho: nicho || "geral", estado: estado || "br", cidade: cidade || "geral", intent: intentType }); }}
             target="_blank"
             rel="noreferrer"
             className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-primary px-5 text-sm font-bold text-primary-foreground transition hover:bg-primary/90"
@@ -143,7 +143,7 @@ export default function ProgrammaticIntentLanding({ intentType }: IntentProps) {
             </p>
             <div className="mt-10 flex justify-center">
               <a
-                href={whatsappLink} onClick={(e) => { trackEvent("whatsapp_click", { method: "whatsapp" }); }}
+                href={whatsappLink} onClick={(e) => { trackWhatsappClick({ origem: "seo_programatico", nicho: nicho || "geral", estado: estado || "br", cidade: cidade || "geral", intent: intentType }); }}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-primary px-8 text-lg font-black text-primary-foreground transition hover:bg-primary/90"

@@ -30,51 +30,62 @@ O roteiro segue o posicionamento da Funil Comercial como empresa de estrutura de
 
 ### Abertura
 
-> Olá! Obrigado por entrar em contato com a Funil Comercial.
->
-> Vou fazer algumas perguntas rápidas para entender o seu negócio e direcionar melhor o diagnóstico. Pode responder uma por vez, combinado?
+```
+Olá! Obrigado por entrar em contato.
 
+Vou fazer algumas perguntas rápidas para entender o seu negócio e direcionar melhor o diagnóstico. Pode responder uma por vez, combinado?
+```
 ### 1. Nome do negócio
 
-> Para começar, qual é o nome do negócio que você deseja divulgar?
->
-> Se for um profissional autônomo, pode enviar o nome profissional ou comercial.
+```
+Para começar, qual é o nome do negócio que você deseja divulgar?
+
+Se for um profissional autônomo, pode enviar o nome profissional ou comercial.
+```
 
 ### 2. Presença pública
 
-> Obrigado! Para eu conhecer a presença atual do negócio, envie os links públicos que você tiver: site, Instagram, Facebook ou Perfil da Empresa no Google/Google Maps.
->
-> Se não tiver algum deles, pode escrever “não tenho”.
+```
+Para eu conhecer a presença atual do negócio, envie os links públicos que você tiver, site, Instagram, Facebook ou Perfil da Empresa no Google/Google Maps.
+
+Se não tiver algum deles, pode escrever “não tenho”.
+```
 
 ### 3. Relação com o negócio
 
-> Você é proprietário(a) ou responsável pelas decisões de marketing, divulgação e vendas desse negócio?
->
-> Pode responder: proprietário(a), responsável, equipe/agência ou outro.
+```
+Você é proprietário(a) ou responsável pelas decisões de marketing, divulgação e vendas desse negócio?
+```
 
 ### 4. Objetivo principal
 
-> Qual é o principal resultado que você deseja alcançar agora?
->
-> 1. Atrair mais clientes ou projetos
-> 2. Aparecer melhor no Google e ser encontrado
-> 3. Organizar o WhatsApp e o acompanhamento dos contatos
-> 4. Melhorar a conversão e fechar mais oportunidades
-> 5. Outro objetivo
+```
+Qual é o principal resultado que você deseja alcançar agora?
+
+1. Atrair mais clientes ou projetos
+2. Aparecer melhor no Google e ser encontrado
+3. Organizar o WhatsApp e o acompanhamento dos contatos
+4. Melhorar a conversão e fechar mais oportunidades
+5. Outro objetivo
+```
 
 ### Encerramento da pré-qualificação
 
-> Obrigado pelas informações. Agora já temos uma visão inicial do seu negócio e do principal objetivo.
->
-> Vamos organizar esse cenário para identificar qual parte da estrutura de vendas merece atenção primeiro: Presença, Aquisição, Conversão ou Escala.
+```
+Obrigado pelas informações. Agora já tenho uma visão inicial do seu negócio e do principal objetivo.
+
+Vou organizar esse cenário para identificar qual parte da estrutura de vendas merece atenção primeiro, presença, aquisição, conversão ou escala.
+```
 
 ## Aplicação ao caso FormaPEC
 
 Quando o lead responder que deseja **atrair mais projetos**, usar a pergunta de aprofundamento abaixo:
 
-> Entendi. Então o foco principal é atrair mais projetos.
->
-> Para direcionar melhor o diagnóstico: vocês querem priorizar projetos residenciais, comerciais ou obras corporativas?
+```
+Entendi. Então o foco principal é atrair mais projetos.
+
+Para direcionar melhor o diagnóstico, vocês querem priorizar projetos residenciais, comerciais ou obras corporativas?
+```
 
 Após essa resposta, investigar o perfil de cliente desejado, a origem atual dos contatos e o tipo de projeto com maior interesse comercial.
 

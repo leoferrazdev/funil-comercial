@@ -140,6 +140,70 @@ export const seoNicheData: Record<string, NicheData> = {
       { question: "Consigo explicar a diferença das minhas massagens?", answer: "Com certeza. Explicamos detalhadamente as diferenças entre massagem relaxante, desportiva, drenagem, etc., para o cliente saber o que comprar." },
       { question: "Posso captar vouchers para presentes?", answer: "Podemos incluir CTAs focados em 'Dê Bem-Estar de Presente', incentivando a compra de vouchers terapêuticos." }
     ]
+  },
+  arquitetos: {
+    title: "Site para Escritórios de Arquitetura",
+    heroSubtitle: "Capte projetos residenciais e comerciais de alto padrão na sua região. Um portfólio digital focado em gerar reuniões de fechamento.",
+    painPointTitle: "Por que depender apenas de indicação atrasa o seu crescimento?",
+    painPointDescription: "O boca a boca traz clientes, mas sem previsibilidade. Quando alguém da sua cidade pesquisa por projetos de arquitetura, seu site precisa transparecer exclusividade, confiança e um portfólio que justifique o valor do seu trabalho.",
+    benefits: [
+      "Layout minimalista e sofisticado para destacar seu portfólio",
+      "Foco na captação de leads qualificados (filtros de orçamento)",
+      "Posicionamento focado em clientes de alto padrão da sua cidade"
+    ],
+    faqs: [
+      { question: "O site ajuda a atrair projetos mais caros?", answer: "Sim. A arquitetura de conversão (copy + design) é pensada para demonstrar valor agregado e autoridade, afastando o cliente que busca apenas 'o mais barato'." },
+      { question: "Posso exibir meus projetos em alta qualidade?", answer: "Com certeza. Estruturamos galerias otimizadas que carregam rápido, sem perder a resolução que o seu projeto exige." },
+      { question: "O cliente consegue solicitar um orçamento direto?", answer: "Sim. Integramos botões para que o lead converse com você via WhatsApp, já informando o tipo de projeto (comercial/residencial)." }
+    ]
+  },
+  advogados: {
+    title: "Site para Advogados e Escritórios Jurídicos",
+    heroSubtitle: "Posicionamento digital em conformidade com a OAB. Capte clientes corporativos ou físicos que buscam resolução urgente na sua cidade.",
+    painPointTitle: "Como crescer na advocacia respeitando o Código de Ética?",
+    painPointDescription: "A OAB restringe publicidade ostensiva, o que torna o SEO e o Inbound Marketing as armas mais poderosas do advogado. Quando o cliente busca um especialista em sua cidade, seu site deve transmitir autoridade e agilidade, induzindo o contato imediato.",
+    benefits: [
+      "Estrutura ética de captação (Inbound Marketing Jurídico)",
+      "Separação clara por áreas de atuação (Trabalhista, Tributário, etc)",
+      "Call-to-Action focado na urgência do cliente"
+    ],
+    faqs: [
+      { question: "Esse modelo de site fere o provimento da OAB?", answer: "De forma alguma. Nosso foco é informativo e na resolução da intenção de busca (inbound), modelo totalmente aprovado pelos tribunais de ética." },
+      { question: "Ajuda a captar clientes B2B (empresas)?", answer: "Sim. Estruturamos a copy focando na dor do empresário (preventivo tributário, trabalhista), gerando contatos qualificados para reuniões B2B." },
+      { question: "O site converte demandas de urgência (física)?", answer: "Sim. Para áreas como criminal ou família, o design foca no botão de 'Falar com Especialista Agora' via WhatsApp." }
+    ]
+  },
+  dentistas: {
+    title: "Site para Odontologia e Dentistas",
+    heroSubtitle: "Lotando a agenda do seu consultório com procedimentos de alto valor agregado, como implantes e estética dental, na sua cidade.",
+    painPointTitle: "Sua clínica depende apenas de convênios?",
+    painPointDescription: "Atrair pacientes particulares requer confiança. Quando pesquisam por implantes ou lentes de contato dental na região, seu site precisa oferecer uma experiência premium, focada na transformação do sorriso e na segurança técnica.",
+    benefits: [
+      "Destaque para tratamentos high-ticket (Invisalign, Implantes, Lentes)",
+      "Área focada em Prova Social e estrutura da clínica",
+      "Agendamento de avaliação direto via WhatsApp"
+    ],
+    faqs: [
+      { question: "O site ajuda a vender implantes e tratamentos caros?", answer: "Sim. Toda a jornada (funil) é construída para ancorar valor e transmitir autoridade máxima, aumentando a taxa de comparecimento nas avaliações." },
+      { question: "Posso focar em pacientes particulares?", answer: "Exato. A linguagem e o direcionamento das campanhas são moldados para pacientes dispostos a investir em saúde e estética odontológica." },
+      { question: "O site tem espaço para exibir a tecnologia da clínica?", answer: "Sim, sabemos que estrutura (Scanner 3D, Raio-X) gera confiança, então criamos seções específicas para os seus diferenciaz." }
+    ]
+  },
+  medicos: {
+    title: "Site para Médicos e Clínicas Especializadas",
+    heroSubtitle: "Posicionamento premium para atrair pacientes particulares e consolidar sua autoridade médica na região.",
+    painPointTitle: "Como o Google pode encher sua agenda particular?",
+    painPointDescription: "Pacientes particulares pesquisam sintomas e especialistas muito antes de marcar a consulta. Se o seu site comunica sua formação técnica aliada a um atendimento humanizado, você se torna a escolha óbvia na sua cidade.",
+    benefits: [
+      "Comunicação técnica e humanizada, gerando credibilidade",
+      "Destaque claro das especialidades, exames e cirurgias",
+      "Redução de faltas (No-show) via pré-atendimento no WhatsApp"
+    ],
+    faqs: [
+      { question: "Como destacar minha formação e especialidades?", answer: "O site possui seções de Autoridade (Mini-currículo, RQE) essenciais para a confiança do paciente particular." },
+      { question: "Posso captar pacientes de outras cidades (Telemedicina)?", answer: "Sim, além da presença forte na sua cidade física, criamos frentes de atração focadas em teleconsultas a nível estadual ou nacional." },
+      { question: "Atende às normas do CFM?", answer: "Sim, o layout e o copywriting são construídos com total respeito ao manual de publicidade médica." }
+    ]
   }
 };
 
