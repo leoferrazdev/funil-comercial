@@ -656,8 +656,10 @@ export default function LandingPage() {
                 <Link to="/agencia-de-marketing/dentistas" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Dentistas</Link>
                 <Link to="/agencia-de-marketing/medicos" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Médicos</Link>
                 <Link to="/agencia-de-marketing/psicologas" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Psicólogas</Link>
-                <Link to="/agencia-de-marketing/nutricionistas" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Nutricionistas</Link>
-                <Link to="/agencia-de-marketing/contadores" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Contadores</Link>
+                <Link to="/agencia-de-marketing/corretores" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Corretores</Link>
+                <Link to="/agencia-de-marketing/esteticistas" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Estética</Link>
+                <Link to="/agencia-de-marketing/energia-solar" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Energia Solar</Link>
+                <Link to="/agencia-de-marketing/oficinas-mecanicas" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Oficinas Mecânicas</Link>
               </div>
             </div>
           </div>

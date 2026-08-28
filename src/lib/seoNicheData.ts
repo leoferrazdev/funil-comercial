@@ -204,6 +204,70 @@ export const seoNicheData: Record<string, NicheData> = {
       { question: "Posso captar pacientes de outras cidades (Telemedicina)?", answer: "Sim, além da presença forte na sua cidade física, criamos frentes de atração focadas em teleconsultas a nível estadual ou nacional." },
       { question: "Atende às normas do CFM?", answer: "Sim, o layout e o copywriting são construídos com total respeito ao manual de publicidade médica." }
     ]
+  },
+  corretores: {
+    title: "Site para Corretores de Imóveis",
+    heroSubtitle: "Capte leads imobiliários qualificados e venda imóveis de alto padrão. Destaque sua carteira na sua região sem depender de grandes portais.",
+    painPointTitle: "Cansado de depender de leads frios de portais engessados?",
+    painPointDescription: "Quando o cliente busca por imóveis na sua cidade, ele costuma cair em grandes portais onde você é só mais um corretor no meio de centenas. Com um site próprio focado em conversão, você atrai leads que querem falar exclusivamente com VOCÊ, valorizando o seu atendimento premium.",
+    benefits: [
+      "Integração fácil e apresentação luxuosa de imóveis",
+      "Captação de leads (compradores e investidores) direto pro WhatsApp",
+      "Posicionamento como o corretor autoridade da cidade"
+    ],
+    faqs: [
+      { question: "O site ajuda a vender imóveis de alto padrão?", answer: "Sim. O design transmite exclusividade, fundamental para quem atua no mercado de luxo e quer se diferenciar." },
+      { question: "Os leads vão para o meu CRM ou WhatsApp?", answer: "Sim! Construímos botões de contato onde o cliente já clica informando qual imóvel interessou, agilizando o seu atendimento." },
+      { question: "Posso captar imóveis para venda (proprietários)?", answer: "Com certeza. Podemos criar uma página específica no site para donos de imóveis que desejam anunciar exclusivamente com você." }
+    ]
+  },
+  esteticistas: {
+    title: "Site para Clínicas de Estética e Harmonização",
+    heroSubtitle: "Lote a agenda da sua clínica com procedimentos de alto valor. Atraia clientes locais que buscam excelência, beleza e segurança.",
+    painPointTitle: "Sua clínica está perdendo pacientes por não transmitir luxo digital?",
+    painPointDescription: "Na área da estética e harmonização, a percepção de valor é tudo. Se o cliente procura por procedimentos avançados na sua cidade e o seu site não transmite sofisticação, higiene e luxo, ele vai para a concorrência. Nós construímos o ambiente digital perfeito para ancorar o valor dos seus serviços.",
+    benefits: [
+      "Destaque elegante para provas sociais e resultados (Antes/Depois)",
+      "Foco em vender tratamentos high-ticket e harmonização facial",
+      "Agendamento de avaliação perfeitamente integrado e sem fricção"
+    ],
+    faqs: [
+      { question: "Posso destacar equipamentos específicos (ex: Ultraformer)?", answer: "Sim! Pacientes buscam por tecnologias específicas. Teremos páginas detalhando os equipamentos que sua clínica possui." },
+      { question: "O design passa a imagem de clínica de luxo?", answer: "Totalmente. O layout é limpo, utiliza as cores da sua marca e fontes modernas que remetem ao mercado de estética premium." },
+      { question: "Como funciona a captação local?", answer: "Otimizamos o site para ranquear no Google da sua cidade sempre que procurarem por 'harmonização facial em [Sua Cidade]' ou tratamentos estéticos." }
+    ]
+  },
+  'energia-solar': {
+    title: "Site para Empresas de Energia Solar",
+    heroSubtitle: "Gere orçamentos corporativos (B2B) e residenciais todos os dias. Capture o cliente no exato momento em que ele pesquisa por economia.",
+    painPointTitle: "Seus vendedores perdem tempo com curiosos desqualificados?",
+    painPointDescription: "O mercado de energia solar explodiu. Quando uma indústria ou residência na sua cidade decide instalar painéis, eles buscam no Google. Se o seu site não explica o ROI, o financiamento e não facilita o orçamento da fatura, você perde o projeto. Nós montamos uma máquina de captação solar.",
+    benefits: [
+      "Formulário inteligente para pré-qualificar a fatura de energia",
+      "Foco total em gerar orçamentos B2B (empresas, indústrias e rural)",
+      "Copywriting agressivo focando em ROI e economia imediata"
+    ],
+    faqs: [
+      { question: "Como o site qualifica o lead de energia solar?", answer: "Utilizamos formulários que pedem o valor médio da conta de luz antes de liberar o contato, poupando o tempo do seu time comercial." },
+      { question: "Ajuda a vender para indústrias e comércio?", answer: "Sim! Teremos páginas específicas abordando a economia de ICMS e o ROI focado no empresário local." },
+      { question: "Posso expor os sistemas já instalados?", answer: "Com certeza. Ter um portfólio de usinas instaladas na região gera a segurança necessária para o cliente fechar projetos caros." }
+    ]
+  },
+  'oficinas-mecanicas': {
+    title: "Site para Oficinas Mecânicas e Estética Automotiva",
+    heroSubtitle: "Atraia clientes locais que buscam confiança e qualidade para seus veículos. Lotamos o seu box com revisões rentáveis e vitrificação.",
+    painPointTitle: "Quando o carro quebra, o cliente pesquisa no Google. Você está lá?",
+    painPointDescription: "A escolha de uma oficina mecânica ou centro de detalhamento automotivo é 100% baseada em confiança e urgência. Se o seu site não mostra a sua estrutura, transparência e avaliações reais na sua cidade, o cliente escolhe o concorrente. Nós criamos a estrutura perfeita.",
+    benefits: [
+      "Botão de agendamento de revisão e 'SOS' direto para o WhatsApp",
+      "Galeria mostrando a organização, equipamentos premium e limpeza do box",
+      "Foco em serviços altamente rentáveis (revisão programada, PPF)"
+    ],
+    faqs: [
+      { question: "Funciona para estética automotiva (Detailer)?", answer: "Perfeitamente. O site destaca os resultados de polimento, vitrificação e PPF, atraindo donos de carros premium da região." },
+      { question: "Como captar clientes para revisão mecânica?", answer: "Focamos a copy em 'segurança da família' e 'manutenção preventiva', incentivando o cliente a não esperar o carro quebrar." },
+      { question: "O site passa confiança para quem não entende de carro?", answer: "Sim. O copywriting é focado em transparência, honestidade e explicação fácil, quebrando o maior medo do cliente de mecânica." }
+    ]
   }
 };
 
