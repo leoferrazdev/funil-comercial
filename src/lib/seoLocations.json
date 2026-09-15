@@ -6,9 +6,59 @@
       "nome": "São Paulo"
     },
     {
-      "estado": "sp",
-      "cidade": "campinas",
-      "nome": "Campinas"
+      "estado": "rj",
+      "cidade": "rio-de-janeiro",
+      "nome": "Rio de Janeiro"
+    },
+    {
+      "estado": "df",
+      "cidade": "brasilia",
+      "nome": "Brasília"
+    },
+    {
+      "estado": "ba",
+      "cidade": "salvador",
+      "nome": "Salvador"
+    },
+    {
+      "estado": "ce",
+      "cidade": "fortaleza",
+      "nome": "Fortaleza"
+    },
+    {
+      "estado": "mg",
+      "cidade": "belo-horizonte",
+      "nome": "Belo Horizonte"
+    },
+    {
+      "estado": "am",
+      "cidade": "manaus",
+      "nome": "Manaus"
+    },
+    {
+      "estado": "pr",
+      "cidade": "curitiba",
+      "nome": "Curitiba"
+    },
+    {
+      "estado": "pe",
+      "cidade": "recife",
+      "nome": "Recife"
+    },
+    {
+      "estado": "go",
+      "cidade": "goiania",
+      "nome": "Goiânia"
+    },
+    {
+      "estado": "pa",
+      "cidade": "belem",
+      "nome": "Belém"
+    },
+    {
+      "estado": "rs",
+      "cidade": "porto-alegre",
+      "nome": "Porto Alegre"
     },
     {
       "estado": "sp",
@@ -17,18 +67,58 @@
     },
     {
       "estado": "sp",
+      "cidade": "campinas",
+      "nome": "Campinas"
+    },
+    {
+      "estado": "ma",
+      "cidade": "sao-luis",
+      "nome": "São Luís"
+    },
+    {
+      "estado": "rj",
+      "cidade": "sao-goncalo",
+      "nome": "São Gonçalo"
+    },
+    {
+      "estado": "al",
+      "cidade": "maceio",
+      "nome": "Maceió"
+    },
+    {
+      "estado": "rj",
+      "cidade": "duque-de-caxias",
+      "nome": "Duque de Caxias"
+    },
+    {
+      "estado": "ms",
+      "cidade": "campo-grande",
+      "nome": "Campo Grande"
+    },
+    {
+      "estado": "rn",
+      "cidade": "natal",
+      "nome": "Natal"
+    },
+    {
+      "estado": "pi",
+      "cidade": "teresina",
+      "nome": "Teresina"
+    },
+    {
+      "estado": "sp",
       "cidade": "sao-bernardo-do-campo",
       "nome": "São Bernardo do Campo"
     },
     {
-      "estado": "sp",
-      "cidade": "santo-andre",
-      "nome": "Santo André"
+      "estado": "pb",
+      "cidade": "joao-pessoa",
+      "nome": "João Pessoa"
     },
     {
-      "estado": "sp",
-      "cidade": "osasco",
-      "nome": "Osasco"
+      "estado": "rj",
+      "cidade": "nova-iguacu",
+      "nome": "Nova Iguaçu"
     },
     {
       "estado": "sp",
@@ -37,8 +127,28 @@
     },
     {
       "estado": "sp",
+      "cidade": "santo-andre",
+      "nome": "Santo André"
+    },
+    {
+      "estado": "sp",
       "cidade": "ribeirao-preto",
       "nome": "Ribeirão Preto"
+    },
+    {
+      "estado": "pe",
+      "cidade": "jaboatao-dos-guararapes",
+      "nome": "Jaboatão dos Guararapes"
+    },
+    {
+      "estado": "mg",
+      "cidade": "uberlandia",
+      "nome": "Uberlândia"
+    },
+    {
+      "estado": "sp",
+      "cidade": "osasco",
+      "nome": "Osasco"
     },
     {
       "estado": "sp",
@@ -46,14 +156,129 @@
       "nome": "Sorocaba"
     },
     {
+      "estado": "mg",
+      "cidade": "contagem",
+      "nome": "Contagem"
+    },
+    {
+      "estado": "se",
+      "cidade": "aracaju",
+      "nome": "Aracaju"
+    },
+    {
+      "estado": "ba",
+      "cidade": "feira-de-santana",
+      "nome": "Feira de Santana"
+    },
+    {
+      "estado": "mt",
+      "cidade": "cuiaba",
+      "nome": "Cuiabá"
+    },
+    {
+      "estado": "sc",
+      "cidade": "joinville",
+      "nome": "Joinville"
+    },
+    {
+      "estado": "go",
+      "cidade": "aparecida-de-goiania",
+      "nome": "Aparecida de Goiânia"
+    },
+    {
+      "estado": "pr",
+      "cidade": "londrina",
+      "nome": "Londrina"
+    },
+    {
+      "estado": "mg",
+      "cidade": "juiz-de-fora",
+      "nome": "Juiz de Fora"
+    },
+    {
+      "estado": "ro",
+      "cidade": "porto-velho",
+      "nome": "Porto Velho"
+    },
+    {
+      "estado": "pa",
+      "cidade": "ananindeua",
+      "nome": "Ananindeua"
+    },
+    {
+      "estado": "es",
+      "cidade": "serra",
+      "nome": "Serra"
+    },
+    {
+      "estado": "rs",
+      "cidade": "caxias-do-sul",
+      "nome": "Caxias do Sul"
+    },
+    {
+      "estado": "ap",
+      "cidade": "macapa",
+      "nome": "Macapá"
+    },
+    {
+      "estado": "rj",
+      "cidade": "niteroi",
+      "nome": "Niterói"
+    },
+    {
+      "estado": "sc",
+      "cidade": "florianopolis",
+      "nome": "Florianópolis"
+    },
+    {
+      "estado": "rj",
+      "cidade": "belford-roxo",
+      "nome": "Belford Roxo"
+    },
+    {
+      "estado": "rj",
+      "cidade": "campos-dos-goytacazes",
+      "nome": "Campos dos Goytacazes"
+    },
+    {
+      "estado": "es",
+      "cidade": "vila-velha",
+      "nome": "Vila Velha"
+    },
+    {
       "estado": "sp",
       "cidade": "maua",
       "nome": "Mauá"
     },
     {
+      "estado": "rj",
+      "cidade": "sao-joao-de-meriti",
+      "nome": "São João de Meriti"
+    },
+    {
       "estado": "sp",
       "cidade": "sao-jose-do-rio-preto",
       "nome": "São José do Rio Preto"
+    },
+    {
+      "estado": "sp",
+      "cidade": "mogi-das-cruzes",
+      "nome": "Mogi das Cruzes"
+    },
+    {
+      "estado": "mg",
+      "cidade": "betim",
+      "nome": "Betim"
+    },
+    {
+      "estado": "rr",
+      "cidade": "boa-vista",
+      "nome": "Boa Vista"
+    },
+    {
+      "estado": "pr",
+      "cidade": "maringa",
+      "nome": "Maringá"
     },
     {
       "estado": "sp",
@@ -71,6 +296,21 @@
       "nome": "Jundiaí"
     },
     {
+      "estado": "ac",
+      "cidade": "rio-branco",
+      "nome": "Rio Branco"
+    },
+    {
+      "estado": "mg",
+      "cidade": "montes-claros",
+      "nome": "Montes Claros"
+    },
+    {
+      "estado": "pb",
+      "cidade": "campina-grande",
+      "nome": "Campina Grande"
+    },
+    {
       "estado": "sp",
       "cidade": "piracicaba",
       "nome": "Piracicaba"
@@ -79,6 +319,21 @@
       "estado": "sp",
       "cidade": "carapicuiba",
       "nome": "Carapicuíba"
+    },
+    {
+      "estado": "go",
+      "cidade": "anapolis",
+      "nome": "Anápolis"
+    },
+    {
+      "estado": "pe",
+      "cidade": "olinda",
+      "nome": "Olinda"
+    },
+    {
+      "estado": "es",
+      "cidade": "cariacica",
+      "nome": "Cariacica"
     },
     {
       "estado": "sp",
@@ -96,169 +351,29 @@
       "nome": "São Vicente"
     },
     {
-      "estado": "sp",
-      "cidade": "franca",
-      "nome": "Franca"
+      "estado": "es",
+      "cidade": "vitoria",
+      "nome": "Vitória"
     },
     {
-      "estado": "sp",
-      "cidade": "praia-grande",
-      "nome": "Praia Grande"
+      "estado": "pe",
+      "cidade": "caruaru",
+      "nome": "Caruaru"
     },
     {
-      "estado": "sp",
-      "cidade": "guaruja",
-      "nome": "Guarujá"
+      "estado": "ce",
+      "cidade": "caucaia",
+      "nome": "Caucaia"
     },
     {
-      "estado": "sp",
-      "cidade": "taubate",
-      "nome": "Taubaté"
+      "estado": "sc",
+      "cidade": "blumenau",
+      "nome": "Blumenau"
     },
     {
-      "estado": "sp",
-      "cidade": "suzano",
-      "nome": "Suzano"
-    },
-    {
-      "estado": "sp",
-      "cidade": "limeira",
-      "nome": "Limeira"
-    },
-    {
-      "estado": "rj",
-      "cidade": "rio-de-janeiro",
-      "nome": "Rio de Janeiro"
-    },
-    {
-      "estado": "rj",
-      "cidade": "sao-goncalo",
-      "nome": "São Gonçalo"
-    },
-    {
-      "estado": "rj",
-      "cidade": "duque-de-caxias",
-      "nome": "Duque de Caxias"
-    },
-    {
-      "estado": "rj",
-      "cidade": "nova-iguacu",
-      "nome": "Nova Iguaçu"
-    },
-    {
-      "estado": "rj",
-      "cidade": "niteroi",
-      "nome": "Niterói"
-    },
-    {
-      "estado": "rj",
-      "cidade": "belford-roxo",
-      "nome": "Belford Roxo"
-    },
-    {
-      "estado": "rj",
-      "cidade": "campos-dos-goytacazes",
-      "nome": "Campos dos Goytacazes"
-    },
-    {
-      "estado": "rj",
-      "cidade": "sao-joao-de-meriti",
-      "nome": "São João de Meriti"
-    },
-    {
-      "estado": "rj",
-      "cidade": "petropolis",
-      "nome": "Petrópolis"
-    },
-    {
-      "estado": "rj",
-      "cidade": "volta-redonda",
-      "nome": "Volta Redonda"
-    },
-    {
-      "estado": "rj",
-      "cidade": "macae",
-      "nome": "Macaé"
-    },
-    {
-      "estado": "rj",
-      "cidade": "mage",
-      "nome": "Magé"
-    },
-    {
-      "estado": "mg",
-      "cidade": "belo-horizonte",
-      "nome": "Belo Horizonte"
-    },
-    {
-      "estado": "mg",
-      "cidade": "uberlandia",
-      "nome": "Uberlândia"
-    },
-    {
-      "estado": "mg",
-      "cidade": "contagem",
-      "nome": "Contagem"
-    },
-    {
-      "estado": "mg",
-      "cidade": "juiz-de-fora",
-      "nome": "Juiz de Fora"
-    },
-    {
-      "estado": "mg",
-      "cidade": "betim",
-      "nome": "Betim"
-    },
-    {
-      "estado": "mg",
-      "cidade": "montes-claros",
-      "nome": "Montes Claros"
-    },
-    {
-      "estado": "mg",
-      "cidade": "ribeirao-das-neves",
-      "nome": "Ribeirão das Neves"
-    },
-    {
-      "estado": "mg",
-      "cidade": "uberaba",
-      "nome": "Uberaba"
-    },
-    {
-      "estado": "mg",
-      "cidade": "governador-valadares",
-      "nome": "Governador Valadares"
-    },
-    {
-      "estado": "mg",
-      "cidade": "ipatinga",
-      "nome": "Ipatinga"
-    },
-    {
-      "estado": "mg",
-      "cidade": "sete-lagoas",
-      "nome": "Sete Lagoas"
-    },
-    {
-      "estado": "mg",
-      "cidade": "divinopolis",
-      "nome": "Divinópolis"
-    },
-    {
-      "estado": "pr",
-      "cidade": "curitiba",
-      "nome": "Curitiba"
-    },
-    {
-      "estado": "pr",
-      "cidade": "londrina",
-      "nome": "Londrina"
-    },
-    {
-      "estado": "pr",
-      "cidade": "maringa",
-      "nome": "Maringá"
+      "estado": "pe",
+      "cidade": "petrolina",
+      "nome": "Petrolina"
     },
     {
       "estado": "pr",
@@ -266,44 +381,9 @@
       "nome": "Ponta Grossa"
     },
     {
-      "estado": "pr",
-      "cidade": "cascavel",
-      "nome": "Cascavel"
-    },
-    {
-      "estado": "pr",
-      "cidade": "sao-jose-dos-pinhais",
-      "nome": "São José dos Pinhais"
-    },
-    {
-      "estado": "pr",
-      "cidade": "foz-do-iguacu",
-      "nome": "Foz do Iguaçu"
-    },
-    {
-      "estado": "pr",
-      "cidade": "colombo",
-      "nome": "Colombo"
-    },
-    {
-      "estado": "pr",
-      "cidade": "guarapuava",
-      "nome": "Guarapuava"
-    },
-    {
-      "estado": "pr",
-      "cidade": "paranagua",
-      "nome": "Paranaguá"
-    },
-    {
-      "estado": "rs",
-      "cidade": "porto-alegre",
-      "nome": "Porto Alegre"
-    },
-    {
-      "estado": "rs",
-      "cidade": "caxias-do-sul",
-      "nome": "Caxias do Sul"
+      "estado": "sp",
+      "cidade": "franca",
+      "nome": "Franca"
     },
     {
       "estado": "rs",
@@ -316,9 +396,104 @@
       "nome": "Pelotas"
     },
     {
-      "estado": "rs",
-      "cidade": "santa-maria",
-      "nome": "Santa Maria"
+      "estado": "ba",
+      "cidade": "vitoria-da-conquista",
+      "nome": "Vitória da Conquista"
+    },
+    {
+      "estado": "mg",
+      "cidade": "ribeirao-das-neves",
+      "nome": "Ribeirão das Neves"
+    },
+    {
+      "estado": "mg",
+      "cidade": "uberaba",
+      "nome": "Uberaba"
+    },
+    {
+      "estado": "pe",
+      "cidade": "paulista",
+      "nome": "Paulista"
+    },
+    {
+      "estado": "sp",
+      "cidade": "praia-grande",
+      "nome": "Praia Grande"
+    },
+    {
+      "estado": "pr",
+      "cidade": "cascavel",
+      "nome": "Cascavel"
+    },
+    {
+      "estado": "pr",
+      "cidade": "sao-jose-dos-pinhais",
+      "nome": "São José dos Pinhais"
+    },
+    {
+      "estado": "sp",
+      "cidade": "guaruja",
+      "nome": "Guarujá"
+    },
+    {
+      "estado": "sp",
+      "cidade": "taubate",
+      "nome": "Taubaté"
+    },
+    {
+      "estado": "to",
+      "cidade": "palmas",
+      "nome": "Palmas"
+    },
+    {
+      "estado": "sp",
+      "cidade": "limeira",
+      "nome": "Limeira"
+    },
+    {
+      "estado": "ba",
+      "cidade": "camacari",
+      "nome": "Camaçari"
+    },
+    {
+      "estado": "pa",
+      "cidade": "santarem",
+      "nome": "Santarém"
+    },
+    {
+      "estado": "rj",
+      "cidade": "petropolis",
+      "nome": "Petrópolis"
+    },
+    {
+      "estado": "rn",
+      "cidade": "mossoro",
+      "nome": "Mossoró"
+    },
+    {
+      "estado": "sp",
+      "cidade": "suzano",
+      "nome": "Suzano"
+    },
+    {
+      "estado": "sp",
+      "cidade": "taboao-da-serra",
+      "nome": "Taboão da Serra"
+    },
+    {
+      "estado": "mt",
+      "cidade": "varzea-grande",
+      "nome": "Várzea Grande"
+    },
+    {
+      "estado": "sp",
+      "cidade": "sumare",
+      "nome": "Sumaré"
+    },
+    {
+      "estado": "pa",
+      "cidade": "maraba",
+      "nome": "Marabá"
     },
     {
       "estado": "rs",
@@ -327,8 +502,93 @@
     },
     {
       "estado": "rs",
+      "cidade": "santa-maria",
+      "nome": "Santa Maria"
+    },
+    {
+      "estado": "mg",
+      "cidade": "governador-valadares",
+      "nome": "Governador Valadares"
+    },
+    {
+      "estado": "sp",
+      "cidade": "barueri",
+      "nome": "Barueri"
+    },
+    {
+      "estado": "sp",
+      "cidade": "embu-das-artes",
+      "nome": "Embu das Artes"
+    },
+    {
+      "estado": "ce",
+      "cidade": "juazeiro-do-norte",
+      "nome": "Juazeiro do Norte"
+    },
+    {
+      "estado": "rj",
+      "cidade": "volta-redonda",
+      "nome": "Volta Redonda"
+    },
+    {
+      "estado": "rn",
+      "cidade": "parnamirim",
+      "nome": "Parnamirim"
+    },
+    {
+      "estado": "mg",
+      "cidade": "ipatinga",
+      "nome": "Ipatinga"
+    },
+    {
+      "estado": "rj",
+      "cidade": "macae",
+      "nome": "Macaé"
+    },
+    {
+      "estado": "sp",
+      "cidade": "indaiatuba",
+      "nome": "Indaiatuba"
+    },
+    {
+      "estado": "ma",
+      "cidade": "imperatriz",
+      "nome": "Imperatriz"
+    },
+    {
+      "estado": "pr",
+      "cidade": "foz-do-iguacu",
+      "nome": "Foz do Iguaçu"
+    },
+    {
+      "estado": "sp",
+      "cidade": "cotia",
+      "nome": "Cotia"
+    },
+    {
+      "estado": "rs",
       "cidade": "viamao",
       "nome": "Viamão"
+    },
+    {
+      "estado": "sp",
+      "cidade": "sao-carlos",
+      "nome": "São Carlos"
+    },
+    {
+      "estado": "sc",
+      "cidade": "sao-jose",
+      "nome": "São José"
+    },
+    {
+      "estado": "pr",
+      "cidade": "colombo",
+      "nome": "Colombo"
+    },
+    {
+      "estado": "rj",
+      "cidade": "mage",
+      "nome": "Magé"
     },
     {
       "estado": "rs",
@@ -336,34 +596,89 @@
       "nome": "Novo Hamburgo"
     },
     {
+      "estado": "go",
+      "cidade": "rio-verde",
+      "nome": "Rio Verde"
+    },
+    {
+      "estado": "rj",
+      "cidade": "itaborai",
+      "nome": "Itaboraí"
+    },
+    {
+      "estado": "sp",
+      "cidade": "americana",
+      "nome": "Americana"
+    },
+    {
+      "estado": "sp",
+      "cidade": "itapevi",
+      "nome": "Itapevi"
+    },
+    {
+      "estado": "mg",
+      "cidade": "sete-lagoas",
+      "nome": "Sete Lagoas"
+    },
+    {
+      "estado": "mg",
+      "cidade": "divinopolis",
+      "nome": "Divinópolis"
+    },
+    {
+      "estado": "sp",
+      "cidade": "marilia",
+      "nome": "Marília"
+    },
+    {
+      "estado": "sp",
+      "cidade": "araraquara",
+      "nome": "Araraquara"
+    },
+    {
       "estado": "rs",
       "cidade": "sao-leopoldo",
       "nome": "São Leopoldo"
     },
     {
-      "estado": "rs",
-      "cidade": "rio-grande",
-      "nome": "Rio Grande"
+      "estado": "mt",
+      "cidade": "rondonopolis",
+      "nome": "Rondonópolis"
     },
     {
-      "estado": "sc",
-      "cidade": "joinville",
-      "nome": "Joinville"
+      "estado": "sp",
+      "cidade": "hortolandia",
+      "nome": "Hortolândia"
     },
     {
-      "estado": "sc",
-      "cidade": "florianopolis",
-      "nome": "Florianópolis"
+      "estado": "sp",
+      "cidade": "jacarei",
+      "nome": "Jacareí"
     },
     {
-      "estado": "sc",
-      "cidade": "blumenau",
-      "nome": "Blumenau"
+      "estado": "al",
+      "cidade": "arapiraca",
+      "nome": "Arapiraca"
     },
     {
-      "estado": "sc",
-      "cidade": "sao-jose",
-      "nome": "São José"
+      "estado": "rj",
+      "cidade": "cabo-frio",
+      "nome": "Cabo Frio"
+    },
+    {
+      "estado": "sp",
+      "cidade": "presidente-prudente",
+      "nome": "Presidente Prudente"
+    },
+    {
+      "estado": "ce",
+      "cidade": "maracanau",
+      "nome": "Maracanaú"
+    },
+    {
+      "estado": "ms",
+      "cidade": "dourados",
+      "nome": "Dourados"
     },
     {
       "estado": "sc",
@@ -376,69 +691,14 @@
       "nome": "Itajaí"
     },
     {
-      "estado": "sc",
-      "cidade": "criciuma",
-      "nome": "Criciúma"
+      "estado": "go",
+      "cidade": "aguas-lindas-de-goias",
+      "nome": "Águas Lindas de Goiás"
     },
     {
-      "estado": "sc",
-      "cidade": "jaragua-do-sul",
-      "nome": "Jaraguá do Sul"
-    },
-    {
-      "estado": "sc",
-      "cidade": "palhoca",
-      "nome": "Palhoça"
-    },
-    {
-      "estado": "sc",
-      "cidade": "lages",
-      "nome": "Lages"
-    },
-    {
-      "estado": "es",
-      "cidade": "serra",
-      "nome": "Serra"
-    },
-    {
-      "estado": "es",
-      "cidade": "vila-velha",
-      "nome": "Vila Velha"
-    },
-    {
-      "estado": "es",
-      "cidade": "cariacica",
-      "nome": "Cariacica"
-    },
-    {
-      "estado": "es",
-      "cidade": "vitoria",
-      "nome": "Vitória"
-    },
-    {
-      "estado": "es",
-      "cidade": "cachoeiro-de-itapemirim",
-      "nome": "Cachoeiro de Itapemirim"
-    },
-    {
-      "estado": "ba",
-      "cidade": "salvador",
-      "nome": "Salvador"
-    },
-    {
-      "estado": "ba",
-      "cidade": "feira-de-santana",
-      "nome": "Feira de Santana"
-    },
-    {
-      "estado": "ba",
-      "cidade": "vitoria-da-conquista",
-      "nome": "Vitória da Conquista"
-    },
-    {
-      "estado": "ba",
-      "cidade": "camacari",
-      "nome": "Camaçari"
+      "estado": "mg",
+      "cidade": "santa-luzia",
+      "nome": "Santa Luzia"
     },
     {
       "estado": "ba",
@@ -446,89 +706,14 @@
       "nome": "Juazeiro"
     },
     {
-      "estado": "ba",
-      "cidade": "itabuna",
-      "nome": "Itabuna"
+      "estado": "sc",
+      "cidade": "criciuma",
+      "nome": "Criciúma"
     },
     {
-      "estado": "ba",
-      "cidade": "lauro-de-freitas",
-      "nome": "Lauro de Freitas"
-    },
-    {
-      "estado": "pe",
-      "cidade": "recife",
-      "nome": "Recife"
-    },
-    {
-      "estado": "pe",
-      "cidade": "jaboatao-dos-guararapes",
-      "nome": "Jaboatão dos Guararapes"
-    },
-    {
-      "estado": "pe",
-      "cidade": "olinda",
-      "nome": "Olinda"
-    },
-    {
-      "estado": "pe",
-      "cidade": "caruaru",
-      "nome": "Caruaru"
-    },
-    {
-      "estado": "pe",
-      "cidade": "petrolina",
-      "nome": "Petrolina"
-    },
-    {
-      "estado": "pe",
-      "cidade": "paulista",
-      "nome": "Paulista"
-    },
-    {
-      "estado": "ce",
-      "cidade": "fortaleza",
-      "nome": "Fortaleza"
-    },
-    {
-      "estado": "ce",
-      "cidade": "caucaia",
-      "nome": "Caucaia"
-    },
-    {
-      "estado": "ce",
-      "cidade": "juazeiro-do-norte",
-      "nome": "Juazeiro do Norte"
-    },
-    {
-      "estado": "ce",
-      "cidade": "maracanau",
-      "nome": "Maracanaú"
-    },
-    {
-      "estado": "ce",
-      "cidade": "sobral",
-      "nome": "Sobral"
-    },
-    {
-      "estado": "go",
-      "cidade": "goiania",
-      "nome": "Goiânia"
-    },
-    {
-      "estado": "go",
-      "cidade": "aparecida-de-goiania",
-      "nome": "Aparecida de Goiânia"
-    },
-    {
-      "estado": "go",
-      "cidade": "anapolis",
-      "nome": "Anápolis"
-    },
-    {
-      "estado": "go",
-      "cidade": "rio-verde",
-      "nome": "Rio Verde"
+      "estado": "pa",
+      "cidade": "parauapebas",
+      "nome": "Parauapebas"
     },
     {
       "estado": "go",
@@ -536,34 +721,1784 @@
       "nome": "Luziânia"
     },
     {
-      "estado": "mt",
-      "cidade": "cuiaba",
-      "nome": "Cuiabá"
+      "estado": "ba",
+      "cidade": "itabuna",
+      "nome": "Itabuna"
+    },
+    {
+      "estado": "rs",
+      "cidade": "rio-grande",
+      "nome": "Rio Grande"
+    },
+    {
+      "estado": "ce",
+      "cidade": "sobral",
+      "nome": "Sobral"
+    },
+    {
+      "estado": "rs",
+      "cidade": "alvorada",
+      "nome": "Alvorada"
+    },
+    {
+      "estado": "es",
+      "cidade": "cachoeiro-de-itapemirim",
+      "nome": "Cachoeiro de Itapemirim"
+    },
+    {
+      "estado": "pe",
+      "cidade": "cabo-de-santo-agostinho",
+      "nome": "Cabo de Santo Agostinho"
+    },
+    {
+      "estado": "rj",
+      "cidade": "angra-dos-reis",
+      "nome": "Angra dos Reis"
+    },
+    {
+      "estado": "sp",
+      "cidade": "rio-claro",
+      "nome": "Rio Claro"
+    },
+    {
+      "estado": "rs",
+      "cidade": "passo-fundo",
+      "nome": "Passo Fundo"
+    },
+    {
+      "estado": "pa",
+      "cidade": "castanhal",
+      "nome": "Castanhal"
+    },
+    {
+      "estado": "ba",
+      "cidade": "lauro-de-freitas",
+      "nome": "Lauro de Freitas"
+    },
+    {
+      "estado": "sp",
+      "cidade": "aracatuba",
+      "nome": "Araçatuba"
+    },
+    {
+      "estado": "sp",
+      "cidade": "ferraz-de-vasconcelos",
+      "nome": "Ferraz de Vasconcelos"
+    },
+    {
+      "estado": "sp",
+      "cidade": "santa-barbara-doeste",
+      "nome": "Santa Bárbara d'Oeste"
+    },
+    {
+      "estado": "rj",
+      "cidade": "nova-friburgo",
+      "nome": "Nova Friburgo"
+    },
+    {
+      "estado": "se",
+      "cidade": "nossa-senhora-do-socorro",
+      "nome": "Nossa Senhora do Socorro"
+    },
+    {
+      "estado": "to",
+      "cidade": "araguaina",
+      "nome": "Araguaína"
+    },
+    {
+      "estado": "rj",
+      "cidade": "teresopolis",
+      "nome": "Teresópolis"
+    },
+    {
+      "estado": "rj",
+      "cidade": "barra-mansa",
+      "nome": "Barra Mansa"
+    },
+    {
+      "estado": "sc",
+      "cidade": "jaragua-do-sul",
+      "nome": "Jaraguá do Sul"
+    },
+    {
+      "estado": "mg",
+      "cidade": "ibirite",
+      "nome": "Ibirité"
+    },
+    {
+      "estado": "pr",
+      "cidade": "guarapuava",
+      "nome": "Guarapuava"
+    },
+    {
+      "estado": "ma",
+      "cidade": "sao-jose-de-ribamar",
+      "nome": "São José de Ribamar"
+    },
+    {
+      "estado": "es",
+      "cidade": "linhares",
+      "nome": "Linhares"
+    },
+    {
+      "estado": "sp",
+      "cidade": "itapecerica-da-serra",
+      "nome": "Itapecerica da Serra"
+    },
+    {
+      "estado": "sp",
+      "cidade": "francisco-morato",
+      "nome": "Francisco Morato"
+    },
+    {
+      "estado": "sc",
+      "cidade": "palhoca",
+      "nome": "Palhoça"
+    },
+    {
+      "estado": "sp",
+      "cidade": "itu",
+      "nome": "Itu"
+    },
+    {
+      "estado": "rj",
+      "cidade": "mesquita",
+      "nome": "Mesquita"
+    },
+    {
+      "estado": "go",
+      "cidade": "valparaiso-de-goias",
+      "nome": "Valparaíso de Goiás"
+    },
+    {
+      "estado": "sp",
+      "cidade": "braganca-paulista",
+      "nome": "Bragança Paulista"
+    },
+    {
+      "estado": "sp",
+      "cidade": "pindamonhangaba",
+      "nome": "Pindamonhangaba"
+    },
+    {
+      "estado": "ma",
+      "cidade": "timon",
+      "nome": "Timon"
+    },
+    {
+      "estado": "mg",
+      "cidade": "pocos-de-caldas",
+      "nome": "Poços de Caldas"
+    },
+    {
+      "estado": "rj",
+      "cidade": "marica",
+      "nome": "Maricá"
+    },
+    {
+      "estado": "sp",
+      "cidade": "itapetininga",
+      "nome": "Itapetininga"
+    },
+    {
+      "estado": "ma",
+      "cidade": "caxias",
+      "nome": "Caxias"
+    },
+    {
+      "estado": "ba",
+      "cidade": "teixeira-de-freitas",
+      "nome": "Teixeira de Freitas"
+    },
+    {
+      "estado": "rj",
+      "cidade": "nilopolis",
+      "nome": "Nilópolis"
+    },
+    {
+      "estado": "sp",
+      "cidade": "sao-caetano-do-sul",
+      "nome": "São Caetano do Sul"
+    },
+    {
+      "estado": "pa",
+      "cidade": "abaetetuba",
+      "nome": "Abaetetuba"
+    },
+    {
+      "estado": "pe",
+      "cidade": "camaragibe",
+      "nome": "Camaragibe"
+    },
+    {
+      "estado": "rj",
+      "cidade": "rio-das-ostras",
+      "nome": "Rio das Ostras"
+    },
+    {
+      "estado": "sp",
+      "cidade": "franco-da-rocha",
+      "nome": "Franco da Rocha"
+    },
+    {
+      "estado": "ba",
+      "cidade": "barreiras",
+      "nome": "Barreiras"
+    },
+    {
+      "estado": "ba",
+      "cidade": "ilheus",
+      "nome": "Ilhéus"
+    },
+    {
+      "estado": "pr",
+      "cidade": "paranagua",
+      "nome": "Paranaguá"
+    },
+    {
+      "estado": "sc",
+      "cidade": "lages",
+      "nome": "Lages"
+    },
+    {
+      "estado": "ba",
+      "cidade": "jequie",
+      "nome": "Jequié"
+    },
+    {
+      "estado": "mg",
+      "cidade": "patos-de-minas",
+      "nome": "Patos de Minas"
+    },
+    {
+      "estado": "mg",
+      "cidade": "pouso-alegre",
+      "nome": "Pouso Alegre"
+    },
+    {
+      "estado": "sp",
+      "cidade": "mogi-guacu",
+      "nome": "Mogi Guaçu"
+    },
+    {
+      "estado": "pi",
+      "cidade": "parnaiba",
+      "nome": "Parnaíba"
+    },
+    {
+      "estado": "sp",
+      "cidade": "jau",
+      "nome": "Jaú"
+    },
+    {
+      "estado": "ba",
+      "cidade": "alagoinhas",
+      "nome": "Alagoinhas"
+    },
+    {
+      "estado": "ba",
+      "cidade": "porto-seguro",
+      "nome": "Porto Seguro"
+    },
+    {
+      "estado": "rj",
+      "cidade": "queimados",
+      "nome": "Queimados"
+    },
+    {
+      "estado": "sp",
+      "cidade": "botucatu",
+      "nome": "Botucatu"
+    },
+    {
+      "estado": "sc",
+      "cidade": "balneario-camboriu",
+      "nome": "Balneário Camboriú"
     },
     {
       "estado": "mt",
-      "cidade": "varzea-grande",
-      "nome": "Várzea Grande"
+      "cidade": "sinop",
+      "nome": "Sinop"
     },
     {
-      "estado": "mt",
-      "cidade": "rondonopolis",
-      "nome": "Rondonópolis"
+      "estado": "pr",
+      "cidade": "araucaria",
+      "nome": "Araucária"
+    },
+    {
+      "estado": "sp",
+      "cidade": "atibaia",
+      "nome": "Atibaia"
+    },
+    {
+      "estado": "sp",
+      "cidade": "santana-de-parnaiba",
+      "nome": "Santana de Parnaíba"
+    },
+    {
+      "estado": "pr",
+      "cidade": "toledo",
+      "nome": "Toledo"
+    },
+    {
+      "estado": "rs",
+      "cidade": "sapucaia-do-sul",
+      "nome": "Sapucaia do Sul"
+    },
+    {
+      "estado": "pe",
+      "cidade": "garanhuns",
+      "nome": "Garanhuns"
+    },
+    {
+      "estado": "mg",
+      "cidade": "teofilo-otoni",
+      "nome": "Teófilo Otoni"
+    },
+    {
+      "estado": "pa",
+      "cidade": "cameta",
+      "nome": "Cametá"
+    },
+    {
+      "estado": "sc",
+      "cidade": "brusque",
+      "nome": "Brusque"
+    },
+    {
+      "estado": "pe",
+      "cidade": "vitoria-de-santo-antao",
+      "nome": "Vitória de Santo Antão"
+    },
+    {
+      "estado": "mg",
+      "cidade": "barbacena",
+      "nome": "Barbacena"
+    },
+    {
+      "estado": "pb",
+      "cidade": "santa-rita",
+      "nome": "Santa Rita"
+    },
+    {
+      "estado": "mg",
+      "cidade": "sabara",
+      "nome": "Sabará"
+    },
+    {
+      "estado": "mg",
+      "cidade": "varginha",
+      "nome": "Varginha"
+    },
+    {
+      "estado": "pr",
+      "cidade": "apucarana",
+      "nome": "Apucarana"
+    },
+    {
+      "estado": "ba",
+      "cidade": "simoes-filho",
+      "nome": "Simões Filho"
+    },
+    {
+      "estado": "sp",
+      "cidade": "araras",
+      "nome": "Araras"
+    },
+    {
+      "estado": "rj",
+      "cidade": "itaguai",
+      "nome": "Itaguaí"
+    },
+    {
+      "estado": "rj",
+      "cidade": "araruama",
+      "nome": "Araruama"
+    },
+    {
+      "estado": "pa",
+      "cidade": "marituba",
+      "nome": "Marituba"
+    },
+    {
+      "estado": "pa",
+      "cidade": "sao-felix-do-xingu",
+      "nome": "São Félix do Xingu"
+    },
+    {
+      "estado": "pr",
+      "cidade": "campo-largo",
+      "nome": "Campo Largo"
+    },
+    {
+      "estado": "pr",
+      "cidade": "pinhais",
+      "nome": "Pinhais"
+    },
+    {
+      "estado": "es",
+      "cidade": "sao-mateus",
+      "nome": "São Mateus"
+    },
+    {
+      "estado": "ce",
+      "cidade": "crato",
+      "nome": "Crato"
+    },
+    {
+      "estado": "rj",
+      "cidade": "resende",
+      "nome": "Resende"
+    },
+    {
+      "estado": "sp",
+      "cidade": "valinhos",
+      "nome": "Valinhos"
+    },
+    {
+      "estado": "sp",
+      "cidade": "cubatao",
+      "nome": "Cubatão"
+    },
+    {
+      "estado": "rs",
+      "cidade": "santa-cruz-do-sul",
+      "nome": "Santa Cruz do Sul"
+    },
+    {
+      "estado": "rs",
+      "cidade": "cachoeirinha",
+      "nome": "Cachoeirinha"
+    },
+    {
+      "estado": "go",
+      "cidade": "trindade",
+      "nome": "Trindade"
+    },
+    {
+      "estado": "mg",
+      "cidade": "vespasiano",
+      "nome": "Vespasiano"
+    },
+    {
+      "estado": "ce",
+      "cidade": "itapipoca",
+      "nome": "Itapipoca"
+    },
+    {
+      "estado": "ce",
+      "cidade": "maranguape",
+      "nome": "Maranguape"
+    },
+    {
+      "estado": "ro",
+      "cidade": "ji-parana",
+      "nome": "Ji-Paraná"
+    },
+    {
+      "estado": "mg",
+      "cidade": "conselheiro-lafaiete",
+      "nome": "Conselheiro Lafaiete"
+    },
+    {
+      "estado": "pa",
+      "cidade": "braganca",
+      "nome": "Bragança"
+    },
+    {
+      "estado": "pa",
+      "cidade": "barcarena",
+      "nome": "Barcarena"
+    },
+    {
+      "estado": "es",
+      "cidade": "guarapari",
+      "nome": "Guarapari"
+    },
+    {
+      "estado": "sp",
+      "cidade": "sertaozinho",
+      "nome": "Sertãozinho"
+    },
+    {
+      "estado": "sp",
+      "cidade": "jandira",
+      "nome": "Jandira"
+    },
+    {
+      "estado": "rs",
+      "cidade": "uruguaiana",
+      "nome": "Uruguaiana"
+    },
+    {
+      "estado": "pr",
+      "cidade": "arapongas",
+      "nome": "Arapongas"
+    },
+    {
+      "estado": "sp",
+      "cidade": "birigui",
+      "nome": "Birigui"
+    },
+    {
+      "estado": "go",
+      "cidade": "formosa",
+      "nome": "Formosa"
+    },
+    {
+      "estado": "ma",
+      "cidade": "paco-do-lumiar",
+      "nome": "Paço do Lumiar"
+    },
+    {
+      "estado": "sp",
+      "cidade": "ribeirao-pires",
+      "nome": "Ribeirão Pires"
+    },
+    {
+      "estado": "sp",
+      "cidade": "caraguatatuba",
+      "nome": "Caraguatatuba"
     },
     {
       "estado": "ms",
-      "cidade": "campo-grande",
-      "nome": "Campo Grande"
+      "cidade": "tres-lagoas",
+      "nome": "Três Lagoas"
+    },
+    {
+      "estado": "ap",
+      "cidade": "santana",
+      "nome": "Santana"
+    },
+    {
+      "estado": "sp",
+      "cidade": "votorantim",
+      "nome": "Votorantim"
+    },
+    {
+      "estado": "es",
+      "cidade": "colatina",
+      "nome": "Colatina"
+    },
+    {
+      "estado": "sp",
+      "cidade": "varzea-paulista",
+      "nome": "Várzea Paulista"
+    },
+    {
+      "estado": "sp",
+      "cidade": "itatiba",
+      "nome": "Itatiba"
+    },
+    {
+      "estado": "sp",
+      "cidade": "tatui",
+      "nome": "Tatuí"
+    },
+    {
+      "estado": "sp",
+      "cidade": "barretos",
+      "nome": "Barretos"
+    },
+    {
+      "estado": "ma",
+      "cidade": "codo",
+      "nome": "Codó"
+    },
+    {
+      "estado": "sp",
+      "cidade": "guaratingueta",
+      "nome": "Guaratinguetá"
+    },
+    {
+      "estado": "sp",
+      "cidade": "catanduva",
+      "nome": "Catanduva"
+    },
+    {
+      "estado": "rs",
+      "cidade": "bento-goncalves",
+      "nome": "Bento Gonçalves"
+    },
+    {
+      "estado": "mg",
+      "cidade": "itabira",
+      "nome": "Itabira"
+    },
+    {
+      "estado": "rs",
+      "cidade": "bage",
+      "nome": "Bagé"
+    },
+    {
+      "estado": "go",
+      "cidade": "senador-canedo",
+      "nome": "Senador Canedo"
+    },
+    {
+      "estado": "pr",
+      "cidade": "almirante-tamandare",
+      "nome": "Almirante Tamandaré"
+    },
+    {
+      "estado": "sp",
+      "cidade": "salto",
+      "nome": "Salto"
+    },
+    {
+      "estado": "pe",
+      "cidade": "igarassu",
+      "nome": "Igarassu"
+    },
+    {
+      "estado": "go",
+      "cidade": "novo-gama",
+      "nome": "Novo Gama"
+    },
+    {
+      "estado": "sp",
+      "cidade": "poa",
+      "nome": "Poá"
+    },
+    {
+      "estado": "ba",
+      "cidade": "paulo-afonso",
+      "nome": "Paulo Afonso"
+    },
+    {
+      "estado": "mg",
+      "cidade": "araguari",
+      "nome": "Araguari"
+    },
+    {
+      "estado": "mg",
+      "cidade": "uba",
+      "nome": "Ubá"
+    },
+    {
+      "estado": "pa",
+      "cidade": "altamira",
+      "nome": "Altamira"
+    },
+    {
+      "estado": "pr",
+      "cidade": "piraquara",
+      "nome": "Piraquara"
+    },
+    {
+      "estado": "pa",
+      "cidade": "tucurui",
+      "nome": "Tucuruí"
+    },
+    {
+      "estado": "am",
+      "cidade": "parintins",
+      "nome": "Parintins"
+    },
+    {
+      "estado": "mg",
+      "cidade": "passos",
+      "nome": "Passos"
+    },
+    {
+      "estado": "pa",
+      "cidade": "paragominas",
+      "nome": "Paragominas"
+    },
+    {
+      "estado": "ba",
+      "cidade": "eunapolis",
+      "nome": "Eunápolis"
+    },
+    {
+      "estado": "sp",
+      "cidade": "ourinhos",
+      "nome": "Ourinhos"
+    },
+    {
+      "estado": "pe",
+      "cidade": "sao-lourenco-da-mata",
+      "nome": "São Lourenço da Mata"
+    },
+    {
+      "estado": "sp",
+      "cidade": "paulinia",
+      "nome": "Paulínia"
+    },
+    {
+      "estado": "ma",
+      "cidade": "acailandia",
+      "nome": "Açailândia"
+    },
+    {
+      "estado": "pr",
+      "cidade": "umuarama",
+      "nome": "Umuarama"
+    },
+    {
+      "estado": "go",
+      "cidade": "catalao",
+      "nome": "Catalão"
     },
     {
       "estado": "ms",
-      "cidade": "dourados",
-      "nome": "Dourados"
+      "cidade": "corumba",
+      "nome": "Corumbá"
     },
     {
-      "estado": "df",
-      "cidade": "brasilia",
-      "nome": "Brasília"
+      "estado": "pe",
+      "cidade": "santa-cruz-do-capibaribe",
+      "nome": "Santa Cruz do Capibaribe"
+    },
+    {
+      "estado": "pa",
+      "cidade": "tailandia",
+      "nome": "Tailândia"
+    },
+    {
+      "estado": "ro",
+      "cidade": "ariquemes",
+      "nome": "Ariquemes"
+    },
+    {
+      "estado": "mg",
+      "cidade": "coronel-fabriciano",
+      "nome": "Coronel Fabriciano"
+    },
+    {
+      "estado": "mg",
+      "cidade": "muriae",
+      "nome": "Muriaé"
+    },
+    {
+      "estado": "pb",
+      "cidade": "patos",
+      "nome": "Patos"
+    },
+    {
+      "estado": "mg",
+      "cidade": "araxa",
+      "nome": "Araxá"
+    },
+    {
+      "estado": "mg",
+      "cidade": "nova-serrana",
+      "nome": "Nova Serrana"
+    },
+    {
+      "estado": "pr",
+      "cidade": "cambe",
+      "nome": "Cambé"
+    },
+    {
+      "estado": "mt",
+      "cidade": "tangara-da-serra",
+      "nome": "Tangará da Serra"
+    },
+    {
+      "estado": "rj",
+      "cidade": "sao-pedro-da-aldeia",
+      "nome": "São Pedro da Aldeia"
+    },
+    {
+      "estado": "rs",
+      "cidade": "erechim",
+      "nome": "Erechim"
+    },
+    {
+      "estado": "sc",
+      "cidade": "tubarao",
+      "nome": "Tubarão"
+    },
+    {
+      "estado": "go",
+      "cidade": "itumbiara",
+      "nome": "Itumbiara"
+    },
+    {
+      "estado": "rj",
+      "cidade": "japeri",
+      "nome": "Japeri"
+    },
+    {
+      "estado": "se",
+      "cidade": "lagarto",
+      "nome": "Lagarto"
+    },
+    {
+      "estado": "mg",
+      "cidade": "ituiutaba",
+      "nome": "Ituiutaba"
+    },
+    {
+      "estado": "sp",
+      "cidade": "assis",
+      "nome": "Assis"
+    },
+    {
+      "estado": "mg",
+      "cidade": "lavras",
+      "nome": "Lavras"
+    },
+    {
+      "estado": "sp",
+      "cidade": "leme",
+      "nome": "Leme"
+    },
+    {
+      "estado": "ma",
+      "cidade": "bacabal",
+      "nome": "Bacabal"
+    },
+    {
+      "estado": "es",
+      "cidade": "aracruz",
+      "nome": "Aracruz"
+    },
+    {
+      "estado": "rn",
+      "cidade": "sao-goncalo-do-amarante",
+      "nome": "São Gonçalo do Amarante"
+    },
+    {
+      "estado": "ro",
+      "cidade": "vilhena",
+      "nome": "Vilhena"
+    },
+    {
+      "estado": "rj",
+      "cidade": "itaperuna",
+      "nome": "Itaperuna"
+    },
+    {
+      "estado": "sp",
+      "cidade": "itanhaem",
+      "nome": "Itanhaém"
+    },
+    {
+      "estado": "pa",
+      "cidade": "breves",
+      "nome": "Breves"
+    },
+    {
+      "estado": "am",
+      "cidade": "itacoatiara",
+      "nome": "Itacoatiara"
+    },
+    {
+      "estado": "sp",
+      "cidade": "caieiras",
+      "nome": "Caieiras"
+    },
+    {
+      "estado": "pr",
+      "cidade": "fazenda-rio-grande",
+      "nome": "Fazenda Rio Grande"
+    },
+    {
+      "estado": "sp",
+      "cidade": "mairipora",
+      "nome": "Mairiporã"
+    },
+    {
+      "estado": "ce",
+      "cidade": "iguatu",
+      "nome": "Iguatu"
+    },
+    {
+      "estado": "go",
+      "cidade": "jatai",
+      "nome": "Jataí"
+    },
+    {
+      "estado": "ba",
+      "cidade": "santo-antonio-de-jesus",
+      "nome": "Santo Antônio de Jesus"
+    },
+    {
+      "estado": "pa",
+      "cidade": "itaituba",
+      "nome": "Itaituba"
+    },
+    {
+      "estado": "rj",
+      "cidade": "barra-do-pirai",
+      "nome": "Barra do Piraí"
+    },
+    {
+      "estado": "pe",
+      "cidade": "abreu-e-lima",
+      "nome": "Abreu e Lima"
+    },
+    {
+      "estado": "am",
+      "cidade": "manacapuru",
+      "nome": "Manacapuru"
+    },
+    {
+      "estado": "pe",
+      "cidade": "ipojuca",
+      "nome": "Ipojuca"
+    },
+    {
+      "estado": "pr",
+      "cidade": "sarandi",
+      "nome": "Sarandi"
+    },
+    {
+      "estado": "rs",
+      "cidade": "guaiba",
+      "nome": "Guaíba"
+    },
+    {
+      "estado": "ba",
+      "cidade": "valenca",
+      "nome": "Valença"
+    },
+    {
+      "estado": "mg",
+      "cidade": "itajuba",
+      "nome": "Itajubá"
+    },
+    {
+      "estado": "pb",
+      "cidade": "bayeux",
+      "nome": "Bayeux"
+    },
+    {
+      "estado": "mg",
+      "cidade": "nova-lima",
+      "nome": "Nova Lima"
+    },
+    {
+      "estado": "ma",
+      "cidade": "balsas",
+      "nome": "Balsas"
+    },
+    {
+      "estado": "se",
+      "cidade": "itabaiana",
+      "nome": "Itabaiana"
+    },
+    {
+      "estado": "sp",
+      "cidade": "votuporanga",
+      "nome": "Votuporanga"
+    },
+    {
+      "estado": "pr",
+      "cidade": "campo-mourao",
+      "nome": "Campo Mourão"
+    },
+    {
+      "estado": "sp",
+      "cidade": "cacapava",
+      "nome": "Caçapava"
+    },
+    {
+      "estado": "mg",
+      "cidade": "para-de-minas",
+      "nome": "Pará de Minas"
+    },
+    {
+      "estado": "mt",
+      "cidade": "caceres",
+      "nome": "Cáceres"
+    },
+    {
+      "estado": "ms",
+      "cidade": "ponta-pora",
+      "nome": "Ponta Porã"
+    },
+    {
+      "estado": "sp",
+      "cidade": "itapeva",
+      "nome": "Itapeva"
+    },
+    {
+      "estado": "go",
+      "cidade": "caldas-novas",
+      "nome": "Caldas Novas"
+    },
+    {
+      "estado": "mt",
+      "cidade": "sorriso",
+      "nome": "Sorriso"
+    },
+    {
+      "estado": "mg",
+      "cidade": "paracatu",
+      "nome": "Paracatu"
+    },
+    {
+      "estado": "mg",
+      "cidade": "itauna",
+      "nome": "Itaúna"
+    },
+    {
+      "estado": "sp",
+      "cidade": "mogi-mirim",
+      "nome": "Mogi Mirim"
+    },
+    {
+      "estado": "pr",
+      "cidade": "francisco-beltrao",
+      "nome": "Francisco Beltrão"
+    },
+    {
+      "estado": "mg",
+      "cidade": "caratinga",
+      "nome": "Caratinga"
+    },
+    {
+      "estado": "sp",
+      "cidade": "sao-roque",
+      "nome": "São Roque"
+    },
+    {
+      "estado": "sp",
+      "cidade": "ubatuba",
+      "nome": "Ubatuba"
+    },
+    {
+      "estado": "ba",
+      "cidade": "luis-eduardo-magalhaes",
+      "nome": "Luís Eduardo Magalhães"
+    },
+    {
+      "estado": "sp",
+      "cidade": "aruja",
+      "nome": "Arujá"
+    },
+    {
+      "estado": "sp",
+      "cidade": "sao-joao-da-boa-vista",
+      "nome": "São João da Boa Vista"
+    },
+    {
+      "estado": "mg",
+      "cidade": "patrocinio",
+      "nome": "Patrocínio"
+    },
+    {
+      "estado": "se",
+      "cidade": "sao-cristovao",
+      "nome": "São Cristóvão"
+    },
+    {
+      "estado": "mg",
+      "cidade": "manhuacu",
+      "nome": "Manhuaçu"
+    },
+    {
+      "estado": "rj",
+      "cidade": "saquarema",
+      "nome": "Saquarema"
+    },
+    {
+      "estado": "sp",
+      "cidade": "avare",
+      "nome": "Avaré"
+    },
+    {
+      "estado": "sp",
+      "cidade": "sao-sebastiao",
+      "nome": "São Sebastião"
+    },
+    {
+      "estado": "go",
+      "cidade": "planaltina",
+      "nome": "Planaltina"
+    },
+    {
+      "estado": "mg",
+      "cidade": "timoteo",
+      "nome": "Timóteo"
+    },
+    {
+      "estado": "mg",
+      "cidade": "sao-joao-del-rei",
+      "nome": "São João del Rei"
+    },
+    {
+      "estado": "ma",
+      "cidade": "santa-ines",
+      "nome": "Santa Inês"
+    },
+    {
+      "estado": "ac",
+      "cidade": "cruzeiro-do-sul",
+      "nome": "Cruzeiro do Sul"
+    },
+    {
+      "estado": "sp",
+      "cidade": "lorena",
+      "nome": "Lorena"
+    },
+    {
+      "estado": "pr",
+      "cidade": "paranavai",
+      "nome": "Paranavaí"
+    },
+    {
+      "estado": "ce",
+      "cidade": "quixada",
+      "nome": "Quixadá"
+    },
+    {
+      "estado": "ma",
+      "cidade": "barra-do-corda",
+      "nome": "Barra do Corda"
+    },
+    {
+      "estado": "to",
+      "cidade": "gurupi",
+      "nome": "Gurupi"
+    },
+    {
+      "estado": "ba",
+      "cidade": "candeias",
+      "nome": "Candeias"
+    },
+    {
+      "estado": "pe",
+      "cidade": "serra-talhada",
+      "nome": "Serra Talhada"
+    },
+    {
+      "estado": "sc",
+      "cidade": "camboriu",
+      "nome": "Camboriú"
+    },
+    {
+      "estado": "am",
+      "cidade": "coari",
+      "nome": "Coari"
+    },
+    {
+      "estado": "ro",
+      "cidade": "cacoal",
+      "nome": "Cacoal"
+    },
+    {
+      "estado": "sp",
+      "cidade": "campo-limpo-paulista",
+      "nome": "Campo Limpo Paulista"
+    },
+    {
+      "estado": "pa",
+      "cidade": "redencao",
+      "nome": "Redenção"
+    },
+    {
+      "estado": "sc",
+      "cidade": "sao-bento-do-sul",
+      "nome": "São Bento do Sul"
+    },
+    {
+      "estado": "rs",
+      "cidade": "lajeado",
+      "nome": "Lajeado"
+    },
+    {
+      "estado": "sc",
+      "cidade": "navegantes",
+      "nome": "Navegantes"
+    },
+    {
+      "estado": "ce",
+      "cidade": "pacatuba",
+      "nome": "Pacatuba"
+    },
+    {
+      "estado": "mg",
+      "cidade": "unai",
+      "nome": "Unaí"
+    },
+    {
+      "estado": "ba",
+      "cidade": "guanambi",
+      "nome": "Guanambi"
+    },
+    {
+      "estado": "pe",
+      "cidade": "gravata",
+      "nome": "Gravatá"
+    },
+    {
+      "estado": "pe",
+      "cidade": "araripina",
+      "nome": "Araripina"
+    },
+    {
+      "estado": "pe",
+      "cidade": "carpina",
+      "nome": "Carpina"
+    },
+    {
+      "estado": "pr",
+      "cidade": "cianorte",
+      "nome": "Cianorte"
+    },
+    {
+      "estado": "pr",
+      "cidade": "pato-branco",
+      "nome": "Pato Branco"
+    },
+    {
+      "estado": "pa",
+      "cidade": "moju",
+      "nome": "Moju"
+    },
+    {
+      "estado": "ma",
+      "cidade": "pinheiro",
+      "nome": "Pinheiro"
+    },
+    {
+      "estado": "sp",
+      "cidade": "matao",
+      "nome": "Matão"
+    },
+    {
+      "estado": "rs",
+      "cidade": "ijui",
+      "nome": "Ijuí"
+    },
+    {
+      "estado": "rj",
+      "cidade": "seropedica",
+      "nome": "Seropédica"
+    },
+    {
+      "estado": "ba",
+      "cidade": "dias-davila",
+      "nome": "Dias d'Ávila"
+    },
+    {
+      "estado": "rs",
+      "cidade": "esteio",
+      "nome": "Esteio"
+    },
+    {
+      "estado": "sp",
+      "cidade": "cruzeiro",
+      "nome": "Cruzeiro"
+    },
+    {
+      "estado": "rn",
+      "cidade": "macaiba",
+      "nome": "Macaíba"
+    },
+    {
+      "estado": "rj",
+      "cidade": "tres-rios",
+      "nome": "Três Rios"
+    },
+    {
+      "estado": "ce",
+      "cidade": "quixeramobim",
+      "nome": "Quixeramobim"
+    },
+    {
+      "estado": "ba",
+      "cidade": "serrinha",
+      "nome": "Serrinha"
+    },
+    {
+      "estado": "ce",
+      "cidade": "aquiraz",
+      "nome": "Aquiraz"
+    },
+    {
+      "estado": "rs",
+      "cidade": "cachoeira-do-sul",
+      "nome": "Cachoeira do Sul"
+    },
+    {
+      "estado": "sp",
+      "cidade": "vinhedo",
+      "nome": "Vinhedo"
+    },
+    {
+      "estado": "mg",
+      "cidade": "curvelo",
+      "nome": "Curvelo"
+    },
+    {
+      "estado": "mg",
+      "cidade": "alfenas",
+      "nome": "Alfenas"
+    },
+    {
+      "estado": "mg",
+      "cidade": "joao-monlevade",
+      "nome": "João Monlevade"
+    },
+    {
+      "estado": "ba",
+      "cidade": "jacobina",
+      "nome": "Jacobina"
+    },
+    {
+      "estado": "es",
+      "cidade": "viana",
+      "nome": "Viana"
+    },
+    {
+      "estado": "ma",
+      "cidade": "chapadinha",
+      "nome": "Chapadinha"
+    },
+    {
+      "estado": "pr",
+      "cidade": "telemaco-borba",
+      "nome": "Telêmaco Borba"
+    },
+    {
+      "estado": "mg",
+      "cidade": "tres-coracoes",
+      "nome": "Três Corações"
+    },
+    {
+      "estado": "rs",
+      "cidade": "sapiranga",
+      "nome": "Sapiranga"
+    },
+    {
+      "estado": "pe",
+      "cidade": "goiana",
+      "nome": "Goiana"
+    },
+    {
+      "estado": "sp",
+      "cidade": "ibiuna",
+      "nome": "Ibiúna"
+    },
+    {
+      "estado": "sc",
+      "cidade": "cacador",
+      "nome": "Caçador"
+    },
+    {
+      "estado": "mg",
+      "cidade": "vicosa",
+      "nome": "Viçosa"
+    },
+    {
+      "estado": "ba",
+      "cidade": "senhor-do-bonfim",
+      "nome": "Senhor do Bonfim"
+    },
+    {
+      "estado": "ce",
+      "cidade": "russas",
+      "nome": "Russas"
+    },
+    {
+      "estado": "sp",
+      "cidade": "cajamar",
+      "nome": "Cajamar"
+    },
+    {
+      "estado": "sp",
+      "cidade": "lins",
+      "nome": "Lins"
+    },
+    {
+      "estado": "pi",
+      "cidade": "picos",
+      "nome": "Picos"
+    },
+    {
+      "estado": "pa",
+      "cidade": "novo-repartimento",
+      "nome": "Novo Repartimento"
+    },
+    {
+      "estado": "sp",
+      "cidade": "jaboticabal",
+      "nome": "Jaboticabal"
+    },
+    {
+      "estado": "sp",
+      "cidade": "bebedouro",
+      "nome": "Bebedouro"
+    },
+    {
+      "estado": "rs",
+      "cidade": "santo-angelo",
+      "nome": "Santo Ângelo"
+    },
+    {
+      "estado": "ce",
+      "cidade": "caninde",
+      "nome": "Canindé"
+    },
+    {
+      "estado": "ba",
+      "cidade": "itapetinga",
+      "nome": "Itapetinga"
+    },
+    {
+      "estado": "sp",
+      "cidade": "pirassununga",
+      "nome": "Pirassununga"
+    },
+    {
+      "estado": "rj",
+      "cidade": "valenca",
+      "nome": "Valença"
+    },
+    {
+      "estado": "ce",
+      "cidade": "tiangua",
+      "nome": "Tianguá"
+    },
+    {
+      "estado": "pe",
+      "cidade": "belo-jardim",
+      "nome": "Belo Jardim"
+    },
+    {
+      "estado": "go",
+      "cidade": "santo-antonio-do-descoberto",
+      "nome": "Santo Antônio do Descoberto"
+    },
+    {
+      "estado": "pa",
+      "cidade": "santana-do-araguaia",
+      "nome": "Santana do Araguaia"
+    },
+    {
+      "estado": "mg",
+      "cidade": "cataguases",
+      "nome": "Cataguases"
+    },
+    {
+      "estado": "sp",
+      "cidade": "itapira",
+      "nome": "Itapira"
+    },
+    {
+      "estado": "sc",
+      "cidade": "concordia",
+      "nome": "Concórdia"
+    },
+    {
+      "estado": "al",
+      "cidade": "rio-largo",
+      "nome": "Rio Largo"
+    },
+    {
+      "estado": "rs",
+      "cidade": "santana-do-livramento",
+      "nome": "Sant'Ana do Livramento"
+    },
+    {
+      "estado": "ce",
+      "cidade": "aracati",
+      "nome": "Aracati"
+    },
+    {
+      "estado": "pe",
+      "cidade": "arcoverde",
+      "nome": "Arcoverde"
+    },
+    {
+      "estado": "ce",
+      "cidade": "crateus",
+      "nome": "Crateús"
+    },
+    {
+      "estado": "pa",
+      "cidade": "oriximina",
+      "nome": "Oriximiná"
+    },
+    {
+      "estado": "mg",
+      "cidade": "ouro-preto",
+      "nome": "Ouro Preto"
+    },
+    {
+      "estado": "sp",
+      "cidade": "cosmopolis",
+      "nome": "Cosmópolis"
+    },
+    {
+      "estado": "go",
+      "cidade": "cidade-ocidental",
+      "nome": "Cidade Ocidental"
+    },
+    {
+      "estado": "rn",
+      "cidade": "ceara-mirim",
+      "nome": "Ceará-Mirim"
+    },
+    {
+      "estado": "ce",
+      "cidade": "pacajus",
+      "nome": "Pacajus"
+    },
+    {
+      "estado": "ba",
+      "cidade": "irece",
+      "nome": "Irecê"
+    },
+    {
+      "estado": "rs",
+      "cidade": "santa-rosa",
+      "nome": "Santa Rosa"
+    },
+    {
+      "estado": "rs",
+      "cidade": "farroupilha",
+      "nome": "Farroupilha"
+    },
+    {
+      "estado": "ma",
+      "cidade": "buriticupu",
+      "nome": "Buriticupu"
+    },
+    {
+      "estado": "al",
+      "cidade": "palmeira-dos-indios",
+      "nome": "Palmeira dos Índios"
+    },
+    {
+      "estado": "sp",
+      "cidade": "amparo",
+      "nome": "Amparo"
+    },
+    {
+      "estado": "ma",
+      "cidade": "santa-luzia",
+      "nome": "Santa Luzia"
+    },
+    {
+      "estado": "ba",
+      "cidade": "casa-nova",
+      "nome": "Casa Nova"
+    },
+    {
+      "estado": "sc",
+      "cidade": "rio-do-sul",
+      "nome": "Rio do Sul"
+    },
+    {
+      "estado": "pa",
+      "cidade": "santa-izabel-do-para",
+      "nome": "Santa Izabel do Pará"
+    },
+    {
+      "estado": "ce",
+      "cidade": "cascavel",
+      "nome": "Cascavel"
+    },
+    {
+      "estado": "mg",
+      "cidade": "esmeraldas",
+      "nome": "Esmeraldas"
+    },
+    {
+      "estado": "rs",
+      "cidade": "alegrete",
+      "nome": "Alegrete"
+    },
+    {
+      "estado": "mg",
+      "cidade": "janauba",
+      "nome": "Janaúba"
+    },
+    {
+      "estado": "rs",
+      "cidade": "venancio-aires",
+      "nome": "Venâncio Aires"
+    },
+    {
+      "estado": "sc",
+      "cidade": "indaial",
+      "nome": "Indaial"
+    },
+    {
+      "estado": "pr",
+      "cidade": "castro",
+      "nome": "Castro"
+    },
+    {
+      "estado": "go",
+      "cidade": "goianesia",
+      "nome": "Goianésia"
+    },
+    {
+      "estado": "sc",
+      "cidade": "gaspar",
+      "nome": "Gaspar"
+    },
+    {
+      "estado": "mg",
+      "cidade": "sao-sebastiao-do-paraiso",
+      "nome": "São Sebastião do Paraíso"
+    },
+    {
+      "estado": "ba",
+      "cidade": "campo-formoso",
+      "nome": "Campo Formoso"
+    },
+    {
+      "estado": "ma",
+      "cidade": "grajau",
+      "nome": "Grajaú"
+    },
+    {
+      "estado": "sc",
+      "cidade": "biguacu",
+      "nome": "Biguaçu"
+    },
+    {
+      "estado": "pe",
+      "cidade": "ouricuri",
+      "nome": "Ouricuri"
+    },
+    {
+      "estado": "sp",
+      "cidade": "embu-guacu",
+      "nome": "Embu-Guaçu"
+    },
+    {
+      "estado": "ba",
+      "cidade": "bom-jesus-da-lapa",
+      "nome": "Bom Jesus da Lapa"
+    },
+    {
+      "estado": "pb",
+      "cidade": "sousa",
+      "nome": "Sousa"
+    },
+    {
+      "estado": "rs",
+      "cidade": "campo-bom",
+      "nome": "Campo Bom"
+    },
+    {
+      "estado": "se",
+      "cidade": "estancia",
+      "nome": "Estância"
+    },
+    {
+      "estado": "pa",
+      "cidade": "capanema",
+      "nome": "Capanema"
+    },
+    {
+      "estado": "pb",
+      "cidade": "cabedelo",
+      "nome": "Cabedelo"
+    },
+    {
+      "estado": "pe",
+      "cidade": "escada",
+      "nome": "Escada"
+    },
+    {
+      "estado": "sp",
+      "cidade": "peruibe",
+      "nome": "Peruíbe"
+    },
+    {
+      "estado": "ce",
+      "cidade": "horizonte",
+      "nome": "Horizonte"
+    },
+    {
+      "estado": "sp",
+      "cidade": "fernandopolis",
+      "nome": "Fernandópolis"
+    },
+    {
+      "estado": "mt",
+      "cidade": "lucas-do-rio-verde",
+      "nome": "Lucas do Rio Verde"
+    },
+    {
+      "estado": "sp",
+      "cidade": "lencois-paulista",
+      "nome": "Lençóis Paulista"
+    },
+    {
+      "estado": "sc",
+      "cidade": "ararangua",
+      "nome": "Araranguá"
+    },
+    {
+      "estado": "go",
+      "cidade": "mineiros",
+      "nome": "Mineiros"
+    },
+    {
+      "estado": "sc",
+      "cidade": "itapema",
+      "nome": "Itapema"
+    },
+    {
+      "estado": "ma",
+      "cidade": "itapecuru-mirim",
+      "nome": "Itapecuru Mirim"
+    },
+    {
+      "estado": "sp",
+      "cidade": "mococa",
+      "nome": "Mococa"
+    },
+    {
+      "estado": "rn",
+      "cidade": "caico",
+      "nome": "Caicó"
+    },
+    {
+      "estado": "pa",
+      "cidade": "breu-branco",
+      "nome": "Breu Branco"
+    },
+    {
+      "estado": "am",
+      "cidade": "tabatinga",
+      "nome": "Tabatinga"
+    },
+    {
+      "estado": "ce",
+      "cidade": "ico",
+      "nome": "Icó"
+    },
+    {
+      "estado": "pr",
+      "cidade": "rolandia",
+      "nome": "Rolândia"
+    },
+    {
+      "estado": "pe",
+      "cidade": "pesqueira",
+      "nome": "Pesqueira"
+    },
+    {
+      "estado": "mg",
+      "cidade": "januaria",
+      "nome": "Januária"
+    },
+    {
+      "estado": "mg",
+      "cidade": "formiga",
+      "nome": "Formiga"
+    },
+    {
+      "estado": "ba",
+      "cidade": "brumado",
+      "nome": "Brumado"
+    },
+    {
+      "estado": "ba",
+      "cidade": "conceicao-do-coite",
+      "nome": "Conceição do Coité"
     }
   ],
   "NICHES": [
