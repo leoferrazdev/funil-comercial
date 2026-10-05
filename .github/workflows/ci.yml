@@ -33,7 +33,9 @@ jobs:
         run: npm ci
 
       - name: Check Edge Functions
-        run: deno check --no-lock supabase/functions/whatsapp-inbound/index.ts supabase/functions/whatsapp-send/index.ts
+        run: |
+          deno install
+          deno check --no-lock supabase/functions/whatsapp-inbound/index.ts supabase/functions/whatsapp-send/index.ts
 
       - name: Smoke test Edge Functions
         run: npm run functions:smoke
