@@ -22,7 +22,7 @@ export default function CitiesDirectory() {
     <div data-theme="dark" className="min-h-screen bg-background text-foreground">
       <SeoHead 
         title="Cidades Atendidas - Funil Comercial"
-        description="Confira todas as cidades e estados onde criamos sites profissionais e estruturas de vendas otimizadas para negócios locais."
+        description="Confira todas as cidades e estados onde criamos sites profissionais, otimizamos o Google Meu Negócio e implementamos estruturas de vendas para negócios locais."
         canonicalUrl="https://funilcomercial.com/cidades-atendidas"
       />
       <header className="sticky top-0 z-50 border-b border-white/10 bg-background/90 backdrop-blur">
@@ -46,7 +46,7 @@ export default function CitiesDirectory() {
                 Cidades e Regiões Atendidas
              </h1>
              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Desenvolvemos estruturas de vendas e sites profissionais de alta conversão 
+                Desenvolvemos estruturas de vendas, sites profissionais e otimização de Google Meu Negócio 
                 para mais de {TARGET_CITIES.length} cidades no Brasil. Selecione a sua região abaixo para ver as especialidades atendidas.
              </p>
           </div>
@@ -74,6 +74,12 @@ export default function CitiesDirectory() {
                                     className="text-xs text-muted-foreground hover:text-primary transition-colors"
                                   >
                                      • Site e Estrutura de Vendas
+                                  </Link>
+                                  <Link 
+                                    to={`/google-meu-negocio/${niche.slug}/${city.estado}/${city.cidade}`}
+                                    className="text-xs text-muted-foreground hover:text-primary transition-colors"
+                                  >
+                                     • Google Meu Negócio e Maps
                                   </Link>
                                   <Link 
                                     to={`/agencia-de-marketing/${niche.slug}/${city.estado}/${city.cidade}`}

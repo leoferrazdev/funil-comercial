@@ -69,6 +69,7 @@ function generateSitemap() {
     localUrls.push(generateUrlNode(`/agencia-de-marketing/${nicho}`, '0.8', 'weekly'));
     localUrls.push(generateUrlNode(`/empresa-de-captacao/${nicho}`, '0.8', 'weekly'));
     localUrls.push(generateUrlNode(`/melhor-crm/${nicho}`, '0.8', 'weekly'));
+    localUrls.push(generateUrlNode(`/google-meu-negocio/${nicho}`, '0.8', 'weekly'));
   });
 
   TARGET_CITIES.forEach(location => {
@@ -77,6 +78,7 @@ function generateSitemap() {
       localUrls.push(generateUrlNode(`/agencia-de-marketing/${nicho}/${location.estado}/${location.cidade}`, '0.7', 'monthly'));
       localUrls.push(generateUrlNode(`/empresa-de-captacao/${nicho}/${location.estado}/${location.cidade}`, '0.7', 'monthly'));
       localUrls.push(generateUrlNode(`/melhor-crm/${nicho}/${location.estado}/${location.cidade}`, '0.7', 'monthly'));
+      localUrls.push(generateUrlNode(`/google-meu-negocio/${nicho}/${location.estado}/${location.cidade}`, '0.7', 'monthly'));
     });
   });
   allSitemapFiles.push(...writeSitemapFiles(publicDir, 'sitemap-local', localUrls));

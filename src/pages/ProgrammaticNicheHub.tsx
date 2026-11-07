@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router";
+import { Link, useLocation, useParams } from "react-router";
 import Logo from "../components/Logo";
 import { SeoHead } from "../components/SeoHead";
 import locationsData from "../lib/seoLocations.json";
@@ -6,7 +6,9 @@ import { seoNicheData } from "../lib/seoNicheData";
 import { ArrowRight, MapPin } from "lucide-react";
 
 export default function ProgrammaticNicheHub() {
-  const { intentType, nicho } = useParams();
+  const { intentType: paramIntentType, nicho } = useParams();
+  const location = useLocation();
+  const intentType = paramIntentType || location.pathname.split("/").filter(Boolean)[0] || "agencia-de-marketing";
   
   const { TARGET_CITIES, NICHES } = locationsData;
   const nicheInfo = NICHES.find(n => n.slug === nicho) || { nome: nicho, slug: nicho };
@@ -26,11 +28,14 @@ export default function ProgrammaticNicheHub() {
   if (intentType === "agencia-de-marketing") intentName = "Agência de Marketing Especializada";
   if (intentType === "empresa-de-captacao") intentName = "Empresa de Captação de Clientes";
   if (intentType === "melhor-crm") intentName = "Melhor CRM";
+  if (intentType === "google-meu-negocio") intentName = "Otimização de Google Meu Negócio";
 
   const title = `${intentName} para ${nicheInfo.nome}`;
-  const description = nicheContent 
-    ? nicheContent.heroSubtitle 
-    : `Encontre a melhor solução de ${intentName.toLowerCase()} para ${nicheInfo.nome} na sua cidade.`;
+  const description = intentType === "google-meu-negocio"
+    ? `Otimização de Perfil da Empresa no Google (Google Meu Negócio) para ${nicheInfo.nome} na sua cidade. Apareça no Google Maps e receba mais contatos no WhatsApp.`
+    : nicheContent 
+      ? nicheContent.heroSubtitle 
+      : `Encontre a melhor solução de ${intentName.toLowerCase()} para ${nicheInfo.nome} na sua cidade.`;
 
   return (
     <div data-theme="dark" className="min-h-screen bg-background text-foreground">
@@ -58,7 +63,7 @@ export default function ProgrammaticNicheHub() {
              </h1>
              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Atuamos em todo o Brasil. Selecione abaixo o seu estado e cidade para ver como nossa estrutura 
-                de captação de vendas funciona para <strong>{nicheInfo.nome}</strong> na sua região.
+                de {intentType === "google-meu-negocio" ? "posicionamento no Google Maps e Perfil da Empresa" : "captação de vendas"} funciona para <strong>{nicheInfo.nome}</strong> na sua região.
              </p>
           </div>
 

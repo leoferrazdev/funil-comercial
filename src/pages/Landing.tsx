@@ -683,6 +683,7 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6">
+              <Link to="/google-meu-negocio" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Google Meu Negócio</Link>
               <Link to="/blog" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Blog</Link>
               <Link to="/cidades-atendidas" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Cidades Atendidas</Link>
               <Link to="/crm" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">CRM</Link>

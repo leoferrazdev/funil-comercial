@@ -7,7 +7,7 @@ interface RelatedContentProps {
   currentNiche?: string;
   currentState?: string;
   currentCity?: string;
-  intentType?: 'local' | 'agencia' | 'captacao' | 'crm' | 'guia';
+  intentType?: 'local' | 'agencia' | 'captacao' | 'crm' | 'gmn' | 'guia';
 }
 
 const getNicheCategory = (nicheSlug?: string) => {
@@ -59,6 +59,7 @@ export function RelatedContent({
       case 'agencia': return `/agencia-de-marketing/${niche}/${state}/${city}`;
       case 'captacao': return `/empresa-de-captacao/${niche}/${state}/${city}`;
       case 'crm': return `/melhor-crm/${niche}/${state}/${city}`;
+      case 'gmn': return `/google-meu-negocio/${niche}/${state}/${city}`;
       case 'guia': return `/blog/guia-de-vendas/${niche}/${state}/${city}`;
       case 'local':
       default: return `/local/${niche}/${state}/${city}`;
@@ -66,6 +67,16 @@ export function RelatedContent({
   };
 
   const isBlog = intentType === 'guia';
+  const currentCityName = TARGET_CITIES.find((c) => c.cidade === currentCity)?.nome || currentCity;
+  const currentNicheName = NICHES.find((n) => n.slug === currentNiche)?.nome || currentNiche;
+
+  const allIntents = [
+    { key: 'local', label: `Site e Estrutura de Vendas para ${currentNicheName} em ${currentCityName}`, path: `/local/${currentNiche}/${currentState}/${currentCity}` },
+    { key: 'gmn', label: `Google Meu Negócio para ${currentNicheName} em ${currentCityName}`, path: `/google-meu-negocio/${currentNiche}/${currentState}/${currentCity}` },
+    { key: 'agencia', label: `Agência de Marketing para ${currentNicheName} em ${currentCityName}`, path: `/agencia-de-marketing/${currentNiche}/${currentState}/${currentCity}` },
+    { key: 'captacao', label: `Captação de Clientes para ${currentNicheName} em ${currentCityName}`, path: `/empresa-de-captacao/${currentNiche}/${currentState}/${currentCity}` },
+    { key: 'crm', label: `Melhor CRM para ${currentNicheName} em ${currentCityName}`, path: `/melhor-crm/${currentNiche}/${currentState}/${currentCity}` },
+  ].filter(item => item.key !== intentType);
 
   return (
     <section className="bg-background py-16 border-t border-white/5">
@@ -106,7 +117,27 @@ export function RelatedContent({
           </div>
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Outras soluções na mesma cidade */}
+          <div>
+            <h3 className="text-lg font-semibold text-primary mb-4 border-b border-white/10 pb-2">
+              Soluções em {currentCityName}
+            </h3>
+            <ul className="space-y-3">
+              {allIntents.map((item) => (
+                <li key={item.key}>
+                  <Link
+                    to={item.path}
+                    className="group flex items-center justify-between rounded-lg p-3 hover:bg-white/5 transition-colors border border-transparent hover:border-white/10 text-muted-foreground hover:text-foreground text-sm"
+                  >
+                    <span>{item.label}</span>
+                    <ArrowRight size={16} className="shrink-0 opacity-0 group-hover:opacity-100 transition-opacity text-primary" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Mesma especialidade em outras cidades */}
           <div>
             <h3 className="text-lg font-semibold text-primary mb-4 border-b border-white/10 pb-2">
@@ -119,12 +150,12 @@ export function RelatedContent({
                   <li key={city.cidade}>
                     <Link
                       to={getPath(currentNiche, city.estado, city.cidade)}
-                      className="group flex items-center justify-between rounded-lg p-3 hover:bg-white/5 transition-colors border border-transparent hover:border-white/10 text-muted-foreground hover:text-foreground"
+                      className="group flex items-center justify-between rounded-lg p-3 hover:bg-white/5 transition-colors border border-transparent hover:border-white/10 text-muted-foreground hover:text-foreground text-sm"
                     >
                       <span>
                         {isBlog ? "Guia para " : ""}{nicheName} em {city.nome}
                       </span>
-                      <ArrowRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity text-primary" />
+                      <ArrowRight size={16} className="shrink-0 opacity-0 group-hover:opacity-100 transition-opacity text-primary" />
                     </Link>
                   </li>
                 );
@@ -142,12 +173,12 @@ export function RelatedContent({
                 <li key={niche.slug}>
                   <Link
                     to={getPath(niche.slug, currentState, currentCity)}
-                    className="group flex items-center justify-between rounded-lg p-3 hover:bg-white/5 transition-colors border border-transparent hover:border-white/10 text-muted-foreground hover:text-foreground"
+                    className="group flex items-center justify-between rounded-lg p-3 hover:bg-white/5 transition-colors border border-transparent hover:border-white/10 text-muted-foreground hover:text-foreground text-sm"
                   >
                     <span>
-                      {isBlog ? "Guia para " : ""}{niche.nome} em {TARGET_CITIES.find((c) => c.cidade === currentCity)?.nome || currentCity}
+                      {isBlog ? "Guia para " : ""}{niche.nome} em {currentCityName}
                     </span>
-                    <ArrowRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity text-primary" />
+                    <ArrowRight size={16} className="shrink-0 opacity-0 group-hover:opacity-100 transition-opacity text-primary" />
                   </Link>
                 </li>
               ))}

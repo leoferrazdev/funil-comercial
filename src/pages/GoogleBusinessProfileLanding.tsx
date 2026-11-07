@@ -581,10 +581,29 @@ export default function GoogleBusinessProfileLanding() {
         </section>
       </main>
 
-      <footer className="border-t border-white/10 py-8">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between md:px-8">
-          <Logo iconSize={28} theme="monochrome-white" />
-          <p>Perfil da Empresa no Google · Camada Presença</p>
+      <footer className="border-t border-white/10 py-10">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <div className="mb-8 border-b border-white/10 pb-8">
+            <h4 className="mb-4 text-sm font-bold text-foreground">Google Meu Negócio por Especialidade</h4>
+            <div className="flex flex-wrap gap-x-5 gap-y-2 text-xs text-muted-foreground">
+              <Link to="/google-meu-negocio/dentistas" className="hover:text-primary transition-colors">Dentistas</Link>
+              <Link to="/google-meu-negocio/advogados" className="hover:text-primary transition-colors">Advogados</Link>
+              <Link to="/google-meu-negocio/nutricionistas" className="hover:text-primary transition-colors">Nutricionistas</Link>
+              <Link to="/google-meu-negocio/psicologas" className="hover:text-primary transition-colors">Psicólogos</Link>
+              <Link to="/google-meu-negocio/medicos" className="hover:text-primary transition-colors">Médicos</Link>
+              <Link to="/google-meu-negocio/fisioterapeutas" className="hover:text-primary transition-colors">Fisioterapeutas</Link>
+              <Link to="/google-meu-negocio/contadores" className="hover:text-primary transition-colors">Contadores</Link>
+              <Link to="/google-meu-negocio/arquitetos" className="hover:text-primary transition-colors">Arquitetos</Link>
+              <Link to="/google-meu-negocio/esteticistas" className="hover:text-primary transition-colors">Estética</Link>
+              <Link to="/google-meu-negocio/corretores" className="hover:text-primary transition-colors">Corretores</Link>
+              <Link to="/google-meu-negocio/oficinas-mecanicas" className="hover:text-primary transition-colors">Oficinas Mecânicas</Link>
+              <Link to="/cidades-atendidas" className="font-semibold text-primary hover:underline">Ver todas as 5.570 cidades →</Link>
+            </div>
+          </div>
+          <div className="flex flex-col gap-4 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
+            <Logo iconSize={28} theme="monochrome-white" />
+            <p>Perfil da Empresa no Google · Camada Presença</p>
+          </div>
         </div>
       </footer>
     </div>

@@ -210,6 +210,7 @@ const isPublicPath = (pathname: string) =>
   pathname.startsWith("/agencia-de-marketing/") ||
   pathname.startsWith("/empresa-de-captacao/") ||
   pathname.startsWith("/melhor-crm/") ||
+  pathname.startsWith("/google-meu-negocio/") ||
   isProspectingPreviewPath(pathname);
 
 const stages: OpportunityStage[] = pipelineStages;
@@ -1198,9 +1199,11 @@ function AppContent() {
           <Route path="/agencia-de-marketing/:nicho" element={<ProgrammaticNicheHub />} />
           <Route path="/empresa-de-captacao/:nicho" element={<ProgrammaticNicheHub />} />
           <Route path="/melhor-crm/:nicho" element={<ProgrammaticNicheHub />} />
+          <Route path="/google-meu-negocio/:nicho" element={<ProgrammaticNicheHub />} />
           <Route path="/agencia-de-marketing/:nicho/:estado/:cidade" element={<ProgrammaticIntentLanding intentType="agencia" />} />
           <Route path="/empresa-de-captacao/:nicho/:estado/:cidade" element={<ProgrammaticIntentLanding intentType="captacao" />} />
           <Route path="/melhor-crm/:nicho/:estado/:cidade" element={<ProgrammaticIntentLanding intentType="crm" />} />
+          <Route path="/google-meu-negocio/:nicho/:estado/:cidade" element={<ProgrammaticIntentLanding intentType="gmn" />} />
           <Route path="/l/:slug" element={<LinkAggregatorPage />} />
           <Route path="/:slug" element={<ProspectingPreviewPage />} />
           <Route path="/:slug/index.html" element={<ProspectingPreviewPage />} />

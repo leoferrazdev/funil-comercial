@@ -11,6 +11,8 @@ const routes = [
   "/diagnostico-estrutura-de-vendas",
   "/contato",
   "/google-meu-negocio",
+  "/google-meu-negocio/dentistas",
+  "/google-meu-negocio/dentistas/sp/limeira",
   "/trafego-pago-negocios-locais",
   "/crm-whatsapp-organizado",
   "/site-para-dentistas",
