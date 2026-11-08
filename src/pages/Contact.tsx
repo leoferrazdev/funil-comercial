@@ -10,8 +10,8 @@ import Logo from "../components/Logo";
 import { LeadCaptureForm } from "../components/LeadCaptureForm";
 import { SeoHead } from "../components/SeoHead";
 
-const PHONE = "+5551992568861";
-const PHONE_LABEL = "+55 (51) 99256-8861";
+const PHONE = "+5551996737359";
+const PHONE_LABEL = "+55 (51) 99673-7359";
 const WHATSAPP_LINK = `https://wa.me/${PHONE.replace("+", "")}`;
 
 const contactSchema = {
