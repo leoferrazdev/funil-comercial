@@ -1,0 +1,9 @@
+<IfModule mod_headers.c>
+  Header always set Access-Control-Allow-Origin "*"
+  Header set X-Content-Type-Options "nosniff"
+  Header set Cache-Control "no-cache, must-revalidate"
+</IfModule>
+
+<Files "oauth-protected-resource">
+  ForceType application/json
+</Files>

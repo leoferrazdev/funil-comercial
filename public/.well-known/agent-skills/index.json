@@ -1,12 +1,11 @@
 {
-  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
   "skills": [
     {
       "name": "funil-skill",
       "type": "skill-md",
-      "description": "Example skill for Funil Comercial",
+      "description": "Consultar os serviços públicos, o CRM e os canais de contato da Funil Comercial.",
       "url": "https://funilcomercial.com/.well-known/agent-skills/funil-skill/SKILL.md",
-      "digest": "sha256:da90536069dc8ddf0b4aab6f9410096c8e404ded18de8219461f5ec4db9af996"
+      "digest": "sha256:8e1e3509bacbde25c072d8589d8b4037aa4b292ac603c0f4a28bb41fbf428efc"
     }
   ]
 }

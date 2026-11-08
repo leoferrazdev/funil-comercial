@@ -1,1 +1,32 @@
-Serviço de otimização de funil comercial.
+# Funil Comercial
+
+> Estrutura de vendas para negócios locais no Brasil: presença, aquisição, conversão e escala. O CRM é o software próprio da empresa, a camada de Conversão.
+
+## Páginas principais em Markdown
+
+- [Empresa](https://funilcomercial.com/index.md): método, soluções e canais de contato.
+- [CRM](https://funilcomercial.com/crm/index.md): organização de contatos, leads, conversas e oportunidades.
+- [Consultoria](https://funilcomercial.com/consultoria/index.md): diagnóstico, estratégia, execução e acompanhamento.
+- [Contato](https://funilcomercial.com/contato/index.md): WhatsApp +55 (51) 99673-7359 e funil@funilcomercial.com.
+
+## Mais conteúdo público
+
+- [Site para negócios locais](https://funilcomercial.com/site-para-negocios-locais)
+- [Perfil da Empresa no Google](https://funilcomercial.com/google-meu-negocio)
+- [Tráfego pago](https://funilcomercial.com/trafego-pago-negocios-locais)
+- [CRM com WhatsApp organizado](https://funilcomercial.com/crm-whatsapp-organizado)
+- [Blog](https://funilcomercial.com/blog)
+- [Cidades atendidas](https://funilcomercial.com/cidades-atendidas)
+- [Sitemap](https://funilcomercial.com/sitemap.xml)
+
+## Descoberta e acesso
+
+- [Catálogo de recursos públicos](https://funilcomercial.com/.well-known/ai-catalog.json)
+- [Índice de skills](https://funilcomercial.com/.well-known/agent-skills/index.json)
+- [Descoberta Poppy](https://funilcomercial.com/.well-known/poppy.json): navegação pública, sem login delegado.
+- [Acesso e limites das integrações](https://funilcomercial.com/auth.md)
+- [Privacidade](https://funilcomercial.com/privacidade)
+
+As páginas com representação Markdown aceitam `Accept: text/markdown` e o caminho `/index.md` relativo à página. A disponibilidade além das quatro páginas principais depende do prerender no build.
+
+O CRM requer login e permissões. Este domínio não publica API externa, servidor MCP ou emissor OAuth para agentes. Consulte a equipe para confirmar condições comerciais e integrações. Um link de contato não representa agendamento ou contratação concluídos.

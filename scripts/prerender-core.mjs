@@ -8,6 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 import { CORE_ROUTES } from './core-routes.mjs';
+import { documentToMarkdown } from './agent-content.mjs';
 
 async function prerender() {
   const distPath = path.join(__dirname, '..', 'dist');
@@ -56,8 +57,8 @@ async function prerender() {
     await page.setRequestInterception(true);
     page.on('request', (req) => {
       const resourceType = req.resourceType();
-      const isAdSenseRequest = req.url().includes('pagead2.googlesyndication.com');
-      if (isAdSenseRequest || ['image', 'media', 'font', 'websocket'].includes(resourceType)) {
+      const isExternalRequest = !req.url().startsWith(`${baseUrl}/`);
+      if (isExternalRequest || ['image', 'media', 'font', 'websocket'].includes(resourceType)) {
         req.abort();
       } else {
         req.continue();
@@ -66,6 +67,12 @@ async function prerender() {
 
     // 3. Loop through core routes and take snapshots
     for (const route of CORE_ROUTES) {
+      // Este diretório monta centenas de milhares de links de uma vez.
+      // Mantê-lo em CSR evita travar o Chromium e perder as páginas seguintes.
+      if (route === '/cidades-atendidas') {
+        console.log('ℹ️ /cidades-atendidas mantida em CSR (diretório de grande volume).');
+        continue;
+      }
       console.log(`\n⏳ Prerendering ${route} ...`);
       try {
         await page.goto(`${baseUrl}${route}`, { waitUntil: 'networkidle0', timeout: 30000 });
@@ -89,6 +96,9 @@ async function prerender() {
         }
 
         fs.writeFileSync(absoluteSavePath, html);
+        // Cada representação Markdown corresponde à mesma página pública.
+        const markdown = await page.evaluate(documentToMarkdown, `https://funilcomercial.com${route}`);
+        fs.writeFileSync(path.join(dir, 'index.md'), markdown);
         console.log(`✅ Saved ${routePath}`);
       } catch (err) {
         console.error(`❌ Failed to prerender ${route}:`, err);

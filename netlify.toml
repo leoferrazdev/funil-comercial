@@ -3,6 +3,11 @@
   publish = "dist"
 
 [[redirects]]
+  from = "/.well-known/*"
+  to = "/404.html"
+  status = 404
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
@@ -14,24 +19,26 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Vary = "Accept"
 
 [[headers]]
   for = "/"
   [headers.values]
-    Link = "</.well-known/llms.txt>; rel=\"service-doc\", </.well-known/api-catalog>; rel=\"api-catalog\""
+    Link = "</llms.txt>; rel=\"service-doc\"; type=\"text/plain\", </.well-known/ai-catalog.json>; rel=\"ai-catalog\"; type=\"application/json\", </.well-known/ard.json>; rel=\"ard\"; type=\"application/json\""
 
 [[headers]]
-  for = "/.well-known/http-message-signatures-directory"
+  for = "/.well-known/*"
   [headers.values]
-    Content-Type = "application/json"
+    Access-Control-Allow-Origin = "*"
 
 [[headers]]
-  for = "/.well-known/api-catalog"
+  for = "/*.md"
   [headers.values]
-    Content-Type = "application/linkset+json"
+    Content-Type = "text/markdown; charset=utf-8"
+    Cache-Control = "no-cache, no-store, must-revalidate"
 
 [[headers]]
-  for = "/.well-known/oauth-authorization-server"
+  for = "/.well-known/*.json"
   [headers.values]
     Content-Type = "application/json"
 
@@ -43,4 +50,4 @@
 [[headers]]
   for = "/auth.md"
   [headers.values]
-    Content-Type = "text/markdown"
+    Content-Type = "text/markdown; charset=utf-8"

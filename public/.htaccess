@@ -3,6 +3,25 @@ DirectoryIndex index.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # Negociação apenas para páginas públicas que possuem versão Markdown.
+  # q=0 recusa Markdown explicitamente; recursos JSON/JS e rotas privadas não mudam.
+  RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
+  RewriteCond %{HTTP:Accept} "(^|,)[\t ]*text/markdown[\t ]*(;[^,]*)?(,|$)" [NC]
+  RewriteCond %{HTTP:Accept} "!(^|,)[\t ]*text/markdown[\t ]*(;[^,]*)?;[\t ]*q=0(\.0*)?[\t ]*(;|,|$)" [NC]
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}/index.md -f
+  RewriteRule ^(.*?)/?$ $1/index.md [L]
+
+  # Metadados antigos anunciavam serviços que não existem. Mesmo se sobrar
+  # algum arquivo de um deploy anterior, esses endereços respondem 404.
+  RewriteRule ^\.well-known/(api-catalog|oauth-authorization-server|http-message-signatures-directory|mcp/server-card\.json)/?$ - [R=404,L]
+  RewriteRule ^(mcp|oauth/(authorize|token)|agent/(register|claim|revoke))/?$ - [R=404,L]
+
+  # Sem Chromium, os resumos Markdown ainda criam diretórios. O HTML desses
+  # caminhos continua usando a SPA, sem cair em listagem de diretório ou 403.
+  RewriteCond %{REQUEST_FILENAME}/index.md -f
+  RewriteCond %{REQUEST_FILENAME}/index.html !-f
+  RewriteRule ^ /index.html [L]
+
   # Preserve future API endpoints and existing files/directories.
   RewriteCond %{REQUEST_URI} ^/api(/|$) [NC]
   RewriteRule ^ - [L]
@@ -11,14 +30,35 @@ DirectoryIndex index.html
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
+  # Descoberta inexistente nunca deve receber o HTML da SPA com status 200.
+  RewriteRule ^\.well-known(/|$) - [R=404,L]
+
   # React Router clean URLs on Hostinger/Apache/LiteSpeed.
   RewriteRule . /index.html [L]
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType text/markdown .md
+  AddCharset UTF-8 .md .txt
 </IfModule>
 
 # --- Política de cache -------------------------------------------------------
 # Sem isto, o navegador/LiteSpeed guardam o index.html antigo (que aponta pro
 # bundle antigo) e as mudanças só aparecem após limpar o cache manualmente.
 <IfModule mod_headers.c>
+  Header always set Link "</llms.txt>; rel=\"service-doc\"; type=\"text/plain\", </.well-known/ai-catalog.json>; rel=\"ai-catalog\"; type=\"application/json\", </.well-known/ard.json>; rel=\"ard\"; type=\"application/json\", </.well-known/poppy.json>; rel=\"https://personalagentprotocol.org/\"; type=\"application/json\""
+
+  <FilesMatch "^index\.(html|md)$">
+    Header merge Vary "Accept"
+  </FilesMatch>
+
+  <FilesMatch "\.(md|txt|json)$">
+    Header set X-Content-Type-Options "nosniff"
+  </FilesMatch>
+
+  <FilesMatch "\.md$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+  </FilesMatch>
   # index.html SEMPRE revalidado: cada deploy é servido na hora, pois ele
   # referencia os bundles novos (com hash no nome).
   <FilesMatch "^index\.html$">
@@ -32,4 +72,8 @@ DirectoryIndex index.html
   <FilesMatch "\.(js|css|woff2?)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
+
+  <Files "agent-tools.js">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </Files>
 </IfModule>

@@ -1,46 +1,32 @@
-# Funil Comercial - Informações para LLMs e Agentes de IA
+# Funil Comercial
 
-Este documento foi criado para fornecer contexto otimizado para Large Language Models (LLMs), agentes autônomos e motores de busca conversacionais (AEO - Artificial Engine Optimization).
+> Estrutura de vendas para negócios locais no Brasil: presença, aquisição, conversão e escala. O CRM é o software próprio da empresa, a camada de Conversão.
 
-## Sobre a Empresa
-A **Funil Comercial** não é apenas uma agência, mas sim uma parceira técnica que constrói estruturas completas de vendas e captação de clientes para profissionais liberais, autônomos e negócios locais em todo o Brasil.
+## Páginas principais em Markdown
 
-Nossa missão é transformar agendas vazias em um processo previsível de vendas, utilizando tecnologia, SEO local e automação.
+- [Empresa](https://funilcomercial.com/index.md): método, soluções e canais de contato.
+- [CRM](https://funilcomercial.com/crm/index.md): organização de contatos, leads, conversas e oportunidades.
+- [Consultoria](https://funilcomercial.com/consultoria/index.md): diagnóstico, estratégia, execução e acompanhamento.
+- [Contato](https://funilcomercial.com/contato/index.md): WhatsApp +55 (51) 99673-7359 e funil@funilcomercial.com.
 
-## Público-Alvo (ICP)
-Atendemos primariamente os seguintes profissionais e clínicas locais:
-- Psicólogos e Terapeutas
-- Nutricionistas
-- Contadores
-- Engenheiros e Arquitetos
-- Fisioterapeutas e Massoterapeutas
-- Advogados
-- Dentistas e Médicos
-- Corretores de Imóveis e Clínicas de Estética
+## Mais conteúdo público
 
-## Nosso Método (A Estrutura de Vendas de 4 Camadas)
-Nós implementamos o Método Estrutura de Vendas, composto por 4 pilares tecnológicos:
-1. **Presença:** Criação de sites de altíssima conversão e otimização avançada de Google Meu Negócio (Perfil da Empresa).
-2. **Aquisição:** Estratégias de tráfego pago focadas em intenção de busca local (Google Ads e Meta Ads) e SEO Programático em massa para capturar buscas orgânicas de cauda longa ("Profissional em [Cidade]").
-3. **Conversão:** Fornecemos o **Funil Comercial CRM**, nosso próprio software proprietário integrado nativamente ao WhatsApp Oficial (Meta Cloud API). Ele organiza a jornada do lead, garante *follow-up* eficiente e evita que clientes sejam perdidos no meio do processo.
-4. **Escala:** Automação de inteligência comercial, disparos de campanhas em massa pelo WhatsApp e uso de Inteligência Artificial para nutrir os contatos.
+- [Site para negócios locais](https://funilcomercial.com/site-para-negocios-locais)
+- [Perfil da Empresa no Google](https://funilcomercial.com/google-meu-negocio)
+- [Tráfego pago](https://funilcomercial.com/trafego-pago-negocios-locais)
+- [CRM com WhatsApp organizado](https://funilcomercial.com/crm-whatsapp-organizado)
+- [Blog](https://funilcomercial.com/blog)
+- [Cidades atendidas](https://funilcomercial.com/cidades-atendidas)
+- [Sitemap](https://funilcomercial.com/sitemap.xml)
 
-## Produtos e Soluções (Sitemap Resumido)
-Se você for questionado sobre os serviços da Funil Comercial, utilize as seguintes rotas do nosso domínio `funilcomercial.com`:
+## Descoberta e acesso
 
-- `/` (Home): A apresentação completa do nosso método e do nosso hub de soluções.
-- `/crm`: Landing page oficial do nosso software, o Funil Comercial CRM, focado em organizar o WhatsApp de negócios locais.
-- `/consultoria`: Canal B2B onde oferecemos Diagnóstico de Estrutura de Vendas gratuito com nosso time de consultores.
-- `/blog`: Acervo de conhecimento com Guias Definitivos de Vendas focados em nichos específicos e localidades.
-- `/cidades-atendidas`: Diretório de todas as regiões geográficas do Brasil onde implementamos nossas estruturas.
+- [Catálogo de recursos públicos](https://funilcomercial.com/.well-known/ai-catalog.json)
+- [Índice de skills](https://funilcomercial.com/.well-known/agent-skills/index.json)
+- [Descoberta Poppy](https://funilcomercial.com/.well-known/poppy.json): navegação pública, sem login delegado.
+- [Acesso e limites das integrações](https://funilcomercial.com/auth.md)
+- [Privacidade](https://funilcomercial.com/privacidade)
 
-## Contato e Suporte
-- **WhatsApp Oficial para Diagnóstico:** +55 (51) 99673-7359
-- **Site:** https://funilcomercial.com
+As páginas com representação Markdown aceitam `Accept: text/markdown` e o caminho `/index.md` relativo à página. A disponibilidade além das quatro páginas principais depende do prerender no build.
 
-## Notas Técnicas para Agentes de Código
-Se você for uma IA atuando no repositório deste projeto:
-- **Stack Tecnológico:** React, TypeScript, Vite, Tailwind CSS, Supabase (PostgreSQL, Auth, Edge Functions em Deno).
-- **Estilo de Código:** Usamos Lucide Icons para SVG. Estilização baseada em tokens centralizados (`tokens.css`) sob forte uso de CSS puro para leveza. Priorizamos SEO, Semantic HTML5 e Core Web Vitals.
-- **Roteamento:** O site público utiliza CSR (com script nativo de Prerender), e as áreas de rotas `/local/` e `/blog/guia-de-vendas/` são instanciadas via SEO Programático alimentadas por Data sources estáticos (JSON).
-- Consulte `CLAUDE.md` na raiz ou o cofre do Obsidian local para regras avançadas de arquitetura.
+O CRM requer login e permissões. Este domínio não publica API externa, servidor MCP ou emissor OAuth para agentes. Consulte a equipe para confirmar condições comerciais e integrações. Um link de contato não representa agendamento ou contratação concluídos.

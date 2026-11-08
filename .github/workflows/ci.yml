@@ -43,5 +43,8 @@ jobs:
       - name: Typecheck and build
         run: npm run check
 
+      - name: Test public agent content
+        run: npm run test:agents
+
       - name: Smoke test app routes
         run: npm run routes:smoke

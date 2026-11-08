@@ -9,10 +9,12 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && node scripts/generate-sitemap.mjs && node scripts/prerender-core.mjs && node --experimental-strip-types scripts/prerender-local.ts",
+    "build": "tsc && node scripts/prepare-agent-discovery.mjs && vite build && node scripts/generate-sitemap.mjs && node scripts/prerender-core.mjs && node --experimental-strip-types scripts/prerender-local.ts",
     "prerender": "node scripts/prerender-core.mjs",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
+    "test:agents": "node --test scripts/agent-content.test.mjs scripts/agent-negotiation.test.mjs scripts/webmcp.test.mjs",
+    "agents:smoke": "node scripts/smoke-agent-readiness.mjs",
     "check": "npm run typecheck && npm run build",
     "db:apply": "node scripts/apply-supabase-sql.mjs",
     "functions:smoke": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/test-supabase-functions.ps1",

@@ -1,0 +1,31 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Funil Comercial",
+    "documentationUrl": "https://funilcomercial.com/llms.txt"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:funilcomercial.com:skill:consultar-servicos",
+      "displayName": "Consultar a Funil Comercial",
+      "type": "text/markdown",
+      "url": "https://funilcomercial.com/.well-known/agent-skills/funil-skill/SKILL.md",
+      "description": "Guia para consultar serviços, CRM, consultoria e canais de contato públicos.",
+      "representativeQueries": [
+        "O que a Funil Comercial oferece para negócios locais?",
+        "Como falar com a equipe sobre CRM e estrutura de vendas?"
+      ]
+    },
+    {
+      "identifier": "urn:air:funilcomercial.com:docs:acesso-publico",
+      "displayName": "Acesso público e limites das integrações",
+      "type": "text/markdown",
+      "url": "https://funilcomercial.com/auth.md",
+      "description": "Informa como consultar o site público e distingue esse conteúdo das contas privadas do CRM.",
+      "representativeQueries": [
+        "Preciso autenticar para consultar o site da Funil Comercial?",
+        "A Funil Comercial oferece API pública ou servidor MCP?"
+      ]
+    }
+  ]
+}

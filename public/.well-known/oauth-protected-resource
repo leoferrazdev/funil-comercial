@@ -1,13 +1,5 @@
 {
-  "resource": "https://funilcomercial.com/api",
-  "authorization_servers": [
-    "https://funilcomercial.com"
-  ],
-  "scopes_supported": [
-    "read",
-    "write"
-  ],
-  "bearer_methods_supported": [
-    "header"
-  ]
+  "resource": "https://funilcomercial.com",
+  "resource_name": "Funil Comercial — site público",
+  "resource_documentation": "https://funilcomercial.com/auth.md"
 }
