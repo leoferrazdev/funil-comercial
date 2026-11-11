@@ -136,7 +136,7 @@ export default function LpArquitetos() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Posicionamento B2B e High-Ticket</h4>
+                      <h3 className="text-xl font-semibold mb-2">Posicionamento B2B e High-Ticket</h3>
                       <p className="text-muted-foreground">Configuramos suas campanhas no Google Ads (Fundo de Funil) para capturar quem precisa de regularização, laudos, projetos corporativos ou arquitetura de alto padrão.</p>
                     </div>
                   </div>
@@ -147,7 +147,7 @@ export default function LpArquitetos() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Página de Apresentação (Portfólio Ativo)</h4>
+                      <h3 className="text-xl font-semibold mb-2">Página de Apresentação (Portfólio Ativo)</h3>
                       <p className="text-muted-foreground">O clique do anúncio não cai no seu Instagram. Ele vai para uma Landing Page de altíssima velocidade que vende a sua segurança técnica, experiência e metodologia.</p>
                     </div>
                   </div>
@@ -158,7 +158,7 @@ export default function LpArquitetos() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">CRM para Ciclos Longos</h4>
+                      <h3 className="text-xl font-semibold mb-2">CRM para Ciclos Longos</h3>
                       <p className="text-muted-foreground">Vender um projeto grande leva meses. Sem um CRM visual, as negociações esfriam e morrem no WhatsApp. Estruturamos o acompanhamento (follow-up) automático para você.</p>
                     </div>
                   </div>

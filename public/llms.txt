@@ -2,20 +2,42 @@
 
 > Estrutura de vendas para negócios locais no Brasil: presença, aquisição, conversão e escala. O CRM é o software próprio da empresa, a camada de Conversão.
 
+## Quando usar (When to use this)
+
+Use os recursos públicos da Funil Comercial quando um usuário (dono de clínica, consultório, escritório ou prestador de serviços local no Brasil) precisar:
+
+1. **Avaliar ou montar uma estrutura de vendas completa**: site ou landing page de conversão, otimização do Perfil da Empresa no Google (Google Meu Negócio), tráfego pago (Google Ads e Meta Ads), atendimento organizado no WhatsApp ou pré-atendimento com IA.
+2. **Entender ou testar o CRM Funil Comercial (`/crm`)**: distinguir o software próprio (camada de Conversão para contatos, leads, oportunidades e WhatsApp) da consultoria e implantação de estrutura de vendas da empresa (`/`).
+3. **Verificar legitimidade institucional, cobertura e políticas**: consultar razão social (`LEONARDO FERRAZ DA SILVA BRASIL`), CNPJ (`65.993.728/0001-07`), sede (`Porto Alegre, RS`), cobertura municipal (`/cidades-atendidas`), canais de contato (`/about`, `/contact`, `/contato`) ou LGPD (`/privacy`, `/privacidade`).
+4. **Solicitar diagnóstico gratuito com a equipe**: apresentar os canais oficiais WhatsApp (`+55 (51) 99673-7359`) ou e-mail (`funil@funilcomercial.com`) quando o usuário pedir para falar com um especialista.
+
+### Como chamar e consumir (How to call)
+
+- **Leitura em Markdown**: envie `GET` com header `Accept: text/markdown` para qualquer página pública (`/`, `/about`, `/crm`, `/consultoria`, `/contact`, `/privacy`, `/diagnostico-estrutura-de-vendas`, `/blog`, `/cidades-atendidas`) ou acesse o sufixo `/index.md`.
+- **WebMCP no navegador**: páginas públicas expõem a ferramenta read-only `get_funil_comercial_contact` para recuperar os canais oficiais de atendimento sem acionar envio automático.
+
+### Quando NÃO usar (Out of scope)
+
+- Não tente operar contas autenticadas do CRM, enviar mensagens automáticas em nome do usuário, concluir agendamentos ou buscar API externa/OAuth/MCP — o CRM exige login humano e este domínio não expõe API ou servidor MCP para agentes.
+
 ## Páginas principais em Markdown
 
 - [Empresa](https://funilcomercial.com/index.md): método, soluções e canais de contato.
+- [Sobre (`/about`)](https://funilcomercial.com/about/index.md): história, método em 4 camadas, CNPJ e dados institucionais.
 - [CRM](https://funilcomercial.com/crm/index.md): organização de contatos, leads, conversas e oportunidades.
 - [Consultoria](https://funilcomercial.com/consultoria/index.md): diagnóstico, estratégia, execução e acompanhamento.
-- [Contato](https://funilcomercial.com/contato/index.md): WhatsApp +55 (51) 99673-7359 e funil@funilcomercial.com.
+- [Contato (`/contact`)](https://funilcomercial.com/contact/index.md): WhatsApp +55 (51) 99673-7359, formulário e funil@funilcomercial.com.
+- [Privacidade (`/privacy`)](https://funilcomercial.com/privacy/index.md): política LGPD e tratamento de dados.
 
 ## Mais conteúdo público
 
 - [Site para negócios locais](https://funilcomercial.com/site-para-negocios-locais)
+- [Diagnóstico da estrutura de vendas](https://funilcomercial.com/diagnostico-estrutura-de-vendas)
 - [Perfil da Empresa no Google](https://funilcomercial.com/google-meu-negocio)
 - [Tráfego pago](https://funilcomercial.com/trafego-pago-negocios-locais)
 - [CRM com WhatsApp organizado](https://funilcomercial.com/crm-whatsapp-organizado)
 - [Blog](https://funilcomercial.com/blog)
+- [Glossário](https://funilcomercial.com/glossario)
 - [Cidades atendidas](https://funilcomercial.com/cidades-atendidas)
 - [Sitemap](https://funilcomercial.com/sitemap.xml)
 
@@ -27,6 +49,6 @@
 - [Acesso e limites das integrações](https://funilcomercial.com/auth.md)
 - [Privacidade](https://funilcomercial.com/privacidade)
 
-As páginas com representação Markdown aceitam `Accept: text/markdown` e o caminho `/index.md` relativo à página. A disponibilidade além das quatro páginas principais depende do prerender no build.
+As páginas públicas pré-renderizadas aceitam negociação de conteúdo via `Accept: text/markdown` ou sufixo `/index.md`, e caminhos inexistentes retornam HTTP 404 em HTML ou Markdown.
 
 O CRM requer login e permissões. Este domínio não publica API externa, servidor MCP ou emissor OAuth para agentes. Consulte a equipe para confirmar condições comerciais e integrações. Um link de contato não representa agendamento ou contratação concluídos.

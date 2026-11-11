@@ -220,9 +220,9 @@ function HealthProfessionalSiteMockup() {
             <p className="text-xs font-black uppercase tracking-wider text-primary">
               Nutrição e saúde
             </p>
-            <h3 className="mt-2 text-2xl font-black leading-tight">
+            <p className="mt-2 text-2xl font-black leading-tight">
               Atendimento claro antes da primeira conversa
-            </h3>
+            </p>
             <p className="mt-3 text-sm leading-6 text-muted-foreground">
               Abordagem, áreas de atuação, formato da consulta e WhatsApp em uma página simples.
             </p>

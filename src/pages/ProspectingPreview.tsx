@@ -1,5 +1,6 @@
 import { useEffect, type CSSProperties } from "react";
 import { Navigate, useLocation } from "react-router";
+import { SeoHead } from "../components/SeoHead";
 import {
   getProspectingPreview,
   getProspectingPreviewSlug,
@@ -54,6 +55,13 @@ export default function ProspectingPreviewPage() {
 
   return (
     <main className="prospect-page" style={style}>
+      <SeoHead
+        title={`${preview.name} | Atendimento odontológico`}
+        exactTitle
+        description={`${preview.niche} em ${preview.region} — ${preview.address}`}
+        canonicalUrl={`https://funilcomercial.com/${preview.slug}`}
+        noindex
+      />
       <div className="prospect-alert">
         <div className="prospect-wrap">
           <span>{preview.address}</span>

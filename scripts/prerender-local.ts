@@ -1,6 +1,6 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { seoNicheData, getDefaultNicheData } from '../src/lib/seoNicheData.ts';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -8,6 +8,27 @@ const __dirname = path.dirname(__filename);
 
 const DIST_DIR = path.join(__dirname, '..', 'dist');
 const LOCATIONS_FILE = path.join(__dirname, '..', 'src', 'lib', 'seoLocations.json');
+
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function stripHomeSeoAndRoot(indexHtml: string): string {
+  return indexHtml
+    .replace(/<!--app-root-start-->[\s\S]*?<!--app-root-end-->/, '<!--app-root-start--><div id="root"></div><!--app-root-end-->')
+    .replace(/<meta\b[^>]*\bname=["']prerendered["'][^>]*>\s*/gi, '')
+    .replace(/<title>[\s\S]*?<\/title>\s*/gi, '')
+    .replace(/<meta\b[^>]*\bname=["']description["'][^>]*>\s*/gi, '')
+    .replace(/<meta\b[^>]*\bname=["']keywords["'][^>]*>\s*/gi, '')
+    .replace(/<meta\b[^>]*\bproperty=["']og:(url|title|description)["'][^>]*>\s*/gi, '')
+    .replace(/<meta\b[^>]*\bname=["']twitter:(url|title|description)["'][^>]*>\s*/gi, '')
+    .replace(/<link\b[^>]*\brel=["']canonical["'][^>]*>\s*/gi, '')
+    .replace(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>\s*/gi, '');
+}
 
 async function run() {
   if (!fs.existsSync(DIST_DIR)) {
@@ -21,112 +42,115 @@ async function run() {
     process.exit(1);
   }
 
-  const baseHtml = fs.readFileSync(indexHtmlPath, 'utf-8');
-  
+  const baseShellHtml = stripHomeSeoAndRoot(fs.readFileSync(indexHtmlPath, 'utf-8'));
+
   if (!fs.existsSync(LOCATIONS_FILE)) {
     console.error('❌ seoLocations.json not found.');
     process.exit(1);
   }
-  
+
   const locationsData = JSON.parse(fs.readFileSync(LOCATIONS_FILE, 'utf-8'));
-  
   let generatedCount = 0;
-  
+
   for (const { estado, cidade, nome: cityName } of locationsData.TARGET_CITIES) {
     for (const { slug: niche } of locationsData.NICHES) {
-        
-        // Obter os dados reais exatos que o React vai hidratar!
-        const data = seoNicheData[niche] || getDefaultNicheData(niche, cityName);
-        
-        const title = data.title;
-        // Pega a dor do cliente como Meta Descrição e corta em 160 chars
-        const description = data.painPointDescription.replace(/\n/g, ' ').substring(0, 160);
-        
-        // Injetar o schema de LocalBusiness
-        const schema = {
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "serviceType": niche,
-          "provider": {
-            "@type": "LocalBusiness",
-            "name": `Funil Comercial - Marketing para ${nichoFormat(niche)} em ${cityName}`,
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": cityName,
-              "addressRegion": estado.toUpperCase(),
-              "addressCountry": "BR"
-            }
+      const data = seoNicheData[niche] || getDefaultNicheData(niche, cityName);
+      const ufUpper = estado.toUpperCase();
+      const nicheLabel = nichoFormat(niche);
+      const fullTitle = `${data.title} em ${cityName} (${ufUpper}) | Funil Comercial`;
+      const description = data.painPointDescription.replace(/\n/g, ' ').slice(0, 160);
+      const canonicalUrl = `https://funilcomercial.com/agencia-de-marketing/${niche}/${estado.toLowerCase()}/${cidade.toLowerCase()}`;
+
+      const schema = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        serviceType: `${data.title} para ${nicheLabel}`,
+        provider: {
+          '@type': ['Organization', 'LocalBusiness'],
+          name: `Funil Comercial — Estrutura de Vendas para ${nicheLabel} em ${cityName}`,
+          url: 'https://funilcomercial.com',
+          telephone: '+5551996737359',
+          email: 'funil@funilcomercial.com',
+          contactPoint: [
+            {
+              '@type': 'ContactPoint',
+              telephone: '+5551996737359',
+              email: 'funil@funilcomercial.com',
+              contactType: 'customer service',
+              areaServed: 'BR',
+              availableLanguage: ['Portuguese'],
+            },
+          ],
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: cityName,
+            addressRegion: ufUpper,
+            addressCountry: 'BR',
           },
-          "areaServed": {
-            "@type": "City",
-            "name": cityName
-          }
-        };
+        },
+        areaServed: {
+          '@type': 'City',
+          name: cityName,
+        },
+      };
 
-        // Preparar o HTML Injetado (Static Shell)
-        let html = baseHtml;
-        
-        // Substituir as tags padrão do Vite
-        html = html.replace(/<title>.*?<\/title>/i, `<title>${title} em ${cityName} | Funil Comercial</title>`);
-        html = html.replace(/<meta name="description" content=".*?">/i, `<meta name="description" content="${description}">`);
-        
-        // Inserir schema no head
-        html = html.replace('</head>', `\n    <script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n    </script>\n</head>`);
-        
-        // Marcar que foi pre-renderizado localmente
-        html = html.replace('</head>', '\n    <meta name="prerendered-local-shell" content="true">\n</head>');
+      const escapedTitle = escapeHtml(fullTitle);
+      const escapedDesc = escapeHtml(description);
+      const escapedH1 = escapeHtml(`${data.title} em ${cityName} - ${ufUpper}`);
 
-        // Injetar H1 Oculto/Invisível ou visível apenas para o Googlebot no body para FCP
-        // Isso ajuda imensamente o Googlebot antes do JS carregar
-        const h1Skeleton = `<div style="display:none;" id="seo-shell"><h1>${title} em ${cityName} - ${estado.toUpperCase()}</h1><p>${description}</p></div>`;
-        const finalHtml = html.replace('<div id="root">', `<div id="root">\n${h1Skeleton}`);
+      const headTags = [
+        `<title>${escapedTitle}</title>`,
+        `<meta data-ssr-head="true" name="description" content="${escapedDesc}" />`,
+        `<link data-ssr-head="true" rel="canonical" href="${canonicalUrl}" />`,
+        `<meta data-ssr-head="true" property="og:url" content="${canonicalUrl}" />`,
+        `<meta data-ssr-head="true" property="og:title" content="${escapedTitle}" />`,
+        `<meta data-ssr-head="true" property="og:description" content="${escapedDesc}" />`,
+        `<meta data-ssr-head="true" name="twitter:url" content="${canonicalUrl}" />`,
+        `<meta data-ssr-head="true" name="twitter:title" content="${escapedTitle}" />`,
+        `<meta data-ssr-head="true" name="twitter:description" content="${escapedDesc}" />`,
+        `<meta name="prerendered-local-shell" content="true" />`,
+        `<script type="application/ld+json">${JSON.stringify(schema)}</script>`,
+      ].join('\n    ');
 
-        // A URL é /agencia-de-marketing/:nicho/:estado/:cidade
-        const urlSegments = ['agencia-de-marketing', niche, estado.toLowerCase(), cidade.toLowerCase()];
-        
-        let currentPath = DIST_DIR;
-        
-        // CORREÇÃO CRÍTICA DO ERRO 403: O servidor (ex: GitHub Pages / Vercel) vê o diretório
-        // existindo (porque criamos subpastas), mas sem index.html ele dá 403 Forbidden.
-        // Solução: Ao descer na árvore de diretórios, garantimos que CADA nível tenha um index.html
-        for (let i = 0; i < urlSegments.length; i++) {
-            currentPath = path.join(currentPath, urlSegments[i]);
-            if (!fs.existsSync(currentPath)) {
-                fs.mkdirSync(currentPath, { recursive: true });
-            }
-            
-            const levelHtmlPath = path.join(currentPath, 'index.html');
-            
-            // Se for o último nível (a cidade), gravamos o HTML otimizado específico
-            if (i === urlSegments.length - 1) {
-                fs.writeFileSync(levelHtmlPath, finalHtml);
-                generatedCount++;
-            } 
-            // Para níveis intermediários (ex: /agencia-de-marketing, /advogados, /sp), gravamos um fallback
-            else if (!fs.existsSync(levelHtmlPath)) {
-                let fallbackHtml = baseHtml;
-                // Adicionamos uma tag apenas para sabermos que é um fallback
-                fallbackHtml = fallbackHtml.replace('</head>', '\n    <meta name="prerendered-local-fallback" content="true">\n</head>');
-                fs.writeFileSync(levelHtmlPath, fallbackHtml);
-                // Não incrementamos o count para estes falbacks silenciosos, ou podemos incrementar
-            }
+      const visibleBody = `<div id="root" data-ssr-local="true"><main class="min-h-screen bg-background text-foreground px-6 py-16 mx-auto max-w-4xl"><h1 class="text-3xl font-black mb-4">${escapedH1}</h1><p class="mb-4">${escapeHtml(data.painPointDescription)}</p><section class="mb-6"><h2 class="text-xl font-bold mb-2">Estrutura de Vendas Completa em ${escapeHtml(cityName)}</h2><p>A Funil Comercial implanta criação de site de alta conversão, otimização de Google Meu Negócio, gestão de tráfego pago (Google Ads e Meta Ads), organização de atendimento no WhatsApp e CRM próprio para ${escapeHtml(nicheLabel)} em ${escapeHtml(cityName)}, ${ufUpper}.</p></section></main></div>`;
+
+      const finalHtml = baseShellHtml
+        .replace('</head>', () => `    ${headTags}\n  </head>`)
+        .replace('<!--app-root-start--><div id="root"></div><!--app-root-end-->', () => visibleBody);
+
+      const urlSegments = ['agencia-de-marketing', niche, estado.toLowerCase(), cidade.toLowerCase()];
+      let currentPath = DIST_DIR;
+
+      for (let i = 0; i < urlSegments.length; i++) {
+        currentPath = path.join(currentPath, urlSegments[i]);
+        if (!fs.existsSync(currentPath)) {
+          fs.mkdirSync(currentPath, { recursive: true });
         }
+
+        const levelHtmlPath = path.join(currentPath, 'index.html');
+        if (i === urlSegments.length - 1) {
+          fs.writeFileSync(levelHtmlPath, finalHtml);
+          generatedCount++;
+        } else if (!fs.existsSync(levelHtmlPath)) {
+          const levelRoute = `/${urlSegments.slice(0, i + 1).join('/')}`;
+          const fallbackCanonical = `https://funilcomercial.com${levelRoute}`;
+          const fallbackHead = [
+            `<title>Estrutura de Vendas Local | Funil Comercial</title>`,
+            `<meta data-ssr-head="true" name="description" content="Estrutura de vendas para negócios locais em todo o Brasil: site, Google Meu Negócio, tráfego pago e CRM Funil Comercial." />`,
+            `<link data-ssr-head="true" rel="canonical" href="${fallbackCanonical}" />`,
+            `<meta name="prerendered-local-fallback" content="true" />`,
+          ].join('\n    ');
+          const fallbackBody = `<div id="root" data-ssr-local="fallback"><main class="min-h-screen bg-background text-foreground px-6 py-16 mx-auto max-w-4xl"><h1 class="text-3xl font-black mb-4">Agência e Estrutura de Vendas para Negócios Locais</h1><p>Atendemos ${escapeHtml(locationsData.TARGET_CITIES.length.toString())} municípios no Brasil com criação de site, Google Meu Negócio, tráfego pago, atendimento no WhatsApp e CRM Funil Comercial. Consulte nossa cobertura completa em Cidades Atendidas ou fale com nossa equipe.</p></main></div>`;
+          const fallbackHtml = baseShellHtml
+            .replace('</head>', () => `    ${fallbackHead}\n  </head>`)
+            .replace('<!--app-root-start--><div id="root"></div><!--app-root-end-->', () => fallbackBody);
+          fs.writeFileSync(levelHtmlPath, fallbackHtml);
+        }
+      }
     }
   }
 
   console.log(`✨ Selective Prerendering (Local Shells) Complete! Generated ${generatedCount} programmatic local pages (plus fallbacks).`);
-}
-
-function formatSlug(text: string) {
-  return text
-    .toString()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/g, '-')
-    .replace(/[^\w\-]+/g, '')
-    .replace(/\-\-+/g, '-');
 }
 
 function nichoFormat(niche: string) {

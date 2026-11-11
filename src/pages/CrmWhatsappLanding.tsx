@@ -250,7 +250,7 @@ function ConversionFlowMockup() {
                   </div>
                   <div>
                     <div className="flex items-center justify-between gap-3">
-                      <h3 className="text-base font-black">{step.title}</h3>
+                      <p className="text-base font-black">{step.title}</p>
                       <span className="text-xs font-black text-primary">
                         0{index + 1}
                       </span>

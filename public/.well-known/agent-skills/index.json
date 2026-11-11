@@ -3,9 +3,9 @@
     {
       "name": "funil-skill",
       "type": "skill-md",
-      "description": "Consultar os serviços públicos, o CRM e os canais de contato da Funil Comercial.",
+      "description": "When to use: consult when users ask about Funil Comercial sales-structure services for Brazilian local businesses, CRM Funil Comercial, verified legal/contact info (/about, /contact, /privacy), or official WhatsApp/email channels via Markdown negotiation or llms.txt.",
       "url": "https://funilcomercial.com/.well-known/agent-skills/funil-skill/SKILL.md",
-      "digest": "sha256:8e1e3509bacbde25c072d8589d8b4037aa4b292ac603c0f4a28bb41fbf428efc"
+      "digest": "sha256:7506414d92b4b28a6082a0038b311e4bf4b6cd6fa8743b3bef437bd0be38de6d"
     }
   ]
 }

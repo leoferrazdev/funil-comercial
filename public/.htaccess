@@ -1,74 +1,116 @@
-DirectoryIndex index.html
+<IfModule mod_dir.c>
+  DirectoryIndex index.html
+  DirectorySlash Off
+</IfModule>
+ErrorDocument 404 /404.html
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # Negociação apenas para páginas públicas que possuem versão Markdown.
-  # q=0 recusa Markdown explicitamente; recursos JSON/JS e rotas privadas não mudam.
-  RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
-  RewriteCond %{HTTP:Accept} "(^|,)[\t ]*text/markdown[\t ]*(;[^,]*)?(,|$)" [NC]
-  RewriteCond %{HTTP:Accept} "!(^|,)[\t ]*text/markdown[\t ]*(;[^,]*)?;[\t ]*q=0(\.0*)?[\t ]*(;|,|$)" [NC]
-  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}/index.md -f
-  RewriteRule ^(.*?)/?$ $1/index.md [L]
-
   # Metadados antigos anunciavam serviços que não existem. Mesmo se sobrar
-  # algum arquivo de um deploy anterior, esses endereços respondem 404.
+  # algum arquivo de um deploy anterior, esses endereços respondem HTTP 404 real.
   RewriteRule ^\.well-known/(api-catalog|oauth-authorization-server|http-message-signatures-directory|mcp/server-card\.json)/?$ - [R=404,L]
   RewriteRule ^(mcp|oauth/(authorize|token)|agent/(register|claim|revoke))/?$ - [R=404,L]
 
-  # Sem Chromium, os resumos Markdown ainda criam diretórios. O HTML desses
-  # caminhos continua usando a SPA, sem cair em listagem de diretório ou 403.
+  # Em subrequisições de ErrorDocument 404 (ou acesso direto a 404.html), entrega
+  # corpo Markdown quando o agente prefere text/markdown, mantendo status 404.
+  RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
+  RewriteCond %{HTTP:Accept} "(^|,)[\t ]*text/markdown[\t ]*(;[^,]*)?(,|$)" [NC]
+  RewriteCond %{HTTP:Accept} "!(^|,)[\t ]*text/markdown[\t ]*(;[^,]*)?;[\t ]*q=0(\.0*)?[\t ]*(;|,|$)" [NC]
+  RewriteCond %{HTTP:Accept} "!(^|,)[\t ]*text/html[\t ]*(;[^,]*)?(,|$)" [NC,OR]
+  RewriteCond %{HTTP:Accept} "!(^|,)[\t ]*text/markdown[\t ]*(;[^,]*)?;[\t ]*q=0\.[0-9]+[\t ]*(;|,|$)" [NC,OR]
+  RewriteCond %{HTTP:Accept} "(^|,)[\t ]*text/html[\t ]*(;[^,]*)?;[\t ]*q=0(\.[0-9]+)?[\t ]*(;|,|$)" [NC]
+  RewriteRule ^404\.html$ /404.md [L]
+
+  # Negociação Markdown para "/" e demais páginas públicas que possuem index.md.
+  # Mantém preferência por HTML quando text/html tem prioridade maior ou q=0 recusa Markdown.
+  RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
+  RewriteCond %{HTTP:Accept} "(^|,)[\t ]*text/markdown[\t ]*(;[^,]*)?(,|$)" [NC]
+  RewriteCond %{HTTP:Accept} "!(^|,)[\t ]*text/markdown[\t ]*(;[^,]*)?;[\t ]*q=0(\.0*)?[\t ]*(;|,|$)" [NC]
+  RewriteCond %{HTTP:Accept} "!(^|,)[\t ]*text/html[\t ]*(;[^,]*)?(,|$)" [NC,OR]
+  RewriteCond %{HTTP:Accept} "!(^|,)[\t ]*text/markdown[\t ]*(;[^,]*)?;[\t ]*q=0\.[0-9]+[\t ]*(;|,|$)" [NC,OR]
+  RewriteCond %{HTTP:Accept} "(^|,)[\t ]*text/html[\t ]*(;[^,]*)?;[\t ]*q=0(\.[0-9]+)?[\t ]*(;|,|$)" [NC]
+  RewriteCond %{DOCUMENT_ROOT}/index.md -f
+  RewriteRule ^$ /index.md [L]
+
+  RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
+  RewriteCond %{HTTP:Accept} "(^|,)[\t ]*text/markdown[\t ]*(;[^,]*)?(,|$)" [NC]
+  RewriteCond %{HTTP:Accept} "!(^|,)[\t ]*text/markdown[\t ]*(;[^,]*)?;[\t ]*q=0(\.0*)?[\t ]*(;|,|$)" [NC]
+  RewriteCond %{HTTP:Accept} "!(^|,)[\t ]*text/html[\t ]*(;[^,]*)?(,|$)" [NC,OR]
+  RewriteCond %{HTTP:Accept} "!(^|,)[\t ]*text/markdown[\t ]*(;[^,]*)?;[\t ]*q=0\.[0-9]+[\t ]*(;|,|$)" [NC,OR]
+  RewriteCond %{HTTP:Accept} "(^|,)[\t ]*text/html[\t ]*(;[^,]*)?;[\t ]*q=0(\.[0-9]+)?[\t ]*(;|,|$)" [NC]
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.md -f
+  RewriteRule ^(.+?)/?$ /$1/index.md [L]
+
+  # Fallback defensivo caso exista apenas index.md sem index.html em algum caminho.
   RewriteCond %{REQUEST_FILENAME}/index.md -f
   RewriteCond %{REQUEST_FILENAME}/index.html !-f
   RewriteRule ^ /index.html [L]
 
-  # Preserve future API endpoints and existing files/directories.
+  # Preservar endpoints de API e arquivos estáticos ou diretórios com index.html (sem 301 de trailing slash).
   RewriteCond %{REQUEST_URI} ^/api(/|$) [NC]
   RewriteRule ^ - [L]
 
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]
 
-  # Descoberta inexistente nunca deve receber o HTML da SPA com status 200.
+  RewriteCond %{DOCUMENT_ROOT}/index.html -f
+  RewriteRule ^$ /index.html [L]
+
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+  RewriteRule ^(.+?)/?$ /$1/index.html [L]
+
+  # Descoberta inexistente nunca deve receber HTML da SPA com status 200.
   RewriteRule ^\.well-known(/|$) - [R=404,L]
 
-  # React Router clean URLs on Hostinger/Apache/LiteSpeed.
-  RewriteRule . /index.html [L]
+  # Rotas SPA dinâmicas / autenticadas explícitas (sem pré-render estático).
+  RewriteRule ^(login|cadastro|redefinir-senha|dashboard|inbox|contatos|leads|funil|campanhas|criativos|roteiro|agregadores|pecas|perfil|configuracoes|whatsapp|oauth/(meta|instagram))/?$ /index.html [L]
+
+  # Agregadores públicos (/l/:slug) e previews demonstrativos de prospecção conhecidos.
+  RewriteRule ^l/[a-zA-Z0-9_-]+/?$ /index.html [L]
+  RewriteRule ^(kns-odontologia|dra-talita-nacamura|brasiliense-odontologia|dra-marcia-yamashita|vilela-odontologia|cidmep-odontologia|dr-alexandre-serrano-lima|calligari-odontologia|flavia-martins-dentista|clins-odontologia)(/index\.html)?/?$ /index.html [L]
+
+  # Rotas locais programáticas e guias por município válidos.
+  RewriteRule ^(local|agencia-de-marketing|empresa-de-captacao|melhor-crm|google-meu-negocio)/(dentistas|advogados|psicologas|nutricionistas|arquitetos|contadores|medicos|esteticistas|corretores|fisioterapeutas|engenheiros|personal-trainers|energia-solar|oficinas-mecanicas)/[a-z]{2}/[a-z0-9-]+/?$ /index.html [L]
+  RewriteRule ^blog/guia-de-vendas/(dentistas|advogados|psicologas|nutricionistas|arquitetos|contadores|medicos|esteticistas|corretores|fisioterapeutas|engenheiros|personal-trainers|energia-solar|oficinas-mecanicas)/[a-z]{2}/[a-z0-9-]+/?$ /index.html [L]
+
+  # Qualquer outra URL desconhecida retorna HTTP 404 real (HTML ou Markdown).
+  RewriteRule . - [R=404,L]
 </IfModule>
 
 <IfModule mod_mime.c>
   AddType text/markdown .md
-  AddCharset UTF-8 .md .txt
+  AddCharset UTF-8 .md .txt .html
 </IfModule>
 
-# --- Política de cache -------------------------------------------------------
-# Sem isto, o navegador/LiteSpeed guardam o index.html antigo (que aponta pro
-# bundle antigo) e as mudanças só aparecem após limpar o cache manualmente.
+<Files "404.md">
+  ForceType "text/markdown; charset=utf-8"
+</Files>
+
 <IfModule mod_headers.c>
   Header always set Link "</llms.txt>; rel=\"service-doc\"; type=\"text/plain\", </.well-known/ai-catalog.json>; rel=\"ai-catalog\"; type=\"application/json\", </.well-known/ard.json>; rel=\"ard\"; type=\"application/json\", </.well-known/poppy.json>; rel=\"https://personalagentprotocol.org/\"; type=\"application/json\""
 
-  <FilesMatch "^index\.(html|md)$">
-    Header merge Vary "Accept"
+  <FilesMatch "^(index|404)\.(html|md)$">
+    Header always merge Vary "Accept"
   </FilesMatch>
 
   <FilesMatch "\.(md|txt|json)$">
-    Header set X-Content-Type-Options "nosniff"
+    Header always set X-Content-Type-Options "nosniff"
   </FilesMatch>
 
   <FilesMatch "\.md$">
-    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header always set Cache-Control "no-cache, no-store, must-revalidate"
   </FilesMatch>
+
   # index.html SEMPRE revalidado: cada deploy é servido na hora, pois ele
   # referencia os bundles novos (com hash no nome).
   <FilesMatch "^index\.html$">
-    Header set Cache-Control "no-cache, no-store, must-revalidate"
-    Header set Pragma "no-cache"
-    Header set Expires "0"
+    Header always set Cache-Control "no-cache, no-store, must-revalidate"
+    Header always set Pragma "no-cache"
+    Header always set Expires "0"
   </FilesMatch>
 
-  # Assets com hash no nome (mudam a cada build) → cache longo e imutável.
-  # Todos os .js/.css/.woff do Vite ficam em /assets/ com hash, então é seguro.
+  # Assets com hash com cache longo e imutável.
   <FilesMatch "\.(js|css|woff2?)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>

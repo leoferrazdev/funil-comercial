@@ -5,7 +5,13 @@ import { glossarioTerms } from "../lib/glossarioData";
 import { BookA } from "lucide-react";
 
 export default function GlossarioIndex() {
-  const sortedTerms = [...glossarioTerms].sort((a, b) => a.title.localeCompare(b.title));
+  const uniqueTermsMap = new Map<string, (typeof glossarioTerms)[number]>();
+  for (const term of glossarioTerms) {
+    if (!uniqueTermsMap.has(term.slug)) {
+      uniqueTermsMap.set(term.slug, term);
+    }
+  }
+  const sortedTerms = [...uniqueTermsMap.values()].sort((a, b) => a.title.localeCompare(b.title));
 
   return (
     <div data-theme="dark" className="min-h-screen bg-background text-foreground font-sans">
@@ -53,9 +59,9 @@ export default function GlossarioIndex() {
                  className="group flex flex-col justify-between p-8 rounded-2xl bg-card/30 border border-white/5 hover:bg-card/60 hover:border-primary/30 transition-all"
                >
                   <div>
-                    <h3 className="text-2xl font-bold group-hover:text-primary transition-colors mb-3">
+                    <h2 className="text-2xl font-bold group-hover:text-primary transition-colors mb-3">
                       {term.title}
-                    </h3>
+                    </h2>
                     <p className="text-muted-foreground line-clamp-3">
                       {term.description}
                     </p>

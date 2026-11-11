@@ -10,7 +10,7 @@
       "displayName": "Consultar a Funil Comercial",
       "type": "text/markdown",
       "url": "https://funilcomercial.com/.well-known/agent-skills/funil-skill/SKILL.md",
-      "description": "Guia para consultar serviços, CRM, consultoria e canais de contato públicos.",
+      "description": "When to use: guide for consulting Funil Comercial sales-structure services, CRM Funil Comercial, legal anchors (/about, /privacy), and official diagnostic contact channels via Accept: text/markdown or llms.txt.",
       "representativeQueries": [
         "O que a Funil Comercial oferece para negócios locais?",
         "Como falar com a equipe sobre CRM e estrutura de vendas?"

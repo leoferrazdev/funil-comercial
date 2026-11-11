@@ -136,7 +136,7 @@ export default function LpNutricionistas() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Google & Presença Orgânica</h4>
+                      <h3 className="text-xl font-semibold mb-2">Google & Presença Orgânica</h3>
                       <p className="text-muted-foreground">Configuramos o seu Perfil de Empresa e otimizamos a busca para que você seja encontrada por quem procura nutricionista na sua cidade hoje.</p>
                     </div>
                   </div>
@@ -147,7 +147,7 @@ export default function LpNutricionistas() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Página de Alta Conversão</h4>
+                      <h3 className="text-xl font-semibold mb-2">Página de Alta Conversão</h3>
                       <p className="text-muted-foreground">Substituímos sites lentos por uma Landing Page focada exclusivamente em converter o visitante em um clique direto para o seu WhatsApp.</p>
                     </div>
                   </div>
@@ -158,7 +158,7 @@ export default function LpNutricionistas() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">WhatsApp & CRM Organizado</h4>
+                      <h3 className="text-xl font-semibold mb-2">WhatsApp & CRM Organizado</h3>
                       <p className="text-muted-foreground">Fim dos pacientes perdidos. Implementamos etiquetas, cadência de acompanhamento e organização para você nunca mais esquecer um follow-up.</p>
                     </div>
                   </div>

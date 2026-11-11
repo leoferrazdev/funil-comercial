@@ -1,7 +1,19 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/(login|cadastro|redefinir-senha|dashboard|inbox|contatos|leads|funil|campanhas|criativos|roteiro|agregadores|pecas|perfil|configuracoes|whatsapp|oauth/meta|oauth/instagram)",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/l/:slug",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/(local|agencia-de-marketing|empresa-de-captacao|melhor-crm|google-meu-negocio)/:nicho/:estado/:cidade",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/blog/guia-de-vendas/:nicho/:estado/:cidade",
       "destination": "/index.html"
     }
   ],
@@ -20,6 +32,10 @@
         {
           "key": "X-XSS-Protection",
           "value": "1; mode=block"
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
         }
       ]
     },

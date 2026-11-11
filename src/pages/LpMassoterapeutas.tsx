@@ -128,7 +128,7 @@ export default function LpMassoterapeutas() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Busca Local de Alta Intenção</h4>
+                      <h3 className="text-xl font-semibold mb-2">Busca Local de Alta Intenção</h3>
                       <p className="text-muted-foreground">Colocamos o seu espaço de massoterapia nas primeiras posições quando alguém pesquisa por liberação miofascial, drenagem ou relaxante na sua região.</p>
                     </div>
                   </div>
@@ -139,7 +139,7 @@ export default function LpMassoterapeutas() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Landing Page Premium (A Experiência)</h4>
+                      <h3 className="text-xl font-semibold mb-2">Landing Page Premium (A Experiência)</h3>
                       <p className="text-muted-foreground">Uma página própria para mostrar as suas técnicas e a estrutura do seu espaço. Ancoramos a sua autoridade, justificando o seu valor antes mesmo do contato no WhatsApp.</p>
                     </div>
                   </div>
@@ -150,7 +150,7 @@ export default function LpMassoterapeutas() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">CRM: Do Alívio à Fidelização</h4>
+                      <h3 className="text-xl font-semibold mb-2">CRM: Do Alívio à Fidelização</h3>
                       <p className="text-muted-foreground">Implementamos um sistema para que a sua recepção (ou você) consiga acompanhar o paciente 3 dias após a sessão e ofereça, de forma natural, um pacote de recorrência.</p>
                     </div>
                   </div>

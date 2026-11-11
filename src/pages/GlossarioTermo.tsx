@@ -78,13 +78,24 @@ export default function GlossarioTermo() {
           </header>
 
           <div className="prose prose-invert prose-lg md:prose-xl mx-auto prose-headings:font-bold prose-headings:tracking-tight prose-a:text-primary hover:prose-a:text-primary/80 prose-strong:text-white">
-            <ReactMarkdown>{term.content}</ReactMarkdown>
+            <ReactMarkdown
+              components={{
+                h1: ({ node: _node, ...props }) => <h2 {...props} />,
+                h2: ({ node: _node, ...props }) => <h2 {...props} />,
+                h3: ({ node: _node, ...props }) => <h2 {...props} />,
+                h4: ({ node: _node, ...props }) => <h3 {...props} />,
+                h5: ({ node: _node, ...props }) => <h4 {...props} />,
+                h6: ({ node: _node, ...props }) => <h5 {...props} />,
+              }}
+            >
+              {term.content}
+            </ReactMarkdown>
           </div>
 
           {/* Related Terms */}
           {relatedTerms.length > 0 && (
             <div className="mt-16 pt-8 border-t border-white/10">
-              <h3 className="text-xl font-bold mb-6">Conceitos Relacionados</h3>
+              <h2 className="text-xl font-bold mb-6">Conceitos Relacionados</h2>
               <div className="grid gap-4 sm:grid-cols-2">
                 {relatedTerms.map(rt => (
                   <Link 
@@ -106,9 +117,9 @@ export default function GlossarioTermo() {
             
             <div className="relative p-8 md:p-12 text-center md:text-left flex flex-col md:flex-row items-center gap-8">
                <div className="flex-1">
-                 <h3 className="text-2xl md:text-3xl font-black mb-4">
+                 <h2 className="text-2xl md:text-3xl font-black mb-4">
                    Não basta apenas entender a teoria. <span className="text-primary">Tem que dar lucro.</span>
-                 </h3>
+                 </h2>
                  <p className="text-muted-foreground text-lg mb-0">
                    Você pode gastar meses estudando {term.title} ou pode chamar a Funil Comercial no WhatsApp para aplicarmos isso no seu negócio ainda essa semana. Nós escalamos clínicas, construtoras e escritórios.
                  </p>

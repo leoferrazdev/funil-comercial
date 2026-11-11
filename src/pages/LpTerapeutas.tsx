@@ -128,7 +128,7 @@ export default function LpTerapeutas() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Busca Ativa (Apareça no Google)</h4>
+                      <h3 className="text-xl font-semibold mb-2">Busca Ativa (Apareça no Google)</h3>
                       <p className="text-muted-foreground">Posicionamos o seu nome para pessoas que já entenderam que precisam do seu método e estão buscando terapia ativamente na sua região ou online.</p>
                     </div>
                   </div>
@@ -139,7 +139,7 @@ export default function LpTerapeutas() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Página de Acolhimento e Autoridade</h4>
+                      <h3 className="text-xl font-semibold mb-2">Página de Acolhimento e Autoridade</h3>
                       <p className="text-muted-foreground">Um site leve, acolhedor e altamente profissional. Ele educa o paciente sobre o seu método antes mesmo do primeiro contato, elevando o seu valor percebido.</p>
                     </div>
                   </div>
@@ -150,7 +150,7 @@ export default function LpTerapeutas() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Atendimento Estruturado no WhatsApp</h4>
+                      <h3 className="text-xl font-semibold mb-2">Atendimento Estruturado no WhatsApp</h3>
                       <p className="text-muted-foreground">Organizamos o primeiro contato para que o paciente se sinta verdadeiramente acolhido, com respostas claras e cadência de acompanhamento no CRM.</p>
                     </div>
                   </div>

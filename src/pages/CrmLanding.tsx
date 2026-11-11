@@ -7,6 +7,7 @@ import { trackEvent } from "../lib/analytics";
 import { Link } from "react-router";
 import { MoveRight, Lock, LayoutDashboard, MessageCircle, BarChart3, ChevronDown, CheckCircle2, Building2, Briefcase, Zap, Menu, X, Layers } from "lucide-react";
 import Logo from "../components/Logo";
+import { SeoHead, generateLocalBusinessSchema } from "../components/SeoHead";
 import { brandConfig } from "../lib/branding";
 
 export default function CrmLandingPage() {
@@ -33,6 +34,13 @@ export default function CrmLandingPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col font-sans selection:bg-primary/30">
+      <SeoHead
+        title="CRM Funil Comercial para Negócios Locais"
+        description="CRM próprio da Funil Comercial: WhatsApp organizado, contatos, leads e oportunidades de vendas em um painel simples para negócios locais."
+        canonicalUrl="https://funilcomercial.com/crm"
+        keywords="CRM Funil Comercial, CRM WhatsApp organizado, gestão de leads, funil de vendas para negócios locais"
+        schema={generateLocalBusinessSchema()}
+      />
       <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-background/80 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-6 h-16 md:h-20 flex items-center justify-between">
           <div className="flex items-center gap-8">

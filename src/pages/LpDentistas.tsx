@@ -128,7 +128,7 @@ export default function LpDentistas() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Google & Intenção Direta</h4>
+                      <h3 className="text-xl font-semibold mb-2">Google & Intenção Direta</h3>
                       <p className="text-muted-foreground">Em vez de panfletagem no Instagram, posicionamos a sua clínica para buscas de alta intenção como "especialista em implante" ou "Invisalign na cidade".</p>
                     </div>
                   </div>
@@ -139,7 +139,7 @@ export default function LpDentistas() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Páginas de Alta Conversão</h4>
+                      <h3 className="text-xl font-semibold mb-2">Páginas de Alta Conversão</h3>
                       <p className="text-muted-foreground">Criamos Landing Pages focadas em tratamentos específicos (HOF, Lentes, Implantes) para ancorar a sua autoridade de especialista de forma premium.</p>
                     </div>
                   </div>
@@ -150,7 +150,7 @@ export default function LpDentistas() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">CRM e Follow-up da Recepção</h4>
+                      <h3 className="text-xl font-semibold mb-2">CRM e Follow-up da Recepção</h3>
                       <p className="text-muted-foreground">Implementamos um CRM que organiza quem agendou, quem avaliou e quem fechou o tratamento, evitando que propostas valiosas fiquem esquecidas.</p>
                     </div>
                   </div>

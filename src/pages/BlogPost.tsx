@@ -41,7 +41,30 @@ export default function BlogPost() {
     }],
     "publisher": {
       "@type": "Organization",
+      "@id": "https://funilcomercial.com/#organization",
       "name": "Funil Comercial",
+      "legalName": "LEONARDO FERRAZ DA SILVA BRASIL",
+      "url": "https://funilcomercial.com",
+      "telephone": "+5551996737359",
+      "email": "funil@funilcomercial.com",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+5551996737359",
+          "email": "funil@funilcomercial.com",
+          "contactType": "customer service",
+          "areaServed": "BR",
+          "availableLanguage": ["Portuguese"]
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Liberal, 1329, 12",
+        "addressLocality": "Porto Alegre",
+        "addressRegion": "RS",
+        "postalCode": "91920-680",
+        "addressCountry": "BR"
+      },
       "logo": {
         "@type": "ImageObject",
         "url": "https://funilcomercial.com/logo.png"
@@ -62,6 +85,7 @@ export default function BlogPost() {
         description={post.excerpt}
         canonicalUrl={`https://funilcomercial.com/blog/${post.slug}`}
         image={post.imageUrl}
+        ogType="article"
         schema={articleSchema}
       />
       
@@ -165,13 +189,24 @@ export default function BlogPost() {
             className="prose prose-invert prose-lg md:prose-xl mx-auto px-6 md:px-12 prose-headings:font-bold prose-headings:tracking-tight prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-xl"
             itemProp="articleBody"
           >
-            <ReactMarkdown>{post.content}</ReactMarkdown>
+            <ReactMarkdown
+              components={{
+                h1: ({ node: _node, ...props }) => <h2 {...props} />,
+                h2: ({ node: _node, ...props }) => <h2 {...props} />,
+                h3: ({ node: _node, ...props }) => <h2 {...props} />,
+                h4: ({ node: _node, ...props }) => <h3 {...props} />,
+                h5: ({ node: _node, ...props }) => <h4 {...props} />,
+                h6: ({ node: _node, ...props }) => <h5 {...props} />,
+              }}
+            >
+              {post.content}
+            </ReactMarkdown>
           </div>
 
           {post.clusterType === 'pillar' && satellitePosts.length > 0 && (
             <div className="mx-auto px-6 md:px-12 mt-16">
               <div className="rounded-3xl border border-white/10 bg-black/40 p-8 md:p-10">
-                <h3 className="text-2xl md:text-3xl font-black mb-2">Artigos neste Guia</h3>
+                <h2 className="text-2xl md:text-3xl font-black mb-2">Artigos neste Guia</h2>
                 <p className="text-muted-foreground mb-8">Aprofunde-se em cada estratégia clicando nos capítulos abaixo.</p>
                 <div className="flex flex-col gap-3">
                   {satellitePosts.map((sat, index) => (
@@ -218,9 +253,9 @@ export default function BlogPost() {
 
             return (
               <div className="mx-auto px-6 md:px-12 mt-14 pt-8 border-t border-white/10">
-                <h4 className="text-lg font-bold text-foreground mb-4">
+                <h2 className="text-lg font-bold text-foreground mb-4">
                   Encontre a Estrutura de Vendas para {targetNiche.name} na sua Região:
-                </h4>
+                </h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                   {topCities.map((c) => (
                     <Link
@@ -237,7 +272,7 @@ export default function BlogPost() {
           })()}
 
           <div className="mt-14 pt-10 border-t border-white/10 text-center">
-            <h3 className="text-2xl font-bold mb-4">Gostou deste conteúdo?</h3>
+            <h2 className="text-2xl font-bold mb-4">Gostou deste conteúdo?</h2>
             <p className="text-muted-foreground mb-8">Nós aplicamos exatamente essas estratégias na criação da sua estrutura de vendas.</p>
             <Link 
               to="/" 

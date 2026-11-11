@@ -136,7 +136,7 @@ export default function LpContabilidade() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Tráfego de Migração (Fundo de Funil)</h4>
+                      <h3 className="text-xl font-semibold mb-2">Tráfego de Migração (Fundo de Funil)</h3>
                       <p className="text-muted-foreground">Posicionamos o seu escritório no Google Ads para buscar o empresário que já está insatisfeito com a contabilidade atual e tem urgência na troca.</p>
                     </div>
                   </div>
@@ -147,7 +147,7 @@ export default function LpContabilidade() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Landing Page de Transição Segura</h4>
+                      <h3 className="text-xl font-semibold mb-2">Landing Page de Transição Segura</h3>
                       <p className="text-muted-foreground">Criamos uma página focada em resolver o medo da Receita Federal. O foco do site é provar como o seu processo de migração (onboarding) é rápido e indolor para a empresa.</p>
                     </div>
                   </div>
@@ -158,7 +158,7 @@ export default function LpContabilidade() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Inteligência Comercial B2B (CRM)</h4>
+                      <h3 className="text-xl font-semibold mb-2">Inteligência Comercial B2B (CRM)</h3>
                       <p className="text-muted-foreground">Vendas B2B exigem reuniões e acompanhamento. Nosso CRM avisa quando enviar a proposta, quando cobrar e qual a temperatura (Lucro Real, Simples Nacional) de cada lead.</p>
                     </div>
                   </div>

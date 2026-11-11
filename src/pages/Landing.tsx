@@ -180,8 +180,10 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col font-sans selection:bg-primary/30">
       <SeoHead 
-        title="Estrutura de Vendas para Negócios Locais"
-        description="Criação de sites, Google Ads, Meta Ads, WhatsApp e CRM integrados. A estrutura completa para seu negócio atrair e fechar clientes todos os dias."
+        title="Funil Comercial — Estrutura de Vendas e CRM para Negócios Locais"
+        exactTitle
+        description="Funil Comercial: montamos a estrutura de vendas do seu negócio local — site, Google Meu Negócio, tráfego pago, WhatsApp organizado e CRM próprio, de ponta a ponta."
+        keywords="estrutura de vendas para negócios locais, CRM Funil Comercial, Google Meu Negócio, Tráfego Pago, Site / Landing Page, WhatsApp organizado, Pré-atendimento com IA"
         canonicalUrl="https://funilcomercial.com/"
         schema={generateEntityGraphSchema()}
       />
@@ -633,13 +635,13 @@ export default function LandingPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-b border-white/10 pb-8 mb-8 text-center md:text-left">
             <div className="flex flex-col gap-3 md:gap-4">
-              <h4 className="text-sm font-bold text-foreground">Principais Regiões Atendidas</h4>
+              <h3 className="text-sm font-bold text-foreground">Principais Regiões Atendidas</h3>
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
                 Balneário Camboriú, Itajaí, Blumenau, São Paulo, Campinas, Ribeirão Preto, Sorocaba, São José dos Campos, Rio de Janeiro, Niterói, Duque de Caxias, Nova Iguaçu, Petrópolis, Belo Horizonte, Uberlândia, Contagem, Juiz de Fora, Betim, Curitiba, Londrina, Maringá, Ponta Grossa, Cascavel, Florianópolis, Joinville.
               </p>
             </div>
             <div className="flex flex-col gap-3 md:gap-4">
-              <h4 className="text-sm font-bold text-foreground">Soluções por Nicho</h4>
+              <h3 className="text-sm font-bold text-foreground">Soluções por Nicho</h3>
               <div className="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2">
                 <Link to="/estrutura-de-vendas-para-nutricionistas" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Nutricionistas</Link>
                 <Link to="/estrutura-de-vendas-para-psicologas" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Psicólogas</Link>
@@ -649,7 +651,7 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="flex flex-col gap-3 md:gap-4">
-              <h4 className="text-sm font-bold text-foreground">Marketing por Nicho</h4>
+              <h3 className="text-sm font-bold text-foreground">Marketing por Nicho</h3>
               <div className="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2">
                 <Link to="/agencia-de-marketing/arquitetos" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Arquitetos</Link>
                 <Link to="/agencia-de-marketing/advogados" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Advogados</Link>
@@ -683,6 +685,7 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6">
+              <Link to="/about" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Sobre</Link>
               <Link to="/google-meu-negocio" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Google Meu Negócio</Link>
               <Link to="/blog" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Blog</Link>
               <Link to="/cidades-atendidas" className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors">Cidades Atendidas</Link>

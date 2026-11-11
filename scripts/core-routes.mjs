@@ -1,8 +1,15 @@
 export const CORE_ROUTES = [
   '/',
+  '/about',
+  '/sobre',
+  '/contact',
+  '/contato',
+  '/privacy',
+  '/privacidade',
+  '/termos',
+  '/exclusao-de-dados',
   '/crm',
   '/consultoria',
-  '/contato',
   '/brandbook',
   '/site-para-negocios-locais',
   '/diagnostico-estrutura-de-vendas',
@@ -23,8 +30,8 @@ export const CORE_ROUTES = [
   '/estrutura-de-vendas-para-contabilidade',
   '/estrutura-de-vendas-para-estetica',
   '/blog',
-  // High priority blog posts to prerender
-  '/blog/importancia-do-site-para-advogados',
-  '/blog/como-captar-pacientes-odontologia',
-  '/blog/google-ads-vs-meta-ads-negocios-locais'
+  '/glossario',
+  '/blog/importancia-do-site-para-contadores',
+  '/blog/como-captar-pacientes-particulares-odontologia-sp',
+  '/blog/google-ads-vs-meta-ads-negocios-locais',
 ];

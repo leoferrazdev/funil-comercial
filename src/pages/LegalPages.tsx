@@ -8,6 +8,7 @@
 import { Link } from "react-router";
 import { ArrowLeft } from "lucide-react";
 import Logo from "../components/Logo";
+import { SeoHead, generateLocalBusinessSchema } from "../components/SeoHead";
 import { brandConfig } from "../lib/branding";
 
 // Dados do controlador (mesma fonte do rodapé da Landing).
@@ -23,13 +24,23 @@ const LAST_UPDATE = "9 de julho de 2026";
 
 function LegalLayout({
   title,
+  seoDescription,
+  canonicalUrl,
   children,
 }: {
   title: string;
+  seoDescription: string;
+  canonicalUrl: string;
   children: React.ReactNode;
 }) {
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col font-sans selection:bg-primary/30">
+      <SeoHead
+        title={title}
+        description={seoDescription}
+        canonicalUrl={canonicalUrl}
+        schema={generateLocalBusinessSchema()}
+      />
       <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-background/80 backdrop-blur-xl">
         <div className="max-w-4xl mx-auto px-6 h-16 md:h-20 flex items-center justify-between">
           <Link to="/">
@@ -65,7 +76,13 @@ function LegalLayout({
             © {new Date().getFullYear()} {COMPANY.brand}. Todos os direitos
             reservados.
           </p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap gap-6">
+            <Link to="/about" className="hover:text-primary transition-colors">
+              Sobre
+            </Link>
+            <Link to="/contato" className="hover:text-primary transition-colors">
+              Contato
+            </Link>
             <Link to="/termos" className="hover:text-primary transition-colors">
               Termos de Serviço
             </Link>
@@ -116,9 +133,17 @@ const mail = (
   </a>
 );
 
-export function PrivacyPage() {
+export function PrivacyPage({
+  canonicalUrl = "https://funilcomercial.com/privacidade",
+}: {
+  canonicalUrl?: string;
+} = {}) {
   return (
-    <LegalLayout title="Política de Privacidade">
+    <LegalLayout
+      title="Política de Privacidade"
+      seoDescription="Política de Privacidade da Funil Comercial em conformidade com a LGPD (Lei nº 13.709/2018) e diretrizes da WhatsApp Business Platform."
+      canonicalUrl={canonicalUrl}
+    >
       <P>
         Esta Política de Privacidade descreve como o {COMPANY.brand} (marca
         operada por {COMPANY.legalName}, inscrita no CNPJ nº {COMPANY.cnpj},
@@ -316,7 +341,11 @@ export function PrivacyPage() {
 
 export function DataDeletionPage() {
   return (
-    <LegalLayout title="Exclusão de Dados do Usuário">
+    <LegalLayout
+      title="Exclusão de Dados do Usuário"
+      seoDescription="Como solicitar a exclusão completa de conta, contatos e mensagens armazenados na plataforma Funil Comercial em conformidade com a LGPD."
+      canonicalUrl="https://funilcomercial.com/exclusao-de-dados"
+    >
       <P>
         Nós, do {COMPANY.brand} (marca operada por {COMPANY.legalName}, CNPJ nº{" "}
         {COMPANY.cnpj}), respeitamos o seu direito de controlar seus dados pessoais.
@@ -389,7 +418,11 @@ export function DataDeletionPage() {
 
 export function TermsPage() {
   return (
-    <LegalLayout title="Termos de Serviço">
+    <LegalLayout
+      title="Termos de Serviço"
+      seoDescription="Termos de Serviço aplicáveis ao uso da plataforma e do CRM Funil Comercial."
+      canonicalUrl="https://funilcomercial.com/termos"
+    >
       <P>
         Estes Termos de Serviço ("Termos") regem o uso da plataforma {COMPANY.brand}{" "}
         (marca operada por {COMPANY.legalName}, CNPJ nº {COMPANY.cnpj}),

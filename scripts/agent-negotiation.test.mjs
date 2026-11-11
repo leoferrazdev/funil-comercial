@@ -53,3 +53,41 @@ test('cada página usa seu Markdown e descoberta JSON, arquivos e rotas privadas
   assert.equal(await markdownResponse(request('/crm', 'POST'), fetcher), null);
   assert.equal(await markdownResponse(request('/crm'), async () => new Response('<html>', { headers: { 'Content-Type': 'text/html' } })), null);
 });
+
+test('caminhos desconhecidos retornam 404 real com Markdown quando Accept: text/markdown é preferido', async () => {
+  const { isKnownAppPath, notFoundResponse } = await import('./agent-negotiation.mjs');
+  assert.equal(isKnownAppPath('/about'), true);
+  assert.equal(isKnownAppPath('/contact'), true);
+  assert.equal(isKnownAppPath('/privacy'), true);
+  assert.equal(isKnownAppPath('/some-path-that-does-not-exist'), false);
+  assert.equal(isKnownAppPath('/agencia-de-marketing/nicho-invalido/sp/sao-paulo'), false);
+  assert.equal(isKnownAppPath('/agencia-de-marketing/dentistas/sp/sao-paulo'), true);
+
+  const mdRequest = new Request('https://funilcomercial.com/some-path-that-does-not-exist', {
+    headers: { Accept: 'text/markdown' },
+  });
+  const md404 = await notFoundResponse(
+    mdRequest,
+    async () =>
+      new Response('# 404 — Recurso não encontrado\n\nConsulte /llms.txt e /sitemap.xml.', {
+        headers: { 'Content-Type': 'text/markdown; charset=utf-8' },
+      }),
+  );
+  assert.equal(md404.status, 404);
+  assert.match(md404.headers.get('content-type'), /text\/markdown/i);
+  assert.match(md404.headers.get('vary'), /accept/i);
+  assert.match(await md404.text(), /llms\.txt/);
+
+  const htmlRequest = new Request('https://funilcomercial.com/some-path-that-does-not-exist', {
+    headers: { Accept: 'text/html' },
+  });
+  const html404 = await notFoundResponse(
+    htmlRequest,
+    async () =>
+      new Response('<html><body><h1>404</h1></body></html>', {
+        headers: { 'Content-Type': 'text/html; charset=utf-8' },
+      }),
+  );
+  assert.equal(html404.status, 404);
+  assert.match(html404.headers.get('content-type'), /text\/html/i);
+});

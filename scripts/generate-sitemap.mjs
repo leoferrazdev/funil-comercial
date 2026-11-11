@@ -56,8 +56,11 @@ function generateSitemap() {
   
   const allSitemapFiles = [];
 
-  // 1. Core Sitemap
-  let coreUrls = PUBLIC_ROUTES.map(route => 
+  // 1. Core Sitemap (exclui /glossario e /blog/* que têm sitemaps dedicados)
+  const coreRoutes = [...new Set(PUBLIC_ROUTES)].filter(
+    (route) => route !== '/glossario' && !route.startsWith('/blog/'),
+  );
+  let coreUrls = coreRoutes.map(route => 
     generateUrlNode(route, route === '/' ? '1.0' : '0.8', 'weekly')
   );
   allSitemapFiles.push(...writeSitemapFiles(publicDir, 'sitemap-core', coreUrls));
@@ -89,7 +92,7 @@ function generateSitemap() {
   
   if (fs.existsSync(blogDataPath)) {
     const blogDataContent = fs.readFileSync(blogDataPath, 'utf8');
-    const blogSlugs = [...blogDataContent.matchAll(/slug:\s*["']([^"']+)["']/g)].map(m => m[1]);
+    const blogSlugs = [...new Set([...blogDataContent.matchAll(/slug:\s*["']([^"']+)["']/g)].map(m => m[1]))];
     blogSlugs.forEach(slug => {
       blogUrls.push(generateUrlNode(`/blog/${slug}`, '0.8', 'weekly'));
     });
@@ -109,7 +112,7 @@ function generateSitemap() {
   
   if (fs.existsSync(glossarioDataPath)) {
     const glossarioDataContent = fs.readFileSync(glossarioDataPath, 'utf8');
-    const glossarioSlugs = [...glossarioDataContent.matchAll(/slug:\s*["']([^"']+)["']/g)].map(m => m[1]);
+    const glossarioSlugs = [...new Set([...glossarioDataContent.matchAll(/slug:\s*["']([^"']+)["']/g)].map(m => m[1]))];
     glossarioSlugs.forEach(slug => {
       glossarioUrls.push(generateUrlNode(`/glossario/${slug}`, '0.7', 'monthly'));
     });

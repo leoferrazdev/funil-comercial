@@ -136,7 +136,7 @@ export default function LpEstetica() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Google Ads (Intenção Direta)</h4>
+                      <h3 className="text-xl font-semibold mb-2">Google Ads (Intenção Direta)</h3>
                       <p className="text-muted-foreground">Posicionamos sua clínica no topo das buscas para pessoas pesquisando "fios de PDO perto de mim" ou "botox na cidade X", focando em quem já decidiu fazer o procedimento.</p>
                     </div>
                   </div>
@@ -147,7 +147,7 @@ export default function LpEstetica() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Landing Pages de Procedimento</h4>
+                      <h3 className="text-xl font-semibold mb-2">Landing Pages de Procedimento</h3>
                       <p className="text-muted-foreground">Em vez de mandar o tráfego pro seu Instagram ou home do site, enviamos para uma página específica sobre aquele tratamento. Uma página linda que já constrói desejo e prova social.</p>
                     </div>
                   </div>
@@ -158,7 +158,7 @@ export default function LpEstetica() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">CRM de Triagem de Atendimento</h4>
+                      <h3 className="text-xl font-semibold mb-2">CRM de Triagem de Atendimento</h3>
                       <p className="text-muted-foreground">No WhatsApp, implementamos os scripts e o CRM que organizam o fluxo. O curioso recebe o preço; o paciente potencial é qualificado, agendado e recebe follow-up se esquecer da avaliação.</p>
                     </div>
                   </div>

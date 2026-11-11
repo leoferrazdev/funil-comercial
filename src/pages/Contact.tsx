@@ -14,28 +14,49 @@ const PHONE = "+5551996737359";
 const PHONE_LABEL = "+55 (51) 99673-7359";
 const WHATSAPP_LINK = `https://wa.me/${PHONE.replace("+", "")}`;
 
-const contactSchema = {
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  name: "Contato | Funil Comercial",
-  url: "https://funilcomercial.com/contato",
-  mainEntity: {
-    "@type": "LocalBusiness",
-    name: "Funil Comercial",
-    telephone: PHONE,
-    email: "funil@funilcomercial.com",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Rua Liberal, 1329, 12",
-      addressLocality: "Porto Alegre",
-      addressRegion: "RS",
-      postalCode: "91920-680",
-      addressCountry: "BR",
+function buildContactSchema(canonicalUrl: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "Contato | Funil Comercial",
+    url: canonicalUrl,
+    mainEntity: {
+      "@type": ["Organization", "LocalBusiness"],
+      "@id": "https://funilcomercial.com/#organization",
+      name: "Funil Comercial",
+      legalName: "LEONARDO FERRAZ DA SILVA BRASIL",
+      taxID: "65.993.728/0001-07",
+      url: "https://funilcomercial.com",
+      logo: "https://funilcomercial.com/logo.png",
+      telephone: PHONE,
+      email: "funil@funilcomercial.com",
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          telephone: PHONE,
+          email: "funil@funilcomercial.com",
+          contactType: "customer service",
+          areaServed: "BR",
+          availableLanguage: ["Portuguese"],
+        },
+      ],
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Rua Liberal, 1329, 12",
+        addressLocality: "Porto Alegre",
+        addressRegion: "RS",
+        postalCode: "91920-680",
+        addressCountry: "BR",
+      },
     },
-  },
-};
+  };
+}
 
-export default function Contact() {
+export default function Contact({
+  canonicalUrl = "https://funilcomercial.com/contato",
+}: {
+  canonicalUrl?: string;
+}) {
   return (
     <div
       data-theme="dark"
@@ -44,8 +65,8 @@ export default function Contact() {
       <SeoHead
         title="Contato"
         description="Fale com a Funil Comercial sobre estrutura de vendas, site, tráfego, CRM e WhatsApp organizado."
-        canonicalUrl="https://funilcomercial.com/contato"
-        schema={contactSchema}
+        canonicalUrl={canonicalUrl}
+        schema={buildContactSchema(canonicalUrl)}
       />
 
       <header className="border-b border-white/10">
@@ -195,8 +216,12 @@ export default function Contact() {
 
       <footer className="border-t border-white/10 py-8">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between md:px-8">
-          <p>Funil Comercial é uma marca operada por LEONARDO FERRAZ DA SILVA BRASIL.</p>
-          <p>CNPJ 65.993.728/0001-07 · Porto Alegre, RS</p>
+          <p>Funil Comercial é uma marca operada por LEONARDO FERRAZ DA SILVA BRASIL · CNPJ 65.993.728/0001-07</p>
+          <div className="flex flex-wrap gap-5">
+            <Link to="/about" className="hover:text-primary transition-colors">Sobre</Link>
+            <Link to="/privacidade" className="hover:text-primary transition-colors">Privacidade</Link>
+            <Link to="/termos" className="hover:text-primary transition-colors">Termos</Link>
+          </div>
         </div>
       </footer>
     </div>

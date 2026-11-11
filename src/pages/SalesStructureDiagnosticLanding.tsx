@@ -179,7 +179,7 @@ function DiagnosticMap() {
                 </span>
                 <Icon className="text-primary" size={22} />
               </div>
-              <h3 className="text-xl font-black">{layer.title}</h3>
+              <p className="text-xl font-black">{layer.title}</p>
               <p className="mt-3 text-sm leading-6 text-muted-foreground">
                 {layer.question}
               </p>

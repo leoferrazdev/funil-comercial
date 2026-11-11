@@ -149,7 +149,7 @@ function LocalProfileMockup() {
             <p className="text-xs font-black uppercase tracking-wider text-primary">
               Perfil local organizado
             </p>
-            <h3 className="mt-2 text-2xl font-black">Seu Negócio</h3>
+            <p className="mt-2 text-2xl font-black">Seu Negócio</p>
             <p className="mt-2 text-sm text-muted-foreground">
               Categoria correta · Região atendida · Contato visível
             </p>
@@ -584,7 +584,7 @@ export default function GoogleBusinessProfileLanding() {
       <footer className="border-t border-white/10 py-10">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <div className="mb-8 border-b border-white/10 pb-8">
-            <h4 className="mb-4 text-sm font-bold text-foreground">Google Meu Negócio por Especialidade</h4>
+            <h3 className="mb-4 text-sm font-bold text-foreground">Google Meu Negócio por Especialidade</h3>
             <div className="flex flex-wrap gap-x-5 gap-y-2 text-xs text-muted-foreground">
               <Link to="/google-meu-negocio/dentistas" className="hover:text-primary transition-colors">Dentistas</Link>
               <Link to="/google-meu-negocio/advogados" className="hover:text-primary transition-colors">Advogados</Link>

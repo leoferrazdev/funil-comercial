@@ -57,6 +57,7 @@ const PsychologistWebsiteLanding = lazy(() => import("./pages/PsychologistWebsit
 const LocalCityLanding = lazy(() => import("./pages/LocalCityLanding"));
 const CitiesDirectory = lazy(() => import("./pages/CitiesDirectory"));
 const ConsultoriaLanding = lazy(() => import("./pages/ConsultoriaLanding"));
+const AboutPage = lazy(() => import("./pages/About"));
 const ContactPage = lazy(() => import("./pages/Contact"));
 import { AnnouncementBar } from "./components/AnnouncementBar";
 import { SeoHead } from "./components/SeoHead";
@@ -169,6 +170,10 @@ const navItems = navigationItems;
 // públicas caírem no login.
 const PUBLIC_PATHS = [
   "/",
+  "/about",
+  "/sobre",
+  "/contact",
+  "/privacy",
   "/cidades-atendidas",
   "/consultoria",
   "/contato",
@@ -532,6 +537,7 @@ function AppContent() {
   const [authMessage, setAuthMessage] = useState(readAuthRedirectMessage);
 
   const [theme, setTheme] = useState<"light" | "dark">(() => {
+    if (typeof window === "undefined") return "dark";
     const saved = localStorage.getItem("theme");
     return (
       (saved as "light" | "dark") ||
@@ -1164,9 +1170,12 @@ function AppContent() {
         <AnnouncementBar />
         <Suspense fallback={<PageLoader />}><Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/about" element={<AboutPage canonicalUrl="https://funilcomercial.com/about" />} />
+          <Route path="/sobre" element={<AboutPage canonicalUrl="https://funilcomercial.com/sobre" />} />
           <Route path="/crm" element={<CrmLandingPage />} />
           <Route path="/consultoria" element={<ConsultoriaLanding />} />
-          <Route path="/contato" element={<ContactPage />} />
+          <Route path="/contact" element={<ContactPage canonicalUrl="https://funilcomercial.com/contact" />} />
+          <Route path="/contato" element={<ContactPage canonicalUrl="https://funilcomercial.com/contato" />} />
           <Route path="/brandbook" element={<BrandbookPage />} />
           <Route path="/site-para-negocios-locais" element={<LocalBusinessWebsiteLanding />} />
           <Route path="/diagnostico-estrutura-de-vendas" element={<SalesStructureDiagnosticLanding />} />
@@ -1175,6 +1184,7 @@ function AppContent() {
           <Route path="/crm-whatsapp-organizado" element={<CrmWhatsappLanding />} />
 
           <Route path="/site-para-nutricionistas" element={<NutritionistWebsiteLanding />} />
+          <Route path="/site-para-dentistas" element={<LpDentistas />} />
           <Route path="/estrutura-de-vendas-para-nutricionistas" element={<LpNutricionistas />} />
           <Route path="/estrutura-de-vendas-para-psicologas" element={<LpPsicologas />} />
           <Route path="/estrutura-de-vendas-para-dentistas" element={<LpDentistas />} />
@@ -1185,7 +1195,8 @@ function AppContent() {
           <Route path="/estrutura-de-vendas-para-contabilidade" element={<LpContabilidade />} />
           <Route path="/estrutura-de-vendas-para-estetica" element={<LpEstetica />} />
           <Route path="/site-para-psicologas" element={<PsychologistWebsiteLanding />} />
-          <Route path="/privacidade" element={<PrivacyPage />} />
+          <Route path="/privacy" element={<PrivacyPage canonicalUrl="https://funilcomercial.com/privacy" />} />
+          <Route path="/privacidade" element={<PrivacyPage canonicalUrl="https://funilcomercial.com/privacidade" />} />
           <Route path="/termos" element={<TermsPage />} />
           <Route path="/exclusao-de-dados" element={<DataDeletionPage />} />
           <Route path="/redefinir-senha" element={<ResetPasswordPage />} />

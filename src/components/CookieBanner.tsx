@@ -49,9 +49,9 @@ export function CookieBanner() {
             <Cookie className="w-6 h-6 text-primary" />
           </div>
           <div>
-            <h3 className="font-semibold text-foreground text-base mb-1">
+            <p className="font-semibold text-foreground text-base mb-1">
               Privacidade e Cookies
-            </h3>
+            </p>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Utilizamos cookies e tecnologias similares, incluindo dados fornecidos por você (de forma anônima e criptografada), para medir a performance do site e personalizar anúncios através de parceiros como o Google. Ao aceitar, você concorda com a nossa{" "}
               <Link to="/privacidade" className="text-primary hover:underline font-medium">

@@ -128,7 +128,7 @@ export default function LpPsicologas() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Busca Ativa (Google)</h4>
+                      <h3 className="text-xl font-semibold mb-2">Busca Ativa (Google)</h3>
                       <p className="text-muted-foreground">Posicionamos o seu nome onde a intenção já existe. Você aparecerá para pacientes que estão buscando ativamente por terapia no Google.</p>
                     </div>
                   </div>
@@ -139,7 +139,7 @@ export default function LpPsicologas() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Página de Alta Conversão</h4>
+                      <h3 className="text-xl font-semibold mb-2">Página de Alta Conversão</h3>
                       <p className="text-muted-foreground">Sua formação, especialidades (TCC, Psicanálise) e abordagem apresentadas em um site seguro, rápido e projetado para gerar confiança no primeiro olhar.</p>
                     </div>
                   </div>
@@ -150,7 +150,7 @@ export default function LpPsicologas() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Primeiro Atendimento Organizado</h4>
+                      <h3 className="text-xl font-semibold mb-2">Primeiro Atendimento Organizado</h3>
                       <p className="text-muted-foreground">Implementamos um CRM integrado ao seu WhatsApp. Fluxos de mensagens éticas e acompanhamento organizado para você não esquecer nenhum paciente.</p>
                     </div>
                   </div>

@@ -86,12 +86,12 @@ export default function BlogIndex() {
                       )}
                     </div>
                     <div className="group relative mt-4">
-                      <h3 className={`font-bold leading-tight group-hover:text-primary transition-colors ${isFeatured ? 'text-2xl md:text-4xl lg:leading-tight mb-6' : 'text-xl'}`}>
+                      <h2 className={`font-bold leading-tight group-hover:text-primary transition-colors ${isFeatured ? 'text-2xl md:text-4xl lg:leading-tight mb-6' : 'text-xl'}`}>
                         <Link to={`/blog/${post.slug}`}>
                           <span className="absolute inset-0" />
                           {post.title}
                         </Link>
-                      </h3>
+                      </h2>
                       <p className={`mt-4 line-clamp-3 text-sm leading-relaxed text-muted-foreground ${isFeatured ? 'md:text-base md:line-clamp-4' : ''}`}>
                         {post.excerpt}
                       </p>

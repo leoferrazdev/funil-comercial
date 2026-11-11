@@ -136,7 +136,7 @@ export default function LpAdvogados() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Posicionamento SEO (OAB Compliant)</h4>
+                      <h3 className="text-xl font-semibold mb-2">Posicionamento SEO (OAB Compliant)</h3>
                       <p className="text-muted-foreground">Você vai aparecer no topo do Google apenas para quem já tem a dor (pesquisando por divórcio, tributário, trabalhista), respeitando totalmente o provimento 205/2021.</p>
                     </div>
                   </div>
@@ -147,7 +147,7 @@ export default function LpAdvogados() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Página de Alta Performance</h4>
+                      <h3 className="text-xl font-semibold mb-2">Página de Alta Performance</h3>
                       <p className="text-muted-foreground">Substituímos o cartão de visitas genérico por uma página que projeta a autoridade do seu currículo e escritório, filtrando os curiosos com um formulário profissional.</p>
                     </div>
                   </div>
@@ -158,7 +158,7 @@ export default function LpAdvogados() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">CRM de Acompanhamento</h4>
+                      <h3 className="text-xl font-semibold mb-2">CRM de Acompanhamento</h3>
                       <p className="text-muted-foreground">Casos jurídicos levam meses para fechar. Com nosso CRM integrado, nenhum cliente potencial fica esquecido. Você terá o controle visual de cada negociação.</p>
                     </div>
                   </div>

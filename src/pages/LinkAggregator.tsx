@@ -1,5 +1,6 @@
 import { useEffect, useState, type CSSProperties } from "react";
 import { useParams } from "react-router";
+import { SeoHead } from "../components/SeoHead";
 import { getAggregator, type AggregatorConfig, type AggregatorLink, type AggregatorLinkIcon } from "../lib/aggregators";
 import { getAggregatorBySlug } from "../lib/crmService";
 import { resolveAggregatorTheme, type CustomThemeInput } from "../lib/aggregatorThemes";
@@ -120,6 +121,12 @@ export default function LinkAggregatorPage() {
 
   return (
     <>
+      <SeoHead
+        title={config?.name || "Links oficiais"}
+        description={config?.tagline || "Canal rápido de links oficiais da Funil Comercial."}
+        canonicalUrl={slug ? `https://funilcomercial.com/l/${slug}` : "https://funilcomercial.com/"}
+        noindex
+      />
       <style>{AGG_CSS}</style>
       <main className="agg-stage" style={theme.vars as unknown as CSSProperties}>
         <div className="agg-glow" />

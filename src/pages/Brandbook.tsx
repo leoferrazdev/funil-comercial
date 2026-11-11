@@ -3,6 +3,7 @@ import { brandConfig } from '../lib/branding';
 import { Check, Copy, ChevronRight, Menu, X, Download, CheckCircle2, ShieldAlert, Target, Users, Briefcase, LayoutGrid, Activity, Building2, Workflow, MapPin, UserCheck } from 'lucide-react';
 import { Link } from 'react-router';
 import Logo from '../components/Logo';
+import { SeoHead } from '../components/SeoHead';
 import SocialMediaSection from '../components/SocialMediaSection';
 import AvatarGuidelinesSection from '../components/AvatarGuidelinesSection';
 import ContentGuidelinesSection from '../components/ContentGuidelinesSection';
@@ -27,7 +28,7 @@ function ColorSwatch({ color, name, hex, description }: { color: string, name: s
       />
       <div className="flex items-center justify-between">
         <div>
-          <h4 className="font-bold">{name}</h4>
+          <h3 className="font-bold">{name}</h3>
           <p className="text-xs text-muted-foreground">{description}</p>
         </div>
         <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-muted-foreground transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
@@ -91,6 +92,11 @@ export default function BrandbookPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/30 flex overflow-x-hidden transform">
+      <SeoHead
+        title="Brandbook e Identidade Visual"
+        description="Manual oficial de identidade visual, tipografia, paleta de cores, tom de voz e diretrizes editoriais da Funil Comercial."
+        canonicalUrl="https://funilcomercial.com/brandbook"
+      />
       {/* `transform` (sem valores = visualmente neutro) faz este div virar o
           "containing block" dos filhos fixed (header mobile + aside). Sem
           isso, overflow-x-hidden em html/body NÃO contém fixed — eles
